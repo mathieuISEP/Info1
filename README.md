@@ -1,15 +1,18 @@
 # Info1
-// add the lines you updated on your local to the project
+
+// USE "git pull" to update current Version
+
+// Only do this if you created new files
 // git add .
 
 // commit to local
 // git commit -m "Commit your message"
 
-// add to github server
-// git remote add origin https://github.com/mathieuISEP/Info1.git
-
 // push to github server
-// git push -u origin master
+// git push
 
-// Check the status of your fil
+// Check the status of your project
 // git status
+
+// Check the branch interface
+// gitk&
