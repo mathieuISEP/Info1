@@ -1,0 +1,27 @@
+#title {
+	color: orange;
+	font-family: "Comic sans MS";
+	text-align: center;
+	font-size: 50px;
+}	
+#logout{
+	color:black;
+	font-family: Helvetica;
+	text-align: left;
+}
+#title{
+	text-align: center;
+}
+#logo{
+	 width: 600px;
+  	height: 150px; 
+}
+#logodiv{
+	float: right;
+}
+.header{
+	background-color: grey;
+	border: 5px orange solid;
+	display: inline-block;
+	width: 100%
+}
