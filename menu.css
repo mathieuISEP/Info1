@@ -4,4 +4,6 @@ padding : 0 0.5em; /* Pour espacer les boutons entre eux */
 }
 ul#menu_horizontal {
 list-style-type : none; /* Car sinon les puces se placent n'importe où */
+border-left:1px solid #fff; 
+
 }
