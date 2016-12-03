@@ -1,0 +1,53 @@
+header{
+	background-color: orange;
+	color: white;
+	font-family: Impact;
+	text-align: center;
+	font-size: 60px;
+	}
+h1,form{
+	background-color: white;
+	width: 400px;
+	margin: auto;
+	position: relative;
+	top: 20px;
+	padding: 10px;
+ 	text-align: center;
+ 	color: orange;
+	font-family: "Comic sans MS";
+ }
+
+h1{
+	border-top: 5px orange solid;
+	border-right: 5px orange solid;
+	border-left: 5px orange solid;	
+ }
+ form{
+	border-right: 5px orange solid;
+	border-left: 5px orange solid;
+	border-bottom: 5px orange solid;
+ }
+ input{
+ 	padding: 5px;
+ 	margin-left: 10px;
+ }
+ .emailinput{
+ 	margin-left: 30px;
+ }
+ .passwordinput{
+ 	margin-left: 7px;
+ }
+ .login{
+ 	margin-top: 20px;
+ 	position: relative;
+ 	right: 20px;
+ }
+ #login{
+ 	background-color: orange;
+ }
+ .password{
+ 	margin-top: 10px;
+ }
+ .logo{
+ 	margin: auto;
+ }

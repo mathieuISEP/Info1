@@ -3,21 +3,44 @@
     <head>
         <meta charset="utf-8" />
         <title>DomISEP: Login</title>
+        <link href="loginpage.css" type="text/css" rel="stylesheet">
     </head>
 
-    <body>
+<body>
+    <header>
+        Welcome to 
+    </header>
+    <div class="logo">
+        <img src="LOGOINCROYABLE.png" alt"=logo"> 
+    </img>
+    </div>
     <h1>
-    Enter my Home
+        Enter my Home
     </h1>
 <form name="login" action="index_submit" method="get" accept-charset="utf-8">
   <ul style="list-style-type:none">
-    <li><label for="usermail">Email</label>
-    <input type="email" name="usermail" placeholder="yourname@email.com" required></li>
-    <li><label for="password">Password</label>
-    <input type="password" name="password" placeholder="password" required></li>
     <li>
-    <input type="submit" value="Login"></li>
+        <div>
+        <label for="usermail">Email</label>
+        <span class="emailinput">
+            <input type="email" name="usermail" placeholder="yourname@email.com" required>
+        </span>
+        </div>
+    </li>
+    <li>
+    <div class="password">
+        <label for="password">Password</label>
+        <span class="passwordinput">
+            <input type="password" name="password" placeholder="password" required>
+        </span>
+    </div>
+    </li>
+    <div class="login">
+        <li>
+             <input id="login" type="submit" value="Login">
+        </li>
+    </div>
   </ul>
 </form>
-    </body>
+</body>
 </html>
