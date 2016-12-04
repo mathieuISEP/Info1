@@ -1,41 +1,34 @@
-header{
-	background-color: orange;
-	color: white;
-	font-family: Impact;
-	text-align: center;
-	font-size: 60px;
-	}
-h1,form{
+form{
 	background-color: white;
 	width: 400px;
 	margin: auto;
 	position: relative;
 	top: 20px;
-	padding: 10px;
- 	text-align: center;
+	padding:10px;
+	border: 5px orange solid;
+	border-radius: 30px;
  	color: orange;
-	font-family: "Comic sans MS";
+	font-family: "Comic sans MS";	
  }
-
-h1{
-	border-top: 5px orange solid;
-	border-right: 5px orange solid;
-	border-left: 5px orange solid;	
- }
- form{
-	border-right: 5px orange solid;
-	border-left: 5px orange solid;
-	border-bottom: 5px orange solid;
+ h1{
+ 	text-align: center;
  }
  input{
  	padding: 5px;
  	margin-left: 10px;
  }
+ input[type=submit]{
+ 	width: 100px;
+ 	border-radius: 10px;
+ 	font-family: "Comic Sans MS";
+ 	font-size: 20px;
+ 	color: white
+ }
+ .email.password{
+ 	text-align: left;
+ }
  .emailinput{
  	margin-left: 30px;
- }
- .passwordinput{
- 	margin-left: 7px;
  }
  .login{
  	margin-top: 20px;
@@ -45,9 +38,13 @@ h1{
  #login{
  	background-color: orange;
  }
+ .login{
+ 	text-align: center;
+ }
  .password{
  	margin-top: 10px;
  }
  .logo{
+ 	display: block;
  	margin: auto;
  }
