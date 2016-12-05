@@ -8,6 +8,13 @@
     -webkit-border-radius:5px;
  	-moz-border-radius:5px;
 }
+
+.logout{
+	float: right;
+	padding-left: 15px;
+	background-color: white;
+	border: none;
+}
 #logo{
 	 width: 200px;
   	height: 50px; 
@@ -23,7 +30,7 @@
 #logout{
 	color:black;
 	font-family: Helvetica;
-	font-size: 10px;
+	font-size: 13px;
 	float: right;
 }
 #fleche{
@@ -32,4 +39,3 @@
 	float: right;
 	padding: 10px;
 }
-
