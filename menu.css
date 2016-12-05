@@ -1,37 +1,15 @@
-ul#menu_horizontal li { 
-	padding : 200 0.5em; /* Pour espacer les boutons entre eux */
-}
-ul#menu_horizontal {
-list-style-type : none; /* Car sinon les puces se placent n'importe où */
-border-left: solid 1px #fff;
-	font-size: 30px; 
+nav ul{
 
-
+	padding: 0px;
+	margin: 0px;
+	list-style-type:none;
 }
 
-ul#a{
-}
-
-.menu_div_gauche{
-
-   display: inline;
-   border-right: 1px dashed;
-
-}
-.menu_div_droite{
-   display: inline;
-
-}
-
-.menu_div{
-   border: solid 1px;
-   display: inline;
-   border-radius: 5px;
-}
-
-.menu_icon{
-width: 20px;
-height: auto;
-border:solid 1px;
-padding-right: 30px;
+nav li{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	border-right: 1px solid #CCCCCC;
 }
