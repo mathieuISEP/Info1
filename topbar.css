@@ -15,12 +15,12 @@
 	background-color: white;
 	border: none;
 }
-#logo{
+.logo{
 	 width: 200px;
   	height: 50px; 
   	float: left;
 }
-#title {
+.title {
 	color: orange;
 	font-family: "Comic sans MS";
 	text-align: center;
