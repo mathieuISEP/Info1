@@ -21,9 +21,9 @@
       background: orange; color: #fff;
     }
 
-    label { /* Lable display*/
+    label { /* Label display*/
       display: inline-block;
-      margin: 0 0 -1px;
+      margin: 0 0 0 230px;
       padding: 15px 25px;
       font-weight: 600;
       text-align: center;
@@ -35,6 +35,10 @@
     label:hover {/* Enables hovering highligth */
       color: #888;
       cursor: pointer;
+    }
+    .sub {
+          display : inline-block;
+          margin : auto;
     }
 
 
@@ -49,7 +53,7 @@
       line-height: 50px;
     }
 
-    @media screen and (max-width: 400px) { label {padding: 15px 10px;} }
+
 
     h1 {
       text-align: center;
@@ -79,16 +83,16 @@
     <div class="main">
   
       <input id="tab1" type="radio" name="tabs" checked>
-      <label for="tab1"> Features </label>
+      <label for="tab1" class = "name1"> Features </label>
   
       <input id="tab2" type="radio" name="tabs">
-      <label for="tab2"> Rooms </label>
+      <label for="tab2" class = "name2"> Rooms </label>
   
       <input id="tab3" type="radio" name="tabs">
-      <label for="tab3"> People </label>
+      <label for="tab3" class = "name3"> People </label>
   
       <input id="tab4" type="radio" name="tabs">
-      <label for="tab4"> Favs </label>
+      <label for="tab4" class = "name4"> Favs </label>
   
       <div class="content">  
         <div id="content1">
