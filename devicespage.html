@@ -6,7 +6,9 @@
         <title>Mudafucking tabs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
+                  <!--Style for Gneral content -->
+    <style> 
+
     *, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box;}
 
     .content > div {display: none; padding: 20px 25px 5px;}
@@ -19,20 +21,24 @@
       background: orange; color: #fff;
     }
 
-    label {
+    label { /* Label display*/
       display: inline-block;
-      margin: 0 0 -1px;
+      margin: 0 0 0 230px;
       padding: 15px 25px;
-        font-weight: 600;
+      font-weight: 600;
       text-align: center;
       color: #bbb;
       border: 1px solid transparent;
       display: inline-block;
 
     }
-    label:hover {
+    label:hover {/* Enables hovering highligth */
       color: #888;
       cursor: pointer;
+    }
+    .sub {
+          display : inline-block;
+          margin : auto;
     }
 
 
@@ -47,17 +53,29 @@
       line-height: 50px;
     }
 
-    @media screen and (max-width: 400px) { label {padding: 15px 10px;} }
+
 
     h1 {
       text-align: center;
       vertical-align: middle;
-      width: 100%;
+      /*width: 100%;*/
       height: 100px;
       padding:20px;
 
     }
 
+
+    /* ________________________________________Style for sub class design_______________________________________________ */
+
+        input.sub {display: none;}
+        label.sub {display: inline-block; padding: 2px 5px; font-weight: 600; text-align: center;}
+        #sub_tab1:checked ~ .sub_content #sub_content1,
+        #sub_tab2:checked ~ .sub_content #sub_content2,
+        #sub_tab4:checked ~ .sub_content #sub_content4,
+        ul#mn li {
+            display:inline;
+        }
+    /* _________________________________________________________________________________________________________________ */
     </style>
   </head>
   <body>
@@ -65,16 +83,16 @@
     <div class="main">
   
       <input id="tab1" type="radio" name="tabs" checked>
-      <label for="tab1"> Features </label>
+      <label for="tab1" class = "name1"> Features </label>
   
       <input id="tab2" type="radio" name="tabs">
-      <label for="tab2"> Rooms </label>
+      <label for="tab2" class = "name2"> Rooms </label>
   
       <input id="tab3" type="radio" name="tabs">
-      <label for="tab3"> People </label>
+      <label for="tab3" class = "name3"> People </label>
   
       <input id="tab4" type="radio" name="tabs">
-      <label for="tab4"> Favs </label>
+      <label for="tab4" class = "name4"> Favs </label>
   
       <div class="content">  
         <div id="content1">
@@ -105,21 +123,43 @@
   
         <div id="content3">
         <div class = "listE">
-        <ul>Content 3</ul>
-        <ul>Content 3</ul>
-        <ul>Content 3</ul>
-        <ul>Content 3</ul>
-        <ul>Content 3</ul>
+          <ul>Content 3</ul>
+          <ul>Content 3</ul>
+          <ul>Content 3</ul>
+          <ul>Content 3</ul>
+          <ul>Content 3</ul>
         </div>
         </div>
   
+
+
+
+
         <div id="content4">
-        <div class = "listE">
-        <ul>Content 4</ul>
-        <ul>Content 4</ul>
-        <ul>Content 4</ul>
-        <ul>Content 4</ul>
-        <ul>Content 4</ul>
+        <div class = "listE"><!--Here stops code part 1-->
+           <!--Next up I will clone the general list setup and apply it to te sub list-->
+
+          <!--Note: must dispaly on the rigth -->
+        <!--_________________________________________________________________________________________________________________ -->
+            <ul id="mn"><li><ul><input class = "sub" id="sub_tab1" type="radio" name="sub_tabs" checked>
+            <label class = "sub" for="sub_tab1"> Option 1 </label></ul>
+            <ul><input class = "sub" id="sub_tab2" type="radio" name="sub_tabs">
+            <label class = "sub" for="sub_tab2"> Option 2</label> </ul>
+            <ul><input class = "sub" id="sub_tab3" type="radio" name="sub_tabs" checked>
+            <label class = "sub" for="sub_tab3"> Option 3 </label></ul>
+            <ul><input class = "sub" id="sub_tab4" type="radio" name="sub_tabs">
+            <label class = "sub" for="sub_tab4"> Option 4</label> </ul></li>
+
+            <li>
+            <div class="sub_content">  
+              <div id="sub_content1">
+              <div class = "sub_listE">
+                    <ul>Sensor 4.1 </ul> <ul>Sensor 4.2</ul><ul>Sensor 4.3</ul><ul>Sensor 4.4</ul>
+              </div>
+              </div>
+            </div>
+            </li></ul>
+        <!--_________________________________________________________________________________________________________________ -->
         </div>
         </div>
       </div>
