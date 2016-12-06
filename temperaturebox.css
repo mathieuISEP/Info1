@@ -1,0 +1,64 @@
+#temperaturebox{
+  background-color: orange;
+  border-radius:10px;
+  padding: 10px;
+  width: 400px;
+  color: white;
+  text-align: left;
+  font-family: "Comic sans MS";
+}
+#boxheader{
+	text-align: center;
+}
+#rooms{
+}
+#checkbox{
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+#checkboxlabel{
+	font-size: 15px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+#checkedbox:checked~#rooms{
+	display: block;
+
+}
+#reset{
+	width: 80px;
+	height: 30px;
+	color: black;
+	background-color: white;
+	margin-left: 100px;
+	border: outset;
+	border-radius: 10px;
+}
+#apply{
+	width: 80px;
+	height: 30px;
+	color: black;
+	background-color: white;
+	margin-left: 50px;
+	border: outset;
+	border-radius: 10px;
+}
+#buttons{
+	margin-top: 20px;
+}
+#stepper{
+	margin-top: 15px;
+	margin-bottom: 10px;
+  	font-family: "Comic sans MS";
+  	text-align: center;
+  	width: 70px;
+  	margin-left: 20px;
+}
+.stepper{
+	margin-top: 15px;
+	margin-bottom: 10px;
+  	font-family: "Comic sans MS";
+  	text-align: center;
+  	width: 70px;
+  	margin-left: 100px;
+}
