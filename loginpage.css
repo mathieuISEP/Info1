@@ -24,10 +24,10 @@ form{
  	font-size: 20px;
  	color: white
  }
- .email.password{
+ .user.password{
  	text-align: left;
  }
- .emailinput{
+ .userinput{
  	margin-left: 30px;
  }
  .login{
