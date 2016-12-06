@@ -1,15 +1,15 @@
-nav ul{
+#nav{
 
-	padding: 0px;
-	margin: 0px;
-	list-style-type:none;
+	background-color: orange;
+	width: 200px;
+	text-align: center;
 }
 
-nav li{
-	display: inline-block;
-	width: 100px;
-	height: 40px;
-	margin: 0px;
-	padding: 0px;
-	border-right: 1px solid #CCCCCC;
+ul{
+	text-align: center;
+	padding: 20px;
+}
+
+.menubar{
+
 }
