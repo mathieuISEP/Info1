@@ -2,40 +2,51 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-
-        <title>Another title</title>
+        <title>AutoDhome</title>
+        <link href="topbar.css" type="text/css" rel="stylesheet">
         <link href="menu.css" type="text/css" rel="stylesheet">
-  <!--________________________________________Script________________________________________ -->
-  <script>
-          function opentab(Name) {
-              var i;
-              var x = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";
-                  x[i].style.background = "none";
-              }
-              document.getElementById(Name).style.display = "block";
-          }
-          function opensubtab(Name){
-              var i;
-              var x = document.getElementsByClassName("subtab");
-              for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";
-                  x[i].style.background = "none";
-              }
-              document.getElementById(Name).style.display = "block";
-          }
-  </script>
+        <script type="text/javascript" src="menu.js"></script>
+
   </head>
   <body>
-  <h1> Dashboard/Rooms Choice test for tabs </h1>
-     <ul class="navbar">
-        
+    <div class="header">
+    <div>
+      <img class="logo" src="LOGOINCROYABLE.png" alt"=logo">
+    </div>
+    <div>
+    <button class="logout">
+        <img id="fleche" src="fleche.jpg" alt"fleche">
+        <h2 id="logout">
+          logout
+        </h2>
+    </button>
+    </div>
+    <div>
+     <h1 class="title">
+        Home page     
+      </h1>
+    </div>
+  </div>
+
+    <div class="navbar">
+     <table>
+        <tr>
+          <td>
         <div onclick="opentab('Dashboard')" class="tablinks">Dashboard</div>
+      </td>
+      <td>
         <div onclick="opentab('Features')" class="tablinks">Features</div>
+      </td>
+      <td>
         <div onclick="opentab('Rooms')" class="tablinks">Rooms</div>
+      </td>
+      <td>
         <div onclick="opentab('Settings')" class="tablinks">Settings</div>
-    </ul>
+      </td>
+    </tr>
+    </table>
+  </div>
+
     <div id="Dashboard" class="tabcontent"><!-- ____________________________________________ -->
       <h2>Dashboard</h2>
               <ul>Usefull info defined by the user</ul>
@@ -51,7 +62,7 @@
       </div>
 
 
-      <div class="content">
+      <!--<div class="content">
         <div id ="Temperature" class="subtab"><h2>Temperature</h2>
                 <ul>T1</ul>
                 <ul>T2</ul>
@@ -72,7 +83,7 @@
                 <ul>L8</ul>
                 <ul>L9</ul>      
         </div>    
-    </div>
+    </div>!-->
 
     </div>
     <div id="Rooms" class="tabcontent"><h2>Rooms</h2><!-- ____________________________________________ -->

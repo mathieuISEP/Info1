@@ -2,7 +2,9 @@
 	background-color: white;
 	border: 5px orange solid;
 	width: auto;
+	height: auto;
 	margin: auto;
+	margin-bottom: 20px;
 	padding: 10px;
     border-radius:5px;
     -webkit-border-radius:5px;

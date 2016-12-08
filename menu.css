@@ -1,8 +1,10 @@
   .navbar{
-    display: inline-block;
-    /*padding: 15px 25px; */
-    font-weight: 600; 
+    padding: 10px; 
     text-align: center;
+    margin: auto;
+    width: 600px;
+    height: 60px;
+    border-radius: 10px;
 
   }
 
@@ -13,15 +15,17 @@
 
   .tablinks{
     display: inline-block;
-    color:#bbb;
+    color:orange;
     padding: 15px 25px; 
     font-weight: 600; 
     text-align: center;
-    border: 2px solid;
-    margin: 0 0 0 100px;
+    border: none;
+    margin: 0 0 0 30px;
   }
 
   .tablinks:hover {/* Enables hovering highligth */
+      border: 2px solid;
+      border-radius: 10px;
       cursor: pointer;
       background: orange;
       color: #fff;
@@ -40,7 +44,11 @@
 
   .navbar2{
     /*display: inline-block;*/
-
+    padding: 1px;
+    text-align: center;
+    margin: auto;
+    border: 2px orange solid;
+    color: orange;
   }
   .subtab{
     display:none;
