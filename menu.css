@@ -1,15 +1,59 @@
-#nav{
+  .navbar{
+    display: inline-block;
+    /*padding: 15px 25px; */
+    font-weight: 600; 
+    text-align: center;
 
-	background-color: orange;
-	width: 200px;
-	text-align: center;
-}
+  }
 
-ul{
-	text-align: center;
-	padding: 20px;
-}
+  .tabcontent{
+    display: none;
+    line-height: 50px;
+  }
 
-.menubar{
+  .tablinks{
+    display: inline-block;
+    color:#bbb;
+    padding: 15px 25px; 
+    font-weight: 600; 
+    text-align: center;
+    border: 2px solid;
+    margin: 0 0 0 100px;
+  }
 
-}
+  .tablinks:hover {/* Enables hovering highligth */
+      cursor: pointer;
+      background: orange;
+      color: #fff;
+  }
+  .tablinks:checked + label {
+      background: orange; color: #fff;
+  }
+
+  h1 {
+    text-align: center;
+    vertical-align: middle;
+    height: 100px;
+    padding:20px;
+
+    }
+
+  .navbar2{
+    /*display: inline-block;*/
+
+  }
+  .subtab{
+    display:none;
+  }
+  .subtablinks{
+    line-height: 50px;
+  }
+  .subtablinks:hover {/* Enables hovering highligth */
+      cursor: pointer;
+      color: orange;
+  }
+
+  .content{
+    display: inline-block;
+    width:20%;
+  }

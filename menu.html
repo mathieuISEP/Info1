@@ -1,26 +1,96 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-       
-        <title>Menu d'entete avec Dashboard/Features/Settings</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="menu.css" />
+        <meta charset="utf-8">
 
-    </head>
-    <body>
-        <div class = "menubar" align = "center"> 
-
-
-        <ul id="nav">
-            
-                <li<a href="http://localhost/Web_Interface/loginpage.html">Dashboard</a></li>
-                <li<a href="loginpage.html">Devices</a></li>             
-                <li<a href="loginpage.html">Settings</a></li>   
-                        
-        </ul>
-
-        </div>
-      
+        <title>Another title</title>
+        <link href="menu.css" type="text/css" rel="stylesheet">
+  <!--________________________________________Script________________________________________ -->
+  <script>
+          function opentab(Name) {
+              var i;
+              var x = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                  x[i].style.background = "none";
+              }
+              document.getElementById(Name).style.display = "block";
+          }
+          function opensubtab(Name){
+              var i;
+              var x = document.getElementsByClassName("subtab");
+              for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                  x[i].style.background = "none";
+              }
+              document.getElementById(Name).style.display = "block";
+          }
+  </script>
+  </head>
+  <body>
+  <h1> Dashboard/Rooms Choice test for tabs </h1>
+     <ul class="navbar">
+        
+        <div onclick="opentab('Dashboard')" class="tablinks">Dashboard</div>
+        <div onclick="opentab('Features')" class="tablinks">Features</div>
+        <div onclick="opentab('Rooms')" class="tablinks">Rooms</div>
+        <div onclick="opentab('Settings')" class="tablinks">Settings</div>
+    </ul>
+    <div id="Dashboard" class="tabcontent"><!-- ____________________________________________ -->
+      <h2>Dashboard</h2>
+              <ul>Usefull info defined by the user</ul>
   
-</body>
+    </div>
+
+    <div id="Features" class="tabcontent"><!-- ____________________________________________ -->
+      <div class="content">
+        <ul class="navbar2">
+        <div onclick="opensubtab('Temperature')" class="subtablinks">Temperature</div>
+        <div onclick="opensubtab('Luminosity')" class="subtablinks">Luminosity</div>
+        </ul>
+      </div>
+
+
+      <div class="content">
+        <div id ="Temperature" class="subtab"><h2>Temperature</h2>
+                <ul>T1</ul>
+                <ul>T2</ul>
+                <ul>T3</ul>
+                <ul>T4</ul>
+                <ul>T6</ul>
+                <ul>T7</ul>
+                <ul>T8</ul>
+                <ul>T9</ul>
+        </div>
+        <div id ="Luminosity" class="subtab"><h2>Luminosity</h2>
+                <ul>L1</ul>
+                <ul>L2</ul>
+                <ul>L3</ul>
+                <ul>L4</ul>
+                <ul>L6</ul>
+                <ul>L7</ul>
+                <ul>L8</ul>
+                <ul>L9</ul>      
+        </div>    
+    </div>
+
+    </div>
+    <div id="Rooms" class="tabcontent"><h2>Rooms</h2><!-- ____________________________________________ -->
+              <ul>Kitchen</ul>
+              <ul>Living Room</ul>
+              <ul>Bathroom</ul>
+              <ul>Toilet</ul>
+              <ul>Room 1</ul>
+              <ul>Room 2</ul>
+              <ul>Room 3</ul>
+              <ul>Kids room AKA: LEGO minefield</ul>
+      <ul></ul>
+    </div>
+
+    <div id="Settings" class="tabcontent"><h2>Settings</h2><!-- ____________________________________________ -->
+      <ul>Settings info plus other usefull information</ul>
+    </div>
+
+
+  </body>
 </html>
