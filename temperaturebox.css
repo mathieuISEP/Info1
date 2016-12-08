@@ -10,8 +10,6 @@
 #boxheader{
 	text-align: center;
 }
-#rooms{
-}
 #checkbox{
 	margin-bottom: 20px;
 	margin-left: 30px;
@@ -21,10 +19,9 @@
 	margin-bottom: 20px;
 	margin-left: 10px;
 }
-#checkedbox:checked~#rooms{
-	display: block;
-
-}
+/*#customvalues{
+	display: none;
+}*/
 #reset{
 	width: 80px;
 	height: 30px;
@@ -61,4 +58,8 @@
   	text-align: center;
   	width: 70px;
   	margin-left: 100px;
+}
+.hr{
+	margin: auto;
+	width: auto;
 }

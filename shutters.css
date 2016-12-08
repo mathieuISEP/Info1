@@ -1,40 +1,40 @@
-#alarmbox{
+#shuttersbox{
   background-color: orange;
   border-radius:10px;
   padding: 10px;
-  width: 350px;
+  width: 400px;
   color: white;
   text-align: center;
   font-family: "Comic sans MS";
+}
+#open1,#closed1{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+#open,#closed{
+margin-right: 20px;
+margin-left: 20px;
+}
+#checkbox{
+  margin-bottom: 20px;
 }
 #checkboxlabel{
   font-size: 15px;
   margin-bottom: 20px;
   margin-left: 10px;
 }
-#on1,#off1{
-  margin-right: 10px;
-  margin-left: 10px;
-}
-#on,#off{
-  margin-right: 20px;
-  margin-left: 20px;
-}
-#housealarm{
-  margin-left: 30px;
+#houseshutters{
+  margin-top: 10px;
   margin-bottom: 10px;
 }
-#roomalarms{
-  margin-top: 20px;
+}
+#roomshutters{
   margin-left: 20px;
 }
 .hr{
   margin: auto;
   width: auto;
   height: 2px;
-}
-#alarmbox-label{
-  margin-top: 10px;
 }
 /* The switch - the box around the slider */
 .switch {

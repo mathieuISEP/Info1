@@ -2,13 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-      <title>My Dashboard</title>
+      <title>Temperature</title>
         <link href="temperaturebox.css" type="text/css" rel="stylesheet">
+        <!--<script type="text/javascript">
+        $(document).ready(function(){
+          $('#checkbox').change(function() {
+            $('#customvalues').toggle()
+        });
+        });
+        </script>!-->
   </head>
 <body>
 <div class="content">
   <form name="temperature" method="get" accept-charset="utf-8">
-    <div id="temperaturebox">
+  <div id="temperaturebox">
       <div id="boxheader">Real Time Temperatures</div>
       <div class="hr"><hr /></div>
     <table>
@@ -18,9 +25,9 @@
         <td class="C">°C</td>
       </tr>
     </table>
-    <span id="checkbox"><input type="checkbox"></span><span id="checkboxlabel">Custom room temperatures</span>
-    <div>
-    <table id="rooms">
+    <span><input type="checkbox" id="checkbox" name="checkbox"></span><span id="checkboxlabel">Custom room temperatures</span> 
+    <div id="customvalues">
+    <table>
       <tr>
         <td>Living Room</td>
         <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
@@ -62,12 +69,12 @@
         <td class="°C">°C</td>
       </tr>
     </table>
-  </div>
+    </div>
       <div id="buttons">
         <span><input id="reset" type="submit" value="Reset"></span>
         <span><input id="apply" type="submit" value="Apply"></span>
       </div>
-    </div>
+  </div>
   </form>
 </div>
 </body>
