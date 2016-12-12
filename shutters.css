@@ -7,11 +7,11 @@
   text-align: center;
   font-family: "Comic sans MS";
 }
-#open1,#closed1{
+#open,#closed{
   margin-right: 10px;
   margin-left: 10px;
 }
-#open,#closed{
+.open,.closed{
 margin-right: 20px;
 margin-left: 20px;
 }
@@ -26,10 +26,13 @@ margin-left: 20px;
 #houseshutters{
   margin-top: 10px;
   margin-bottom: 10px;
-}
+  margin-left: 20px;
 }
 #roomshutters{
   margin-left: 20px;
+}
+#rooms{
+  display: none;
 }
 .hr{
   margin: auto;

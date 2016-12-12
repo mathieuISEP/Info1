@@ -10,6 +10,9 @@
 #boxheader{
 	text-align: center;
 }
+#housetemp{
+	margin-left: 50px;
+}
 #checkbox{
 	margin-bottom: 20px;
 	margin-left: 30px;
@@ -19,15 +22,15 @@
 	margin-bottom: 20px;
 	margin-left: 10px;
 }
-/*#customvalues{
+#rooms{
 	display: none;
-}*/
+}
 #reset{
 	width: 80px;
 	height: 30px;
 	color: black;
 	background-color: white;
-	margin-left: 100px;
+	margin-left: 80px;
 	border: outset;
 	border-radius: 10px;
 }

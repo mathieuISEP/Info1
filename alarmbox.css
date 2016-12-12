@@ -12,11 +12,11 @@
   margin-bottom: 20px;
   margin-left: 10px;
 }
-#on1,#off1{
+#on,#off{
   margin-right: 10px;
   margin-left: 10px;
 }
-#on,#off{
+.on,.off{
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -24,9 +24,12 @@
   margin-left: 30px;
   margin-bottom: 10px;
 }
-#roomalarms{
+#alarmrooms{
   margin-top: 20px;
   margin-left: 20px;
+}
+#rooms{
+  display: none;
 }
 .hr{
   margin: auto;
