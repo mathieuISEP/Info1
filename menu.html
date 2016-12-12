@@ -5,7 +5,11 @@
         <title>AutoDhome</title>
         <link href="topbar.css" type="text/css" rel="stylesheet">
         <link href="menu.css" type="text/css" rel="stylesheet">
+        <link href="temperaturebox.css" type="text/css" rel="stylesheet">
+        <link href="alarmbox.css" type="text/css" rel="stylesheet">
+        <link href="shutters.css" type="text/css" rel="stylesheet">
         <script type="text/javascript" src="menu.js"></script>
+        <script type="text/javascript" src="checkbox.js"></script>
 
   </head>
   <body>
@@ -28,7 +32,7 @@
     </div>
   </div>
 
-    <div class="navbar">
+    <nav class="navbar">
      <table>
         <tr>
           <td>
@@ -45,7 +49,7 @@
       </td>
     </tr>
     </table>
-  </div>
+  </nav>
 
     <div id="Dashboard" class="tabcontent"><!-- ____________________________________________ -->
       <h2>Dashboard</h2>
@@ -54,25 +58,106 @@
     </div>
 
     <div id="Features" class="tabcontent"><!-- ____________________________________________ -->
-      <div class="content">
-        <ul class="navbar2">
+      <section class="navbar2">
+        <ul>
         <div onclick="opensubtab('Temperature')" class="subtablinks">Temperature</div>
         <div onclick="opensubtab('Luminosity')" class="subtablinks">Luminosity</div>
         </ul>
+      </section>
+
+
+      <aside class="content">
+
+        <div id ="Temperature" class="subtab">
+        <h2>Temperature</h2>
+        <form name="temperature" method="get" accept-charset="utf-8">
+        <div id="temperaturebox">
+      
+      <div id="boxheader">Temperatures</div>
+      
+      <div class="hr"><hr /></div>
+    
+    <table>
+      <tr>
+        <td><div id="housetemp">House Temperature</div></td>
+        <td><input id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td class="C">°C</td>
+      </tr>
+    </table>
+
+    <div>
+      <span><input type="checkbox" id="checkbox" name="checkbox" onclick="javascript:displayifchecked()"></span>Custom room temperatures
+  </div> 
+    
+    <div id="rooms">
+
+    <table>
+
+      <tr>
+        <td>Living Room</td>
+        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td class="C">°C</td>
+      </tr>
+
+      <tr>
+        <td>Kitchen</td>
+        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td class="C">°C</td>
+      </tr>
+
+      <tr>
+        <td>Bedroom 1</td>
+        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td class="C">°C</td>
+      </tr>
+
+      <tr>
+        <td>Bedroom 2</td>
+        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td class="C">°C</td>
+      </tr>
+
+      <tr>
+        <td>Bedroom 3</td>
+        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td class="C">°C</td>
+      </tr>
+
+      <tr>
+        <td>Bedroom 4</td>
+        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td class="C">°C</td>
+      </tr>
+
+      <tr>
+        <td>Bathroom 1</td>
+        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td class="C">°C</td>
+      </tr>
+
+      <tr>
+        <td>Bathroom 2</td>
+        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td class="°C">°C</td>
+      </tr>
+
+    </table>
+    </div>
+
+      <div id="buttons">
+        <span><input id="reset" type="submit" value="Reset"></span>
+        <span><input id="apply" type="submit" value="Apply"></span>
       </div>
 
+  </div>
+  </form>
+  </div>
+  </aside>
 
-      <!--<div class="content">
-        <div id ="Temperature" class="subtab"><h2>Temperature</h2>
-                <ul>T1</ul>
-                <ul>T2</ul>
-                <ul>T3</ul>
-                <ul>T4</ul>
-                <ul>T6</ul>
-                <ul>T7</ul>
-                <ul>T8</ul>
-                <ul>T9</ul>
-        </div>
+
+  <div>
+
+
         <div id ="Luminosity" class="subtab"><h2>Luminosity</h2>
                 <ul>L1</ul>
                 <ul>L2</ul>
@@ -83,7 +168,7 @@
                 <ul>L8</ul>
                 <ul>L9</ul>      
         </div>    
-    </div>!-->
+    </div>
 
     </div>
     <div id="Rooms" class="tabcontent"><h2>Rooms</h2><!-- ____________________________________________ -->

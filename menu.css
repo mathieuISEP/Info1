@@ -44,18 +44,19 @@
     }
 
   .navbar2{
-    /*display: inline-block;*/
-    padding: 1px;
-    text-align: center;
-    margin: auto;
+    display: block;
+    padding: 10px;
     border: 2px orange solid;
     color: orange;
+    float: left;
+
   }
   .subtab{
     display:none;
   }
   .subtablinks{
     line-height: 50px;
+    font-family: "Arial", sans-serif;
   }
   .subtablinks:hover {/* Enables hovering highligth */
       cursor: pointer;
