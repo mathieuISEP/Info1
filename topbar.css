@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "quantify";
+    src: url("Quantify-Bold.ttf") format("truetype");
+}
 .header{
 	background-color: white;
 	border: 5px orange solid;
@@ -25,10 +29,10 @@
 }
 .title {
 	color: orange;
-	font-family: "Comic sans MS";
+	font-family: "quantify";
 	text-align: center;
 	font-size: 30px;
-	margin: auto;
+	margin-top: 10px;
 }	
 #logout{
 	color:black;

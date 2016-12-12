@@ -7,7 +7,7 @@
     </head>
 
 <body>
-    <img class="logo" src="LOGOINCROYABLE.png" alt"=logo">
+    <img class="logo" src="LOGOINCROYABLE.png" alt"=logo" />
 
    <?php
    include("database.php");
@@ -43,29 +43,35 @@
     <h1>
         Enter my Home
     </h1>
-    <ul style="list-style-type:none">
-    <li>
-        <div class="user">
-        <label for="username">User</label>
-        <span class="userinput">
-            <input type="user" name="username" placeholder="username" required>
+   <table id="loginpagetable">
+    <tr>
+      <div class="user">
+        <td>
+        <label for="username">Username</label>
+        </td>
+        <td>
+        <span>
+            <input id="userinput" type="user" name="username" placeholder="username" required>
         </span>
-        </div>
-    </li>
-    <li>
-    <div class="password">
+        </td>
+      </div>
+    </tr>
+    <tr>
+      <div class="password">
+        <td>
         <label for="password">Password</label>
-        <span class="passwordinput">
-            <input type="password" name="password" placeholder="password" required>
+        </td>
+        <td>
+        <span>
+            <input id="passwordinput" type="password" name="password" placeholder="password" required>
         </span>
+        </td>
     </div>
-    </li>
+    </tr>
+    </table>
     <div class="login">
-        <li>
              <input id="login" type="submit" value="Login">
-        </li>
     </div>
-  </ul>
 </form>
 </body>
 </html>

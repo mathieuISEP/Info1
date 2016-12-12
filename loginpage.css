@@ -8,7 +8,7 @@ form{
 	border: 5px orange solid;
 	border-radius: 30px;
  	color: orange;
-	font-family: "Comic sans MS";	
+	font-family: "Arial", sans-serif;	
  }
  h1{
  	text-align: center;
@@ -20,31 +20,29 @@ form{
  input[type=submit]{
  	width: 100px;
  	border-radius: 10px;
- 	font-family: "Comic Sans MS";
+ 	font-family: "Arial", sans-serif;
  	font-size: 20px;
  	color: white
  }
  .user.password{
  	text-align: left;
  }
- .userinput{
- 	margin-left: 30px;
- }
  .login{
  	margin-top: 20px;
+ 	margin-bottom: 20px;
  	position: relative;
- 	right: 20px;
+ 	text-align: center;
  }
  #login{
  	background-color: orange;
- }
- .login{
- 	text-align: center;
  }
  .password{
  	margin-top: 10px;
  }
  .logo{
  	display: block;
+ 	margin: auto;
+ }
+ #loginpagetable{
  	margin: auto;
  }

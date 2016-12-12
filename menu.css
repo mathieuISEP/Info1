@@ -21,6 +21,7 @@
     text-align: center;
     border: none;
     margin: 0 0 0 30px;
+    font-family: "Arial", sans-serif;
   }
 
   .tablinks:hover {/* Enables hovering highligth */
