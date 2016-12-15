@@ -1,4 +1,16 @@
-<!doctype html>
+    <? php
+      include("database.php");// Connect to databsa
+      $list_rooms = "SELECT Name_room 
+                    FROM room 
+                    WHERE id_home = 1";
+      $result = mysql_query($list_rooms);
+      while($row = mysql_fetch_array($result)) {
+        echo $row['Name_room'];
+        }
+      
+
+    ?>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -181,18 +193,7 @@
 
     <div id="Rooms" class="tabcontent"><h2>Rooms</h2><!-- ____________________________________________ -->
 
-    <?php
-      include("database.php");// Connect to databsa
-      $list_rooms = "SELECT Name_room 
-                    FROM room 
-                    WHERE id_home = 1";
-      $result = mysql_query($list_rooms);
-      while($row = mysql_fetch_array($result)) {
-        echo $row['Name_room'];
-        }
-      
 
-    ?>
 
 <!--               <ul>Kitchen</ul>
               <ul>Living Room</ul>

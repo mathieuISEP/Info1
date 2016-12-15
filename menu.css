@@ -6,11 +6,13 @@
     height: 60px;
     border-radius: 10px;
 
+
   }
 
   .tabcontent{
     display: none;
     line-height: 50px;
+
   }
 
   .tablinks{
@@ -22,6 +24,7 @@
     border: none;
     margin: 0 0 0 30px;
     font-family: "Arial", sans-serif;
+    border: 2px #f2f2f2 ;
   }
 
   .tablinks:hover {/* Enables hovering highligth */
@@ -49,18 +52,23 @@
     border: 2px orange solid;
     color: orange;
     float: left;
-
+    min-width: 180px;
+    min-height: 100%;
   }
+
   .subtab{
     display:none;
+
+
   }
   .subtablinks{
     line-height: 50px;
     font-family: "Arial", sans-serif;
   }
-  .subtablinks:hover {/* Enables hovering highligth */
+  .subtablinks:hover {/* Enables hovering highligth over subtab links */
       cursor: pointer;
-      color: orange;
+      background: orange;
+      color: #fff;
   }
 
   .content{
