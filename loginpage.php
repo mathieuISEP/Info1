@@ -10,36 +10,44 @@
     <img class="logo" src="LOGOINCROYABLE.png" alt"=logo" />
 
    <?php
-   include("database.php");
-   session_start();
-   
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
+   if (isset($_POST['username']) && isset ($_POST['password'])){   
+ 
+   $DB_SERVER = 'localhost';
+   $DB_USERNAME = 'root';
+   $DB_PASSWORD = '';
+   $DB_DATABASE = 'autodhome';
+
+   $myusername = $_POST['username'];
+   $mypassword = $_POST['password']; 
+   $db =  new mysqli($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);  
+       
       
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT id FROM client WHERE last_name = '$myusername' and password = '$mypassword'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myusername and $mypassword, table row must be 1 row
-        
-      if($count == 1) {
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-         
-         header("location: welcome.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
+      $sql = "SELECT id,last_name FROM client WHERE last_name = '$myusername'";
+      $result = $db -> query($sql);
+
+      if ($result->num_rows > 0){
+          $row = mysqli_fetch_assoc($result);
+          if(strcmp($mypassword,$row["password"]) == 0){
+          header("location: homepage.html");
+          echo 'connecté';
+
+          }
+          else{
+            echo 'incorrect password';
+          }
+        } 
+          else{
+            echo'Username doesn\'t exist';
+
+       }   
+       }
+       else{
+
+
 ?>
     
-<form name="login" action="index_submit" method="post" accept-charset="utf-8">
+<form name="login" action="" method="post" accept-charset="utf-8">
     <h1>
         Enter my Home
     </h1>
@@ -73,5 +81,8 @@
              <input id="login" type="submit" value="Login">
     </div>
 </form>
+ <?php
+ }
+ ?>
 </body>
 </html>
