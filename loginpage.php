@@ -23,7 +23,7 @@
        
       
       
-      $sql = "SELECT id,last_name FROM client WHERE last_name = '$myusername'";
+      $sql = "SELECT * FROM client WHERE last_name = '$myusername'";
       $result = $db -> query($sql);
 
       if ($result->num_rows > 0){
@@ -40,7 +40,7 @@
           else{
             echo'Username doesn\'t exist';
 
-       }   
+       }    
        }
        else{
 
