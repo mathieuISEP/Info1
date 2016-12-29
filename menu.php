@@ -1,5 +1,5 @@
     <? php
-      include("database.php");// Connect to databsa
+      include("database.php");// Connect to database
       $list_rooms = "SELECT Name_room 
                     FROM room 
                     WHERE id_home = 1";
@@ -31,6 +31,8 @@
     </div>
     <div>
     <button class="logout">
+      <a href="http://localhost/Info1/loginpage.php" class="button">Logout</a>
+
         <img id="fleche" src="fleche.jpg" alt="fleche" />
         <h2 id="logout">
           logout

@@ -29,15 +29,18 @@
       if ($result->num_rows > 0){
           $row = mysqli_fetch_assoc($result);
           if(strcmp($mypassword,$row["password"]) == 0){
-          header("location: homepage.html");
+          header("location: menu.php");
           echo 'connecté';
 
           }
           else{
-            echo 'incorrect password';
+             echo 'incorrect password';
+
+            
           }
         } 
           else{
+            
             echo'Username doesn\'t exist';
 
        }    
