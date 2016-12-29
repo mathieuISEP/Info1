@@ -31,12 +31,13 @@
     </div>
     <div>
     <button class="logout">
-      <a href="http://localhost/Info1/loginpage.php" class="button">Logout</a>
+      <a href="http://localhost/Info1/loginpage.php" class="button">
 
         <img id="fleche" src="fleche.jpg" alt="fleche" />
         <h2 id="logout">
           logout
         </h2>
+        </a>
     </button>
     </div>
     <div>

@@ -80,7 +80,10 @@
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
-
     text-decoration: none;
     color: initial;
+    float: right;
+    padding-left: 15px;
+    background-color: white;
+    border: none;
 }
