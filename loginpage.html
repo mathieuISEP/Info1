@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DomISEP: Login</title>
+        <link href="loginpage.css" type="text/css" rel="stylesheet">
+    </head>
+
+<body>
+    <img class="logo" src="LOGOINCROYABLE.png" alt"=logo" />
+
+   <?php
+   include("database.php");
+   session_start();
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $myusername = mysqli_real_escape_string($db,$_POST['username']);
+      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      
+      $sql = "SELECT id FROM client WHERE last_name = '$myusername' and password = '$mypassword'";
+      $result = mysqli_query($db,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+        
+      if($count == 1) {
+         session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         
+         header("location: welcome.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
+?>
+    
+<form name="login" action="index_submit" method="post" accept-charset="utf-8">
+    <h1>
+        Enter my Home
+    </h1>
+   <table id="loginpagetable">
+    <tr>
+      <div class="user">
+        <td>
+        <label for="username">Username</label>
+        </td>
+        <td>
+        <span>
+            <input id="userinput" type="user" name="username" placeholder="username" required>
+        </span>
+        </td>
+      </div>
+    </tr>
+    <tr>
+      <div class="password">
+        <td>
+        <label for="password">Password</label>
+        </td>
+        <td>
+        <span>
+            <input id="passwordinput" type="password" name="password" placeholder="password" required>
+        </span>
+        </td>
+    </div>
+    </tr>
+    </table>
+    <div class="login">
+             <input id="login" type="submit" value="Login">
+    </div>
+</form>
+</body>
+</html>

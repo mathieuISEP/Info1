@@ -196,19 +196,43 @@
 
     <div id="Rooms" class="tabcontent"><h2>Rooms</h2><!-- ____________________________________________ -->
 
+      <?php
+
+       $DB_SERVER = 'localhost';
+       $DB_USERNAME = 'root';
+       $DB_PASSWORD = '';
+       $DB_DATABASE = 'autodhome';
+      
+        $db =  mysqli_connect($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
+        $list_rooms = "SELECT Name_room 
+              FROM room 
+              WHERE id_home = 1"; 
 
 
-<!--               <ul>Kitchen</ul>
-              <ul>Living Room</ul>
-              <ul>Bathroom</ul>
-              <ul>Toilet</ul>
-              <ul>Room 1</ul>
-              <ul>Room 2</ul>
-              <ul>Room 3</ul>
-              <ul>Kids room AKA: LEGO minefield</ul> -->
-               
-              <!--  <iframe src="https://www.reddit.com/"></iframe> -->
-      <ul></ul>
+
+      $results = mysqli_query($db,$list_rooms);
+
+      echo "<ul>";
+      if ($result=mysqli_query($db,$list_rooms))
+        {
+        // Fetch one and one row
+        while ($row=mysqli_fetch_row($result))
+          {
+          echo "<li>";  
+          printf ($row[0]);
+          echo "</li>";  
+
+          }
+        // Free result set
+        mysqli_free_result($result);
+      }
+
+      mysqli_close($db);
+
+      echo "This is an auto-generated query";
+
+    ?>
+      
     </div>
 
     <div id="Settings" class="tabcontent"><h2>Settings</h2><!-- ____________________________________________ -->

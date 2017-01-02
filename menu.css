@@ -58,9 +58,8 @@
 
   .subtab{
     display:none;
-
-
   }
+  
   .subtablinks{
     line-height: 50px;
     font-family: "Arial", sans-serif;
@@ -86,4 +85,8 @@
     padding-left: 15px;
     background-color: white;
     border: none;
+}
+
+.list {
+
 }
