@@ -49,20 +49,18 @@
 									FROM room 
 									WHERE id_home = 1";	
 
-
-
-					$results = mysqli_query($db,$list_rooms);
-				
-
 					if ($result=mysqli_query($db,$list_rooms))
 					  {
 					  // Fetch one and one row
 					  while ($row=mysqli_fetch_row($result))
+					  	// For each row in the query
 					    {
+					   
 					    $new = $row[0];
-					    echo '<tr>'; echo '<td>'; echo $new; echo' </td>';
-					    printf ($row[0]);
-					    echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
+					    echo '<tr>'; echo '<td>'; echo $new; echo' </td>'; // Display Title of room
+					   
+					   // Display someting
+					    echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[ 0-9]*"></td>';
 					     echo '<td class="C">°C</td>';
                   	
 					    echo "</tr>";

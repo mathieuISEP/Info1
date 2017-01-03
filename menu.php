@@ -348,7 +348,7 @@
        $DB_SERVER = 'localhost';
        $DB_USERNAME = 'root';
        $DB_PASSWORD = '';
-       $DB_DATABASE = 'autodhome';
+       $DB_DATABASE = 'auto2';
       
         $db =  mysqli_connect($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
         $list_rooms = "SELECT Name_room 
@@ -365,9 +365,9 @@
         // Fetch one and one row
         while ($row=mysqli_fetch_row($result))
           {
-          echo "<li>";  
+          echo "<ul>";  
           printf ($row[0]);
-          echo "</li>";  
+          echo "</ul>";  
 
           }
         // Free result set
@@ -383,7 +383,12 @@
     </div>
 
     <div id="Settings" class="tabcontent"><h2>Settings</h2><!-- ____________________________________________ -->
-      <ul>Settings info plus other usefull information</ul>
+      
+      <tr class ="settingtable">
+        <ul > <div> Change email </ul>
+        <ul > Change password </ul>
+        <ul > Email Notifications </ul>
+      </tr>
     </div>
 
 

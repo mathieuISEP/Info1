@@ -12,7 +12,6 @@
   .tabcontent{
     display: none;
     line-height: 50px;
-
   }
 
   .tablinks{
@@ -87,6 +86,6 @@
     border: none;
 }
 
-.list {
-
+.settingtable {
+  border: 2px orange solid;
 }
