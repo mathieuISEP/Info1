@@ -1,5 +1,5 @@
 function displayifchecked() {
-       var rooms = document.getElementById("rooms");
+       var rooms = document.getElementByClassNme("rooms");
        if(rooms.style.display == 'block')
           rooms.style.display = 'none';
        else

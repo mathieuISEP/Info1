@@ -13,7 +13,7 @@
 #housetemp{
 	margin-left: 50px;
 }
-#checkbox{
+.checkbox{
 	margin-bottom: 20px;
 	margin-left: 30px;
 }
@@ -22,7 +22,7 @@
 	margin-bottom: 20px;
 	margin-left: 10px;
 }
-#rooms{
+.rooms{
 	display: none;
 }
 #reset{
