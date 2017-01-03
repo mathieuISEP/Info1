@@ -87,5 +87,17 @@
 }
 
 .settingtable {
-  border: 2px orange solid;
+    padding: 10px;
+    border: 2px orange solid;
+    color: orange;
+    min-width: 180px;
+    min-height: 100%;
+    max-width: 200px;
+}
+
+.Newsletter{
+    padding: 10px;
+
+    color: orange;
+
 }

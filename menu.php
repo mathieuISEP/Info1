@@ -237,11 +237,17 @@
 
     <div id="Settings" class="tabcontent"><h2>Settings</h2><!-- ____________________________________________ -->
       
-      <tr class ="settingtable">
-        <ul > <div> Change email </ul>
-        <ul > Change password </ul>
-        <ul > Email Notifications </ul>
-      </tr>
+      <div class ="settingtable">
+        <ul > <div > Change email </div> </ul>
+        <ul > <div > Change password </div> </ul>
+        <ul > <div > Email Notifications </div> </ul>
+        <ul > <div > Customize your Dashboard </div> </ul>
+        <ul ></ul>
+      </div>
+
+      <div class="Newsletter"> <label ><input type="checkbox" value="">Recieve DomISEP Newsletter </label></div>
+
+
     </div>
 
 
