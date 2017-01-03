@@ -79,7 +79,7 @@
       <section class="navbar2"> <!-- Sub navigation bar  -->
         <ul>
         <div onclick="opensubtab('Temperature')" class="subtablinks">Temperature</div>
-        <div onclick="opensubtab('Luminosity')" class="subtablinks">Luminosity</div>
+        <div onclick="opensubtab('Alarm')" class="subtablinks">Alarm</div>
         </ul>
       </section>
 
@@ -103,10 +103,10 @@
               </table>
 
               <div>
-                <span><input type="checkbox" id="checkbox" name="checkbox" onclick="javascript:displayifchecked()"></span>Custom room temperatures
+                <span><input type="checkbox" class="checkbox" name="checkbox" onclick="javascript:displayifchecked()"></span>Custom room temperatures
               </div> 
             
-              <div id="rooms">
+              <div class="rooms">
                 <table>
                   <tr>
                     <td>Living Room</td>
@@ -176,21 +176,168 @@
       </aside> <!-- Sub navigation content end  -->
 
 
-      <div>
-        <div id ="Luminosity" class="subtab">
-                        <ul>L1</ul>
-                        <ul>L2</ul>
-                        <ul>L3</ul>
-                        <ul>L4</ul>
-                        <ul>L6</ul>
-                        <ul>L7</ul>
-                        <ul>L8</ul>
-                        <ul>L9</ul>
+      <aside class="content">
+        <div id ="Alarm" class="subtab">
 
-    </iframe> 
-          </div>    
+      <div id="alarmbox">
+        <div>Alarm</div>
+       <div class="hr"><hr /></div>
+        <table id="housealarm">
+          <tr>
+            <td>House Alarm</td>
+            <td>             
+              <div id="off">OFF</div>
+            </td>
+            <td>
+             <label class="switch">
+                <input type="checkbox">
+                 <div class="slider round"></div>
+            </label>     
+           </td>
+           <td>
+             <div id="on">ON</div>
+            </td>
+          </tr>
+        </table>
+        <span>
+        <input type="checkbox" class="checkbox" onclick="javascript:displayifchecked()">
+        Custom room alarms
+      </span> 
+      <div class="rooms">
+        <table id="alarmrooms">
+          <tr>
+            <td>Living Room
+            </td>
+            <td>
+              <div class="off">OFF</div>
+            </td>
+            <td>
+              <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+              </label>
+            </td>
+            <td>
+              <div class="on">ON</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Kitchen
+            </td>
+            <td>
+              <div class="off">OFF</div>
+            </td>
+            <td>
+              <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+              </label>
+            </td>
+            <td>
+              <div class="on">ON</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Bedroom 1
+            </td>
+            <td>
+              <div class="off">OFF</div>
+            </td>
+            <td>
+              <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+              </label>
+            </td>
+            <td>
+              <div class="on">ON</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Bedroom 2
+            </td>
+            <td>
+              <div class="off">OFF</div>
+            </td>
+            <td>
+              <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+              </label>
+            </td>
+            <td>
+              <div class="on">ON</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Bedroom 3
+            </td>
+            <td>
+              <div class="off">OFF</div>
+            </td>
+            <td>
+              <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+              </label>
+            </td>
+            <td>
+              <div class="on">ON</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Bedroom 4
+            </td>
+            <td>
+              <div class="off">OFF</div>
+            </td>
+            <td>
+              <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+              </label>
+            </td>
+            <td>
+              <div class="on">ON</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Bathroom 1
+            </td>
+            <td>
+              <div class="off">OFF</div>
+            </td>
+            <td>
+              <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+              </label>
+            </td>
+            <td>
+              <div class="on">ON</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Bathroom 2
+            </td>
+            <td>
+              <div class="off">OFF</div>
+            </td>
+            <td>
+              <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+              </label>
+            </td>
+            <td>
+              <div class="on">ON</div>
+            </td>
+          </tr>
+        </table>
         </div>
-
+        </div>
+        </div>    
+      </aside>
     </div>
 
 
