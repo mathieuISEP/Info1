@@ -1,15 +1,4 @@
-    <? php
-      include("database.php");// Connect to database
-      $list_rooms = "SELECT Name_room 
-                    FROM room 
-                    WHERE id_home = 1";
-      $result = mysql_query($list_rooms);
-      while($row = mysql_fetch_array($result)) {
-        echo $row['Name_room'];
-        }
-      
 
-    ?>
 
 <html lang="en">
     <head>
@@ -390,7 +379,12 @@
         <ul > <div > Change password </div> </ul>
         <ul > <div > Email Notifications </div> </ul>
         <ul > <div > Customize your Dashboard </div> </ul>
-        <ul ></ul>
+        <ul > <?php 
+        ob_start();
+        require("loginpage.php");
+        $number ;
+        ob_end_clean();
+         ;?> </ul>
       </div>
 
       <div class="Newsletter"> <label ><input type="checkbox" value="">Recieve DomISEP Newsletter </label></div>
