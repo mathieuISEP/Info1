@@ -38,6 +38,7 @@
                 <?php
 
                 include ("login.php");
+                	echo '$number';
 
 				   $DB_SERVER = 'localhost';
 				   $DB_USERNAME = 'root';

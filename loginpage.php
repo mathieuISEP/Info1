@@ -26,6 +26,7 @@
       
       
       $sql = "SELECT * FROM client WHERE last_name = '$myusername'";
+      $number = "SELECT client_number FROM client WHERE last_name = '$myusername'";
       $result = $db -> query($sql);
 
       if ($result->num_rows > 0){
