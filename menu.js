@@ -7,7 +7,7 @@ function opentab(Name) {
               }
               document.getElementById(Name).style.display = "block";
           }
-          function opensubtab(Name){
+function opensubtab(Name){
               var i;
               var x = document.getElementsByClassName("subtab");
               for (i = 0; i < x.length; i++) {
