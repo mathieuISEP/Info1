@@ -348,7 +348,8 @@
        $DB_SERVER = 'localhost';
        $DB_USERNAME = 'root';
        $DB_PASSWORD = '';
-       $DB_DATABASE = 'auto2';
+       $DB_DATABASE = 'autodhome';
+       $DB_DATABASE = 'autodhome';
       
         $db =  mysqli_connect($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
         $list_rooms = "SELECT Name_room 

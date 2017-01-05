@@ -37,6 +37,8 @@
 
                 <?php
 
+                include ("login.php");
+
 				   $DB_SERVER = 'localhost';
 				   $DB_USERNAME = 'root';
 				   $DB_PASSWORD = '';
@@ -47,7 +49,7 @@
 
 				  	$list_rooms = "SELECT Name_room 
 									FROM room 
-									WHERE id_home = 1";	
+									WHERE id_home = $number";	
 
 					if ($result=mysqli_query($db,$list_rooms))
 					  {
