@@ -37,43 +37,50 @@
 
                 <?php
 
-                include ("login.php");
-                	echo '$number';
-
-				   $DB_SERVER = 'localhost';
+                   $DB_SERVER = 'localhost';
 				   $DB_USERNAME = 'root';
 				   $DB_PASSWORD = '';
 				   $DB_DATABASE = 'autodhome';
-				  
-				  	$db =  mysqli_connect($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
-
-
+				   $db =  new mysqli($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);  
 				  	$list_rooms = "SELECT Name_room 
 									FROM room 
-									WHERE id_home = $number";	
+									WHERE id_home = 1";	
 
-					if ($result=mysqli_query($db,$list_rooms))
-					  {
-					  // Fetch one and one row
-					  while ($row=mysqli_fetch_row($result))
-					  	// For each row in the query
-					    {
+					if ($result=mysqli_query($db,$list_rooms)){
+					// Fetch one and one row
+						while ($row=mysqli_fetch_row($result)){
+					// For each row in the query
+					$new = $row[0];
+					echo '<tr>';
+					echo '<td>'; echo $new; echo' </td>'; 
+					// Display Title of room
 					   
-					    $new = $row[0];
-					    echo '<tr>'; echo '<td>'; echo $new; echo' </td>'; // Display Title of room
-					   
-					   // Display someting
-					    echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[ 0-9]*"></td>';
-					     echo '<td class="C">°C</td>';
-                  	
-					    echo "</tr>";
-					    }
-					  // Free result set
-					  mysqli_free_result($result);
+					//Display whats repetitive
+					echo '<td> <div class="off">OFF</div> </td>';
+					echo '<td> <label class="switch">
+					              <input type="checkbox">
+					             <div class="slider round"></div>
+					              </label> 
+					      </td>';
+					echo '<td><div class="on">ON</div></td>';
+					echo "</tr>";
+
+
+
+				          // echo ' <tr><td>';
+				          // printf ($row[0]);
+				          // echo'</td>';
+				          // echo' <td>
+					         //            <input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+					         //            <td class="C">°C</td>';
+              //    			echo'</tr>';
 					}
+					mysqli_free_result($result);
+				}
 
-					mysqli_close($db);
+				mysqli_close($db);
 
+      			echo "This is an auto-generated query";
 				?>
 
                 </table>
