@@ -39,7 +39,7 @@ id_room int,
 type_sensor  varchar (255),
 sensor_name varchar (255),
 current_data float,
-past_data int
+target_data float
 );
 
 CREATE TABLE Actuator(

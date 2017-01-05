@@ -12,10 +12,19 @@
   </head>
 <body>
 
+     <?php
+
+    include 'database.php';
+    $post_temp = $_POST['post_temperature'];
+    $sql = "UPDATE sensor SET past_data = $post_temp WHERE id='3'";
+    $result = $db -> query($sql);
+ ?>
+ 
+
 
 <div class="content">
 
-  <form name="temperature" method="get" accept-charset="utf-8">
+  <form name="temperature" method="post" accept-charset="utf-8">
   <div id="temperaturebox">
       
       <div id="boxheader">Temperatures</div>
@@ -25,18 +34,10 @@
     <table>
       <tr>
         <td><div id="housetemp">House Temperature</div></td>
-        <td><input name = "post_temperature" id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td><input name = "post_temperature" placeholder="post_temperature" id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
         <td class="C">°C</td>
       </tr>
-      <?php
-
-    include 'database.php';
-    $post_temp = $_POST['post_temperature'];
-    $sql = "UPDATE sensors SET current_data = $temp1 WHERE id='3';";
-    $result = $db -> query($sql);
-    echo $result;
-
-?>
+ 
     </table>
 
     <div>

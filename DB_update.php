@@ -2,7 +2,7 @@
 
 include 'database.php';   
 
-$temp1= mysqli_escape_String($db,$_POST[]);
+$temp1= mysqli_escape_String($db,$_POST['post_temperature']);
 
 $query = "UPDATE sensors SET current_data='".$temp1."' WHERE id='2';";
 
