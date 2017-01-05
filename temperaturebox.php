@@ -5,8 +5,29 @@
       <title>Temperature</title>
         <link href="temperaturebox.css" type="text/css" rel="stylesheet">
         <script type="text/javascript" src="checkbox.js"></script>
+
+
+   
+
   </head>
 <body>
+
+<?php
+
+    include 'database.php';
+    $post_temp = $_POST['temperature'];
+    $sql = "UPDATE sensors SET current_data='".$temp1."' WHERE id='3';";
+    $result = $db -> query($sql);
+    echo $result;
+
+
+
+
+
+
+
+
+?>
 <div class="content">
 
   <form name="temperature" method="get" accept-charset="utf-8">
@@ -19,7 +40,7 @@
     <table>
       <tr>
         <td><div id="housetemp">House Temperature</div></td>
-        <td><input id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td><input name = "post_temperature" id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
         <td class="C">°C</td>
       </tr>
     </table>
