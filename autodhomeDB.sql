@@ -66,6 +66,7 @@ Insert into Room values ('Living room home 2',8,2,'Living room');
 Insert into Room values ('Kitchen home 2',9,2,'Kitchen');
 Insert into Room values ('Room 1 home 2',10,2,'Room');
 
+Insert into sensor values (1,2,'temperature_sensor','thermometer 1',15 , '');
 
 
 
