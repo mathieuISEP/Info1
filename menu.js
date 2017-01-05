@@ -16,3 +16,17 @@ function opensubtab(Name){
               }
               document.getElementById(Name).style.display = "block";
           }
+
+function setTemp  (current0,target){
+          var current =current0;
+          if (current < target )
+            while (current<target){
+              current =current +1;
+            }
+          else if (current>target){
+              current = current -1;
+          }
+          else {}
+
+
+}
