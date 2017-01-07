@@ -1,4 +1,4 @@
-function displayifchecked() {
+function display() {
    var rooms = document.getElementsByClassName("rooms");
    var room = rooms[0];
        if(room.style.display == "block")

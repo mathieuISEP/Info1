@@ -69,6 +69,7 @@
         <ul>
         <div onclick="opensubtab('Temperature')" class="subtablinks">Temperature</div>
         <div onclick="opensubtab('Alarm')" class="subtablinks">Alarm</div>
+        <div onclick="opensubtab('Shutters')" class="subtablinks">Shutters</div>
         </ul>
       </section>
 
@@ -95,7 +96,7 @@
                 <span><input type="checkbox" class="checkbox" name="checkbox" onclick="javascript:displayifchecked()"></span>Custom room temperatures
               </div> 
             
-              <div id="rooms">
+              <div class="rooms">
                 <table> 
 
 
@@ -223,6 +224,167 @@
         </div>
         </div>    
       </aside>
+
+      <aside class="content">
+        <div id ="Shutters" class="subtab">
+
+        <div id="shuttersbox">
+    <div>Shutters</div>
+    <div class="hr"><hr /></div>
+    <table id="houseshutters">
+      <tr>
+        <td>House Shutters
+        </td>
+        <td>
+         <div id="closed">CLOSED</div>
+        </td>
+        <td>
+          <label class="switch">
+            <input type="checkbox">
+            <div class="slider round"></div>
+          </label>
+        </td>
+        <td>
+          <div id="open">OPEN</div>
+        </td>
+      </tr>
+    </table>
+    <span>
+      <input type="checkbox" id="checkbox" onclick="javascript:displayifchecked()">Custom house shutters
+    </span> 
+    <div class="rooms">
+      <table id="shutterrooms">
+        <tr>
+          <td>Living Room
+          </td>
+          <td>
+            <div class="closed">CLOSED</div>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+            </label>
+          </td>
+          <td>
+            <div class="open">OPEN</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Kitchen
+          </td>
+          <td>
+            <div class="closed">CLOSED</div>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+            </label>
+          </td>
+          <td>
+            <div class="open">OPEN</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bedroom 1
+          </td>
+          <td>
+            <div class="closed">CLOSED</div>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+            </label>
+          </td>
+          <td>
+            <div class="open">OPEN</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bedroom 2
+          </td>
+          <td>
+            <div class="closed">CLOSED</div>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+            </label>
+          </td>
+          <td>
+            <div class="open">OPEN</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bedroom 3
+          </td>
+          <td>
+            <div class="closed">CLOSED</div>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+            </label>
+          </td>
+          <td>
+            <div class="open">OPEN</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bedroom 4
+          </td>
+          <td>
+            <div class="closed">CLOSED</div>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+            </label>
+          </td>
+          <td>
+            <div class="open">OPEN</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bathroom 1
+          </td>
+          <td>
+            <div class="closed">CLOSED</div>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+            </label>
+          </td>
+          <td>
+            <div class="open">OPEN</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bathroom 2
+          </td>
+          <td>
+            <div class="closed">CLOSED</div>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox">
+              <div class="slider round"></div>
+            </label>
+          </td>
+          <td>
+            <div class="open">OPEN</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
     </div>
 
 
