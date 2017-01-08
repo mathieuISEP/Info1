@@ -62,7 +62,6 @@
     </div>
 
     <div id="Features" class="tabcontent"><!-- ____________________________________________ -->
-      
 
 
       <section class="navbar2"> <!-- Sub navigation bar  -->
@@ -386,8 +385,8 @@
     </div>
   </div>
     </div>
-
-
+    </aside>
+    </div>
     <div id="Rooms" class="tabcontent"><h2>Rooms</h2><!-- ____________________________________________ -->
 
       <?php
