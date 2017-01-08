@@ -55,7 +55,7 @@
     </table>
   </nav>
 
-    <div id="Dashboard" class="tabcontent"><!-- ____________________________________________ -->
+    <div id="Dashboard" class="tabcontent"><!-- ___________________________________________ -->
       <h2>Dashboard</h2>
               <ul>Usefull info defined by the user</ul>
   
