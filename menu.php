@@ -93,10 +93,10 @@
               </table>
 
               <div>
-                <span><input type="checkbox" class="checkbox" name="checkbox" onclick="javascript:displayifchecked()"></span>Custom room temperatures
+                <span><input type="checkbox" class="checkbox" name="checkbox" onclick="javascript:display1()"></span>Custom room temperatures
               </div> 
             
-              <div class="rooms">
+              <div id="temprooms">
                 <table> 
 
 
@@ -172,11 +172,11 @@
           </tr>
         </table>
         <span>
-        <input type="checkbox" class="checkbox" onclick="javascript:displayifchecked()">
+        <input type="checkbox" class="checkbox" onclick="javascript:display2()">
         Custom room alarms
       </span> 
-      <div class="rooms">
-        <table id="alarmrooms">
+      <div id="alarmrooms">
+        <table id="roomalarm">
           
 
         <?php       // _______PHP for automatic Room display in Alarm Subtab_______________
@@ -250,10 +250,10 @@
       </tr>
     </table>
     <span>
-      <input type="checkbox" id="checkbox" onclick="javascript:displayifchecked()">Custom house shutters
+      <input type="checkbox" id="checkbox" onclick="javascript:display3()">Custom house shutters
     </span> 
-    <div class="rooms">
-      <table id="shutterrooms">
+    <div id="shutterrooms">
+      <table id="roomshutters">
         <tr>
           <td>Living Room
           </td>

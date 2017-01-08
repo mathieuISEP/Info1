@@ -24,11 +24,11 @@
   margin-left: 30px;
   margin-bottom: 10px;
 }
-#alarmrooms{
+#roomalarm{
   margin-top: 20px;
   margin-left: 20px;
 }
- .rooms {
+ #alarmrooms {
   display: none;
 }
 .hr{
