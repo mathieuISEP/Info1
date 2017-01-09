@@ -1,3 +1,9 @@
+  body{
+  background-image: url(villa.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
   .navbar{
     padding: 10px; 
     text-align: center;

@@ -58,7 +58,9 @@
     <div id="Dashboard" class="tabcontent"><!-- ___________________________________________ -->
       
       <ul id="dashboardlist">
-      <li class="dashboardlist"></li>
+      <li class="dashboardlist">
+        <?php include ("temperaturebox.php"); ?>
+      </li>
 
       <li class="dashboardlist">
       <?php include ("alarmbox.php"); ?>
@@ -89,6 +91,8 @@
 
         <div id="Temperature" class="subtab"> <!-- Subtab Temperature content  -->
                 
+          <?php include ("temperaturebox.php"); ?>
+
         </div>
 
 

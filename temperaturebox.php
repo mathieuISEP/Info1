@@ -68,7 +68,7 @@
       <span><input type="checkbox" class="checkbox" name="checkbox" onclick="javascript:display1()"></span>Custom room temperatures
   </div> 
     
-    <div class="temprooms">
+    <div id="temprooms">
 
     <table>
 
