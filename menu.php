@@ -208,13 +208,13 @@
 
       $results = mysqli_query($db,$list_rooms);
 
-      echo "<ul>";
+      echo '<ul class="navbar2">';
       if ($result=mysqli_query($db,$list_rooms))
         {
         // Fetch one and one row
         while ($row=mysqli_fetch_row($result))
           {
-          echo "<ul>";  
+          echo '<ul class="subtablinks">';  
           printf ($row[0]);
           echo "</ul>";  
 
@@ -222,13 +222,13 @@
         // Free result set
         mysqli_free_result($result);
       }
-
+      echo "</ul>";  
       mysqli_close($db);
 
-      echo "This is an auto-generated query";
+      
 
     ?>
-      
+    
     </div>
 
     <div id="Settings" class="tabcontent"><!-- ____________________________________________ -->
