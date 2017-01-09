@@ -16,7 +16,7 @@
   <body>
     <div class="header">
     <div>
-      <img class="logo" src="LOGOINCROYABLE.png" alt="=logo" />
+      <img class="logo" src="PTITLOGO.png" alt="=logo" />
     </div>
     <div>
     <button class="logout">
@@ -154,9 +154,9 @@
     <div id="Settings" class="tabcontent"><!-- ____________________________________________ -->
       
       <div class ="settingtable">
-        <ul > <div class="subtablinks" > Change email </div> </ul>
-        <ul > <div class="subtablinks"> Change password </div> </ul>
-        <ul > <div class="subtablinks"> Email Notifications </div> </ul>
+        <ul > <div onclick="opensubtab('email_stuff')" class="subtablinks" id="email_stuf"> Change email </div> </ul>
+        <ul > <div onclick="opensubtab('email_stuff2')" class="subtablinks" id="email_stuf2"> Change password </div> </ul>
+        <ul > <div onclick="opensubtab('email_stuff3')" class="subtablinks" id="email_stuf2"> Email Notifications </div> </ul>
         <ul > <div class="subtablinks"> Customize your Dashboard </div> </ul>
             <ul > <?php 
             ob_start();
@@ -166,13 +166,40 @@
          ;?> </ul>
       </div>
 
-      <div class="Newsletter"> <label ><input type="checkbox" value="">Recieve DomISEP Newsletter </label></div>
-      <div class="email_stuff"><!-- Part for email/password change  -->
-        <span styple="padding: 20px"> 
-              <input id="userinput" type="user" name="E-mail" placeholder="E-mail" required>
-        </span>
-         <button type="button">Send request</button> 
-      </div>
+      
+      
+
+
+      <!-- Part for email/password change  -->
+
+      <form class="subtab" id ="email_stuff">
+      <ul><span class="emailsettings"> 
+              <input id="userinput" type="user" name="E-mail" placeholder="Enter your Email" required class="emailsettings">
+        </span class="emailsettings"></ul>
+        <ul><button type="button" class ="emailsettings">Send request</button> </ul>
+      </form>
+
+      <!-- ______________________________  -->
+      <form class="subtab" id ="email_stuff2">
+      <ul><span class="emailsettings"> 
+              <input id="userinput" type="user" name="E-mail" placeholder="Enter your New password" required class="emailsettings">
+      </span></ul>
+      <ul><span class="emailsettings"> 
+              <input id="userinput" type="user" name="E-mail" placeholder="Confirm your new password" required class="emailsettings">
+      </span></ul>
+
+        <ul><button type="button" class ="emailsettings">Change Password</button> </ul>
+      </form>
+
+      <!-- ______________________________  -->
+      <form class="subtab" id ="email_stuff3">
+      <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Alarm Notifications </label></div></ul>
+      <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Movement Detection </label></div></ul>
+      <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Recieve DomISEP Newsletter </label></div></ul>
+
+      </form>
+
+
     </div>
 
 
