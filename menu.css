@@ -72,6 +72,7 @@
   .content{
     display: inline-block;
     width:20%;
+    margin: auto;
   }
 
   a.button {
@@ -99,5 +100,14 @@
     padding: 10px;
 
     color: orange;
+
+}
+
+.email_stuff{
+   width :200px;
+   height:100px;
+   border: 2px orange solid;
+   display: none;
+
 
 }

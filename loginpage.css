@@ -1,3 +1,7 @@
+body{
+	background-image: url(villa.jpg);
+	background-repeat: no-repeat;
+}
 form{
 	background-color: white;
 	width: 400px;
