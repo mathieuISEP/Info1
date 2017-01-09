@@ -103,11 +103,55 @@
 
 }
 
-.email_stuff{
-   width :200px;
-   height:100px;
-   border: 2px orange solid;
-   display: none;
+#email_stuff {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  top: 20px;
+  padding:10px;
+  border: 2px orange solid;
+  color: orange;
+  font-family: "Arial", sans-serif;
+  display: none;
 
+}
 
+#email_stuff2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  top: 20px;
+  padding:10px;
+  border: 2px orange solid;
+  color: orange;
+  font-family: "Arial", sans-serif;
+
+  display: none;
+}
+
+#email_stuff3{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+
+  width: 400px;
+  margin: auto;
+  top: 20px;
+  padding: 3px;
+  border: 2px orange solid;
+  color: orange;
+  font-family: "Arial", sans-serif;
+
+  display: none;
+}
+
+.emailsettings{
+  width: 200px;
+  height: 40px;
 }
