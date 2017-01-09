@@ -56,10 +56,11 @@
   </nav>
 
     <div id="Dashboard" class="tabcontent"><!-- ___________________________________________ -->
-<<<<<<< HEAD
+
       <h2>Dashboard</h2>
-              <ul>Usefull info defined by the user</ul>
-=======
+              <!-- <ul>Usefull info defined by the user</ul>-->
+
+
       
       
       <ul id="dashboardlist">
@@ -74,7 +75,7 @@
         <?php include ("shutters.php"); ?>
     </li>
     </ul>
->>>>>>> f2787ade04cff9d7552c6fa21de569aaa5f6b82d
+
   
     </div>
 
@@ -96,20 +97,18 @@
                 
         </div>
 
-<<<<<<< HEAD
-        
-=======
+
         <div id ="Alarm" class="subtab">
           
           <?php include ("alarmbox.php"); ?>
 
         </div>
->>>>>>> f2787ade04cff9d7552c6fa21de569aaa5f6b82d
+
 
       </aside> <!-- Sub navigation content end  -->
 
 
-<<<<<<< HEAD
+
       <aside class="content">
         <div id ="Alarm" class="subtab">
 
@@ -186,8 +185,7 @@
         </div>
         </div>    
       </aside>
-=======
->>>>>>> f2787ade04cff9d7552c6fa21de569aaa5f6b82d
+
 
       <aside class="content">
         <div id ="Shutters" class="subtab">
@@ -284,7 +282,6 @@
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Alarm Notifications </label></div></ul>
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Movement Detection </label></div></ul>
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Recieve DomISEP Newsletter </label></div></ul>
-
       </form>
 
 
