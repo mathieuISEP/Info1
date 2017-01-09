@@ -9,6 +9,11 @@
 
   }
 
+  .logo{
+    margin-top: 5px;
+    height: 75px;
+    width: 8%;
+  }
   .tabcontent{
     display: none;
     line-height: 50px;

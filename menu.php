@@ -16,7 +16,7 @@
   <body>
     <div class="header">
     <div>
-      <img class="logo" src="LOGOINCROYABLE.png" alt="=logo" />
+      <img class="logo" src="PTITLOGO.png" alt="=logo" />
     </div>
     <div>
     <button class="logout">
