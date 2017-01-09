@@ -1,6 +1,6 @@
   body{
-  background-image: url(villa.jpg);
-  background-repeat: no-repeat;
+  background-color: #e9ebee; 
+  /* background-repeat: no-repeat;*/ 
   background-size: 100%;
 }
 
