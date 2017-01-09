@@ -16,7 +16,7 @@
   <body>
     <div class="header">
     <div>
-      <img class="logo" src="LOGOINCROYABLE.png" alt="=logo" />
+      <img class="logo" src="PTITLOGO.png" alt="=logo" />
     </div>
     <div>
     <button class="logout">
@@ -56,12 +56,6 @@
   </nav>
 
     <div id="Dashboard" class="tabcontent"><!-- ___________________________________________ -->
-
-      <h2>Dashboard</h2>
-              <!-- <ul>Usefull info defined by the user</ul>-->
-
-
-      
       
       <ul id="dashboardlist">
       <li class="dashboardlist"></li>
