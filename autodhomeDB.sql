@@ -55,16 +55,15 @@ Insert into Client values (3,'Antoine','Jeannette',3,'rue de la paix','Paris','F
 Insert into Client values (4,'Leandro','Gasparini',4,'rue de la paix','Paris','France',27,'f.g@gmail.com',2456534543,True,'root');
 Insert into Client values (5,'Anthony','Demogues',5,'rue de la paix','Paris','France',27,'f.g@gmail.com',2456534543,True,'root');
 
-Insert into Room values ('Living room floor 1',1,1,'Living room');
-Insert into Room values ('Living room floor 2',2,1,'Living room');
-Insert into Room values ('Red Kitchen',3,1,'Kitchen');
-Insert into Room values ('Bathroom 1 home 1',4,1,'Bathroom');
-Insert into Room values ('Room 1',5,1,'Room');
-Insert into Room values ('Room 2',6,1,'Room');
-Insert into Room values ('kid\'s Room ',7,1,'Room');
-Insert into Room values ('Living room home 2',8,2,'Living room');
-Insert into Room values ('Kitchen home 2',9,2,'Kitchen');
-Insert into Room values ('Room 1 home 2',10,2,'Room');
+Insert into Room values ('Living room',1,1,'Living room');
+Insert into Room values ('Kitchen',2,1,'Kitchen');
+Insert into Room values ('Bedroom 1',3,1,'Bedroom');
+Insert into Room values ('Bedroom 2',4,1,'Bedroom');
+Insert into Room values ('Bedroom 3',5,1,'Bedroom');
+Insert into Room values ('Bedroom 4',6,1,'Bedroom');
+Insert into Room values ('Bathroom 1',7,1,'Bathroom');
+Insert into Room values ('Bathroom 2',8,1,'Bathroom');
+
 
 Insert into sensor values (1,2,'temperature_sensor','thermometer 1',15 , '');
 
