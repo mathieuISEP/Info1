@@ -56,8 +56,25 @@
   </nav>
 
     <div id="Dashboard" class="tabcontent"><!-- ___________________________________________ -->
+<<<<<<< HEAD
       <h2>Dashboard</h2>
               <ul>Usefull info defined by the user</ul>
+=======
+      
+      
+      <ul id="dashboardlist">
+      <li class="dashboardlist"></li>
+
+      <li class="dashboardlist">
+      <?php include ("alarmbox.php"); ?>
+        </li>
+
+        <li class="dashboardlist">
+
+        <?php include ("shutters.php"); ?>
+    </li>
+    </ul>
+>>>>>>> f2787ade04cff9d7552c6fa21de569aaa5f6b82d
   
     </div>
 
@@ -75,78 +92,24 @@
 
       <aside class="content"> <!-- Sub navigation content  -->
 
-        <div id ="Temperature" class="subtab"> <!-- Subtab Temperature content  -->
+        <div id="Temperature" class="subtab"> <!-- Subtab Temperature content  -->
                 
-          <form name="temperature" method="get" accept-charset="utf-8">
-            <div id="temperaturebox">
-              
-              <div id="boxheader">Temperatures</div>
-              <div class="hr"><hr /></div>
-            
-              <table>
-                <tr>
-                  <td><div id="housetemp">House Temperature</div></td>
-                  <td><input id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-                  <td class="C">°C</td>
-                </tr>
-              </table>
-
-              <div>
-                <span><input type="checkbox" class="checkbox" name="checkbox" onclick="javascript:display1()"></span>Custom room temperatures
-              </div> 
-            
-              <div id="temprooms">
-                <table> 
-
-
-                <?php // _______PHP for automatic Room display in Temperature Subtab_______________
-                 $DB_SERVER = 'localhost';
-                 $DB_USERNAME = 'root';
-                 $DB_PASSWORD = '';
-                 $DB_DATABASE = 'autodhome';
-                 $db =  new mysqli($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);  
-                  
-                
-                $list_rooms = "SELECT Name_room 
-                              FROM room 
-                              WHERE id_home = 1 "; 
-
-                  if ($result=mysqli_query($db,$list_rooms))
-                  {
-                  // Fetch one and one row
-                  while ($row=mysqli_fetch_row($result))
-                    // For each row in the query
-                    {
-                      echo ' <tr><td>';
-                      printf ($row[0]);
-                      echo'</td>';
-                      echo' <td>
-                              <input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-                              <td class="C">°C</td>';
-                      echo'</tr>';}}
-
-
-
-                 ?>
-                </table>
-              </div>
-
-
-              <div id="buttons">
-                <span><input id="reset" type="submit" value="Reset"></span>
-                <span><input id="apply" type="submit" value="Apply"></span>
-              </div>
-                  
-          </div>
-          </form>
-
         </div>
 
+<<<<<<< HEAD
         
+=======
+        <div id ="Alarm" class="subtab">
+          
+          <?php include ("alarmbox.php"); ?>
+
+        </div>
+>>>>>>> f2787ade04cff9d7552c6fa21de569aaa5f6b82d
 
       </aside> <!-- Sub navigation content end  -->
 
 
+<<<<<<< HEAD
       <aside class="content">
         <div id ="Alarm" class="subtab">
 
@@ -223,167 +186,14 @@
         </div>
         </div>    
       </aside>
+=======
+>>>>>>> f2787ade04cff9d7552c6fa21de569aaa5f6b82d
 
       <aside class="content">
         <div id ="Shutters" class="subtab">
 
-        <div id="shuttersbox">
-        <div>Shutters</div>
-        <div class="hr"><hr /></div>
-        <table id="houseshutters">
-          <tr>
-            <td>House Shutters
-            </td>
-            <td>
-             <div id="closed">CLOSED</div>
-            </td>
-            <td>
-              <label class="switch">
-                <input type="checkbox">
-                <div class="slider round"></div>
-              </label>
-            </td>
-            <td>
-              <div id="open">OPEN</div>
-            </td>
-          </tr>
-        </table>
-        <span>
-          <input type="checkbox" id="checkbox" onclick="javascript:display3()">Custom house shutters
-        </span> 
-        <div id="shutterrooms">
-          <table id="roomshutters">
-            <tr>
-              <td>Living Room
-              </td>
-              <td>
-                <div class="closed">CLOSED</div>
-              </td>
-              <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <div class="slider round"></div>
-                </label>
-              </td>
-              <td>
-                <div class="open">OPEN</div>
-              </td>
-            </tr>
-            <tr>
-              <td>Kitchen
-              </td>
-              <td>
-                <div class="closed">CLOSED</div>
-              </td>
-              <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <div class="slider round"></div>
-                </label>
-              </td>
-              <td>
-                <div class="open">OPEN</div>
-              </td>
-            </tr>
-            <tr>
-              <td>Bedroom 1
-              </td>
-              <td>
-                <div class="closed">CLOSED</div>
-              </td>
-              <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <div class="slider round"></div>
-                </label>
-              </td>
-              <td>
-                <div class="open">OPEN</div>
-              </td>
-            </tr>
-            <tr>
-              <td>Bedroom 2
-              </td>
-              <td>
-                <div class="closed">CLOSED</div>
-              </td>
-              <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <div class="slider round"></div>
-                </label>
-              </td>
-              <td>
-                <div class="open">OPEN</div>
-              </td>
-            </tr>
-            <tr>
-              <td>Bedroom 3
-              </td>
-              <td>
-                <div class="closed">CLOSED</div>
-              </td>
-              <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <div class="slider round"></div>
-                </label>
-              </td>
-              <td>
-                <div class="open">OPEN</div>
-              </td>
-            </tr>
-            <tr>
-              <td>Bedroom 4
-              </td>
-              <td>
-                <div class="closed">CLOSED</div>
-              </td>
-              <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <div class="slider round"></div>
-                </label>
-              </td>
-              <td>
-                <div class="open">OPEN</div>
-              </td>
-            </tr>
-            <tr>
-              <td>Bathroom 1
-              </td>
-              <td>
-                <div class="closed">CLOSED</div>
-              </td>
-              <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <div class="slider round"></div>
-                </label>
-              </td>
-              <td>
-                <div class="open">OPEN</div>
-              </td>
-            </tr>
-            <tr>
-              <td>Bathroom 2
-              </td>
-              <td>
-                <div class="closed">CLOSED</div>
-              </td>
-              <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <div class="slider round"></div>
-                </label>
-              </td>
-              <td>
-                <div class="open">OPEN</div>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
+        <?php include ("shutters.php"); ?>
+        
     </div>
     </aside>
     </div>

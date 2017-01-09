@@ -6,6 +6,7 @@
   color: white;
   text-align: center;
   font-family: "Arial", sans-serif;
+  vertical-align: top;
 }
 #checkboxlabel{
   font-size: 15px;

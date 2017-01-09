@@ -18,6 +18,7 @@
     $post_temp = $_POST['post_temperature'];
     $sql = "UPDATE sensor SET target_data = $post_temp WHERE id='1'";
     $result = $db -> query($sql);
+   
  ?>
 
 
@@ -34,9 +35,14 @@
     <table>
       <tr>
         <td><div id="housetemp">House Temperature</div></td>
-        <td><input name = "post_temperature" placeholder="post_temperature" id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+        <td><input value = "<?php $post_temp ?>" name = "post_temperature" placeholder="SET T°" id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
         <td class="C">°C</td>
       </tr>
+      <tr>
+           <td class="target" id="target"><?php echo 'target T°: '. $post_temp;?> </td>
+      </tr>
+
+
  
     </table>
 
