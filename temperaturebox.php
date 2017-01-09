@@ -16,10 +16,10 @@
 
     include 'database.php';
     $post_temp = $_POST['post_temperature'];
-    $sql = "UPDATE sensor SET past_data = $post_temp WHERE id='3'";
+    $sql = "UPDATE sensor SET target_data = $post_temp WHERE id='1'";
     $result = $db -> query($sql);
  ?>
- 
+
 
 
 <div class="content">
