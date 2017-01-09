@@ -6,6 +6,7 @@
   color: white;
   text-align: left;
   font-family: "Arial", sans-serif;
+  vertical-align: top;
 }
 #boxheader{
 	text-align: center;
@@ -17,7 +18,7 @@
 	margin-bottom: 20px;
 	margin-left: 30px;
 }
-#checkboxlabel{
+.checkboxlabel{
 	font-size: 15px;
 	margin-bottom: 20px;
 	margin-left: 10px;
@@ -43,7 +44,7 @@
 	border: outset;
 	border-radius: 10px;
 }
-#buttons{
+.buttons{
 	margin-top: 20px;
 }
 #stepper{

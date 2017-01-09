@@ -111,3 +111,11 @@
 
 
 }
+#dashboardlist{
+  list-style-type: none;
+}
+.dashboardlist{
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+}
