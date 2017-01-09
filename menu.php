@@ -279,7 +279,7 @@
       <form class="subtab" id ="email_stuff3">
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Alarm Notifications </label></div></ul>
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Movement Detection </label></div></ul>
-      <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Recieve DomISEP Newsletter </label></div></ul>
+      <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Receive Autodhome Newsletter </label></div></ul>
       </form>
 
 
