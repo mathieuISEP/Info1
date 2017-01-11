@@ -17,6 +17,8 @@
    # $DB_PASSWORD = '';
    # $DB_DATABASE = 'autodhome';
     include 'database.php';
+    session_start();
+
 
    $myusername = $_POST['username'];
    $mypassword = $_POST['password'];
@@ -32,6 +34,7 @@
       if ($result->num_rows > 0){
           $row = mysqli_fetch_assoc($result);
           if(strcmp($mypassword,$row["password"]) == 0){
+          $_SESSION['username'] = true;  
           header("location: menu.php");
           echo 'connecté';
 

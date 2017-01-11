@@ -1,4 +1,8 @@
-
+<?php session_start();
+if(!isset($_SESSION['username'])){
+   header("Location:loginpage.php");
+}
+?>
 
 <html lang="en">
     <head>
@@ -20,7 +24,7 @@
     </div>
     <div>
     <button class="logout">
-      <a href="http://localhost/Info1/loginpage.php" class="button">
+      <a href="http://localhost/Info1/logout.php" class="button">
 
         <img id="fleche" src="fleche.jpg" alt="fleche" />
         <h2 id="logout">
