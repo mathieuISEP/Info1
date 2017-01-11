@@ -145,7 +145,7 @@ if(!isset($_SESSION['username'])){
         <?php       // _______PHP for automatic Room display in Alarm Subtab_______________
             $DB_SERVER = 'localhost';
              $DB_USERNAME = 'root';
-             $DB_PASSWORD = '';
+             $DB_PASSWORD = 'root';
              $DB_DATABASE = 'autodhome';
              $db =  new mysqli($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);  
              $list_rooms = "SELECT Name_room 
@@ -203,7 +203,7 @@ if(!isset($_SESSION['username'])){
 
        $DB_SERVER = 'localhost';
        $DB_USERNAME = 'root';
-       $DB_PASSWORD = '';
+       $DB_PASSWORD = 'root';
        $DB_DATABASE = 'autodhome';
        $DB_DATABASE = 'autodhome';
       
@@ -258,11 +258,23 @@ if(!isset($_SESSION['username'])){
       
 
 
-      <!-- Part for email/password change  -->
+      <!-- Part for email/password change  --> 
+      <?php
+      include 'database.php';
 
-      <form class="subtab" id ="email_stuff">
+      if (isset($_SESSION['username'])){
+        $myNewEmail= $_POST['newEmail'];
+        $sql ="UPDATE client SET email_address ='".$myNewEmail."' WHERE email_address = '".$_SESSION['username']."';";
+        mysqli_query($db,$sql);
+        mysqli_close($db);
+
+    }
+
+    ?>
+
+      <form  class="subtab" id ="email_stuff" method="post">
       <ul><span class="emailsettings"> 
-              <input id="userinput" type="user" name="E-mail" placeholder="Enter your Email" required class="emailsettings">
+              <input id="userinput" type="user" name="newEmail" placeholder="Enter your Email" required class="emailsettings">
         </span class="emailsettings"></ul>
         <ul><button type="button" class ="emailsettings">Send request</button> </ul>
       </form>

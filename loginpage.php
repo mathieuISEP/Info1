@@ -27,14 +27,16 @@
        
       
       
-      $sql = "SELECT * FROM client WHERE last_name = '$myusername'";
-      $number = "SELECT client_number FROM client WHERE last_name = '$myusername'";
+      $sql = "SELECT * FROM client WHERE email_address = '$myusername'";
+      $number = "SELECT client_number FROM client WHERE email_address = '$myusername'";
       $result = $db -> query($sql);
 
       if ($result->num_rows > 0){
           $row = mysqli_fetch_assoc($result);
           if(strcmp($mypassword,$row["password"]) == 0){
-          $_SESSION['username'] = true;  
+          $_SESSION['username'] = true;
+          $sql2 = "SELECT last_name FROM client WHERE email_address = '$myusername'";
+          $result2 = $db -> query($sql2);
           header("location: menu.php");
           echo 'connecté';
 
