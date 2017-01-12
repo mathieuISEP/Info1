@@ -7,6 +7,9 @@
   <script type="text/javascript" src="checkbox.js"></script>
 </head>
 <body>
+
+
+  <form name="temperature" method="post" accept-charset="utf-8">
     <div id="alarmbox">
         <div>Alarm</div>
        <div class="hr"><hr /></div>
@@ -76,7 +79,15 @@
 
 
         </table>
-        </div>
-        </div>
+      </div>
+
+      <div id="buttons">
+        <span><input id="alarmreset" type="submit" value="Reset"></span>
+        <span><input id="alarmapply" type="submit" value="Apply"></span>
+      </div>
+
+    </div>
+  </form>
+
 </body>
 </html>

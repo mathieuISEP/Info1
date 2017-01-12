@@ -124,8 +124,8 @@
     </div>
 
       <div id="buttons">
-        <span><input id="reset" type="submit" value="Reset"></span>
-        <span><input id="apply" type="submit" value="Apply"></span>
+        <span><input id="tempreset" type="submit" value="Reset"></span>
+        <span><input id="tempapply" type="submit" value="Apply"></span>
       </div>
 
   </div>

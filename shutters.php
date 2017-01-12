@@ -7,6 +7,8 @@
   <script type="text/javascript" src="checkbox.js"></script>
 </head>
 <body>
+
+<form name="temperature" method="post" accept-charset="utf-8">
   <div id="shuttersbox">
     <div>Shutters</div>
     <div class="hr"><hr /></div>
@@ -163,6 +165,14 @@
         </tr>
       </table>
     </div>
+
+    <div id="buttons">
+        <span><input id="shutterreset" type="submit" value="Reset"></span>
+        <span><input id="shutterapply" type="submit" value="Apply"></span>
+      </div>
+      
   </div>
+</form>
+
 </body>
 </html>
