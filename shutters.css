@@ -104,16 +104,16 @@ input:checked + .slider:before {
 #shutterreset{
   width: 80px;
   height: 30px;
-  color: black;
-  background-color: #ffc966;
+  color: white;
+  background-color: orange;
   border: outset;
   border-radius: 10px;
 }
 #shutterapply{
   width: 80px;
   height: 30px;
-  color: black;
-  background-color: #ffc966;
+  color: white;
+  background-color: orange;
   margin-left: 50px;
   border: outset;
   border-radius: 10px;

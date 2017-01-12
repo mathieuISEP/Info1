@@ -31,8 +31,8 @@
 #tempreset{
 	width: 80px;
 	height: 30px;
-	color: black;
-	background-color: #ffc966;
+	color: white;
+	background-color: orange;
 	margin-left: 80px;
 	border: outset;
 	border-radius: 10px;
@@ -40,9 +40,9 @@
 #tempapply{
 	width: 80px;
 	height: 30px;
-	color: black;
-	background-color: #ffc966;
-	margin-left: 50px;
+	color: white;
+	background-color: orange;
+	margin-left: 70px;
 	border: outset;
 	border-radius: 10px;
 }

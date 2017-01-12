@@ -31,8 +31,7 @@
           </tr>
         </table>
         <span>
-        <input type="checkbox" class="checkbox" onclick="javascript:display2()">
-        Custom room alarms
+        <input type="checkbox" class="checkbox" onclick="javascript:display2()"> Custom room alarms
       </span> 
       <div id="alarmrooms">
         <table id="roomalarm">

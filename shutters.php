@@ -31,7 +31,7 @@
       </tr>
     </table>
     <span>
-      <input type="checkbox" id="checkbox" onclick="javascript:display3()">Custom house shutters
+      <input type="checkbox" id="checkbox" onclick="javascript:display3()"> Custom house shutters
     </span> 
     <div id="shutterrooms">
       <table id="roomshutters">
@@ -170,7 +170,7 @@
         <span><input id="shutterreset" type="submit" value="Reset"></span>
         <span><input id="shutterapply" type="submit" value="Apply"></span>
       </div>
-      
+
   </div>
 </form>
 

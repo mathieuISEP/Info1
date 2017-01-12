@@ -27,6 +27,14 @@
     display: none;
     line-height: 50px;
   }
+  #dashboardlist{
+   list-style-type: none;
+  }
+  .dashboardlist{
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 
   .tablinks{
     display: inline-block;
@@ -66,7 +74,8 @@
     color: orange;
     float: left;
     min-width: 180px;
-    min-height: 100%;
+    height: auto;
+    background-color: white;
   }
 
   .subtab{
@@ -89,6 +98,10 @@
     margin: auto;
   }
 
+  #featurecontent{
+    margin-left: 20px;
+  }
+
   a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -106,8 +119,9 @@
     border: 2px orange solid;
     color: orange;
     min-width: 180px;
-    min-height: 100%;
     max-width: 200px;
+    background-color: white;
+    height: auto;
 }
 
 .Newsletter{
@@ -124,14 +138,6 @@
    display: none;
 
 
-}
-#dashboardlist{
-  list-style-type: none;
-}
-.dashboardlist{
-  float: left;
-  margin-right: 10px;
-  margin-left: 10px;
 }
 
 #email_stuff{

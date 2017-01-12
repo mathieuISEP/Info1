@@ -92,7 +92,7 @@ if(!isset($_SESSION['username'])){
       </section>
 
 
-      <aside class="content"> <!-- Sub navigation content  -->
+      <aside id= "featurecontent" class="content"> <!-- Sub navigation content  -->
 
         <div id="Temperature" class="subtab"> <!-- Subtab Temperature content  -->
                 
@@ -107,98 +107,17 @@ if(!isset($_SESSION['username'])){
 
         </div>
 
-
-      </aside> <!-- Sub navigation content end  -->
-
-
-
-      <aside class="content">
-        <div id ="Alarm" class="subtab">
-
-      <div id="alarmbox">
-        <div>Alarm</div>
-       <div class="hr"><hr /></div>
-        <table id="housealarm">
-          <tr>
-            <td>House Alarm</td>
-            <td>             
-              <div id="off">OFF</div>
-            </td>
-            <td>
-             <label class="switch">
-                <input type="checkbox">
-                 <div class="slider round"></div>
-            </label>     
-           </td>
-           <td>
-             <div id="on">ON</div>
-            </td>
-          </tr>
-        </table>
-        <span>
-        <input type="checkbox" class="checkbox" onclick="javascript:display2()">
-        Custom room alarms
-      </span> 
-      <div id="alarmrooms">
-        <table id="roomalarm">
-          
-
-        <?php       // _______PHP for automatic Room display in Alarm Subtab_______________
-            $DB_SERVER = 'localhost';
-             $DB_USERNAME = 'root';
-             $DB_PASSWORD = 'root';
-             $DB_DATABASE = 'autodhome';
-             $db =  new mysqli($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);  
-             $list_rooms = "SELECT Name_room 
-                            FROM room 
-                            WHERE id_home = 1"; 
-
-          if ($result=mysqli_query($db,$list_rooms))
-            {
-            // Fetch one and one row
-            while ($row=mysqli_fetch_row($result))
-              // For each row in the query
-              {
-             
-              $new = $row[0];
-              echo '<tr>';
-               echo '<td>'; echo $new; echo' </td>'; // Display Title of Room
-             
-                // Display whats repetitive
-
-               echo '<td> <div class="off">OFF</div> </td>';
-               echo '<td> <label class="switch">
-                          <input type="checkbox">
-                          <div class="slider round"></div>
-                          </label> 
-                   </td>';
-             echo '<td><div class="on">ON</div></td>';
-              echo "</tr>";
-              }
-            // Free result set
-            mysqli_free_result($result);
-          }
-
-          mysqli_close($db);
-        ?>
-
-
-        </table>
-        </div>
-        </div>
-        </div>    
-      </aside>
-
-
-      <aside class="content">
         <div id ="Shutters" class="subtab">
 
         <?php include ("shutters.php"); ?>
         
-    </div>
+        </div>
+
     </aside>
     </div>
-    <div id="Rooms" class="tabcontent"><h2>Rooms</h2><!-- ____________________________________________ -->
+
+
+    <div id="Rooms" class="tabcontent"> <!-- ____________________________________________ -->
 
       <?php
 
@@ -242,34 +161,34 @@ if(!isset($_SESSION['username'])){
 
     <div id="Settings" class="tabcontent"><!-- ____________________________________________ -->
       
-      <div class ="settingtable">
-        <ul > <div onclick="opensubtab('email_stuff')" class="subtablinks" id="email_stuf"> Change email </div> </ul>
-        <ul > <div onclick="opensubtab('email_stuff2')" class="subtablinks" id="email_stuf2"> Change password </div> </ul>
-        <ul > <div onclick="opensubtab('email_stuff3')" class="subtablinks" id="email_stuf2"> Email Notifications </div> </ul>
-        <ul > <div class="subtablinks"> Customize your Dashboard </div> </ul>
+      <section class ="settingtable">
+        <ul > <div onclick="opensubtab('setting1')" class="subtablinks" > Change email </div> </ul>
+        <ul > <div onclick="opensubtab('setting2')" class="subtablinks" > Change password </div> </ul>
+        <ul > <div onclick="opensubtab('setting3')" class="subtablinks" > Email Notifications </div> </ul>
+        <ul > <div onclick="opensubtab('setting4')" class="subtablinks"> Edit Dashboard </div> </ul>
+        <ul > <div onclick="opensubtab('setting5')" class="subtablinks"> Manage Rooms </div> </ul>
+        <ul > <div onclick="opensubtab('setting6')" class="subtablinks"> Manage Sensors </div> </ul>
+            
             <ul > <?php 
             ob_start();
             require("loginpage.php");
             $number ;
             ob_end_clean();
          ;?> </ul>
-      </div>
-
-      
-      
-
+      </section>
 
       <!-- Part for email/password change  -->
-
-      <form  class="subtab" id ="email_stuff" method="post">
+      <aside>
+      <form  class="subtab" id ="setting1" method="post">
       <ul><span class="emailsettings"> 
               <input id="userinput" type="user" name="newemail" placeholder="Enter your Email" required class="emailsettings">
         </span class="emailsettings"></ul>
         <ul><button type="button" class ="emailsettings">Send request</button> </ul>
       </form>
+      </aside>
 
-      <!-- ______________________________  -->
-      <form class="subtab" id ="email_stuff2">
+      <aside>
+      <form class="subtab" id ="setting2">
       <ul><span class="emailsettings"> 
               <input id="userinput" type="user" name="E-mail" placeholder="Enter your New password" required class="emailsettings">
       </span></ul>
@@ -279,14 +198,15 @@ if(!isset($_SESSION['username'])){
 
         <ul><button type="button" class ="emailsettings">Change Password</button> </ul>
       </form>
+      </aside>
 
-      <!-- ______________________________  -->
-      <form class="subtab" id ="email_stuff3">
+      <aside>
+      <form class="subtab" id ="setting3">
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Alarm Notifications </label></div></ul>
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Movement Detection </label></div></ul>
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Receive Autodhome Newsletter </label></div></ul>
       </form>
-
+      </aside>
 
     </div>
 
