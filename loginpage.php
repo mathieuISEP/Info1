@@ -33,7 +33,8 @@
       if ($result->num_rows > 0){
           $row = mysqli_fetch_assoc($result);
           if(strcmp($mypassword,$row["password"]) == 0){
-          $_SESSION["username"] = true;  
+          $_SESSION["username"] =  $row["email_address"];  
+
           header("location: menu.php");
 
           }
@@ -93,6 +94,7 @@
 </form>
  <?php
  }
+ mysqli_close($db);
  ?>
 </body>
 </html>
