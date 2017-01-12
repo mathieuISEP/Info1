@@ -1,6 +1,8 @@
 #temperaturebox{
   background-color: white;
   border-radius:10px;
+  border-color: orange;
+  border-style: solid;
   padding: 10px;
   width: 400px;
   color: orange;
@@ -26,20 +28,20 @@
 #temprooms{
 	display: none;
 }
-#reset{
+#tempreset{
 	width: 80px;
 	height: 30px;
 	color: black;
-	background-color: white;
+	background-color: #ffc966;
 	margin-left: 80px;
 	border: outset;
 	border-radius: 10px;
 }
-#apply{
+#tempapply{
 	width: 80px;
 	height: 30px;
 	color: black;
-	background-color: white;
+	background-color: #ffc966;
 	margin-left: 50px;
 	border: outset;
 	border-radius: 10px;
