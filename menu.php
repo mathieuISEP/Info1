@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+session_start();
 if(!isset($_SESSION['username'])){
    header("Location:loginpage.php");
 }
@@ -258,23 +259,11 @@ if(!isset($_SESSION['username'])){
       
 
 
-      <!-- Part for email/password change  --> 
-      <?php
-      include 'database.php';
-
-      if (isset($_SESSION['username'])){
-        $myNewEmail= $_POST['newEmail'];
-        $sql ="UPDATE client SET email_address ='".$myNewEmail."' WHERE email_address = '".$_SESSION['username']."';";
-        mysqli_query($db,$sql);
-        mysqli_close($db);
-
-    }
-
-    ?>
+      <!-- Part for email/password change  -->
 
       <form  class="subtab" id ="email_stuff" method="post">
       <ul><span class="emailsettings"> 
-              <input id="userinput" type="user" name="newEmail" placeholder="Enter your Email" required class="emailsettings">
+              <input id="userinput" type="user" name="newemail" placeholder="Enter your Email" required class="emailsettings">
         </span class="emailsettings"></ul>
         <ul><button type="button" class ="emailsettings">Send request</button> </ul>
       </form>

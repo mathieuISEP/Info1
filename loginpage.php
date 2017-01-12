@@ -28,28 +28,24 @@
       
       
       $sql = "SELECT * FROM client WHERE email_address = '$myusername'";
-      $number = "SELECT client_number FROM client WHERE email_address = '$myusername'";
       $result = $db -> query($sql);
 
       if ($result->num_rows > 0){
           $row = mysqli_fetch_assoc($result);
           if(strcmp($mypassword,$row["password"]) == 0){
-          $_SESSION['username'] = true;
-          $sql2 = "SELECT last_name FROM client WHERE email_address = '$myusername'";
-          $result2 = $db -> query($sql2);
+          $_SESSION["username"] = true;  
           header("location: menu.php");
-          echo 'connecté';
 
           }
           else{
-             echo 'incorrect password';
+        echo "<div style ='font:30px/40px Arial,bold,sans-serif;color:#FFFFFF'> Incorrect password </div>";
 
             
           }
         } 
           else{
             
-            echo'Username doesn\'t exist';
+        echo "<div style ='font:30px/40px Arial,bold,sans-serif;color:#FFFFFF'> Username doesn't exist </div>";
 
        }    
        }
