@@ -38,7 +38,7 @@
         <?php       // _______PHP for automatic Room display in Alarm Subtab_______________
             $DB_SERVER = 'localhost';
              $DB_USERNAME = 'root';
-             $DB_PASSWORD = '';
+             $DB_PASSWORD = 'root';
              $DB_DATABASE = 'autodhome';
              $db =  new mysqli($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);  
              $list_rooms = "SELECT Name_room 
