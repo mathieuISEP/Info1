@@ -180,12 +180,32 @@ if(!isset($_SESSION['username'])){
 
       <!-- Part for email/password change  -->
 
+        <?php
+     
+      if (isset($_POST['newemail'])){
+            include 'database.php';
+            session_start();
+            $myNewEmail = $_POST["newemail"];
+            $sql2 ="UPDATE client SET email_address ='".$myNewEmail."' WHERE email_address = '".$_SESSION["username"]."';";
+            mysqli_query($db,$sql2);
+            mysqli_close($db);
+            echo "Votre adresse email a bien Ã©tÃ© changÃ©e";
+
+    }
+    else{
+
+     ?>
+
       <form  class="subtab" id ="email_stuff" method="post">
       <ul><span class="emailsettings"> 
               <input id="userinput" type="user" name="newemail" placeholder="Enter your Email" required class="emailsettings">
         </span class="emailsettings"></ul>
-        <ul><button type="button" class ="emailsettings">Send request</button> </ul>
+        <ul><button type="submit" class ="emailsettings">Send request</button> </ul>
       </form>
+      
+      <?php
+             }
+       ?>
 
       <!-- ______________________________  -->
       <form class="subtab" id ="email_stuff2">
@@ -196,7 +216,7 @@ if(!isset($_SESSION['username'])){
               <input id="userinput" type="user" name="E-mail" placeholder="Confirm your new password" required class="emailsettings">
       </span></ul>
 
-        <ul><button type="button" class ="emailsettings">Change Password</button> </ul>
+        <ul><button type="submit" class ="emailsettings">Change Password</button> </ul>
       </form>
 
       <!-- ______________________________  -->
