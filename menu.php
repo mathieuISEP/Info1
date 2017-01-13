@@ -189,7 +189,7 @@ if(!isset($_SESSION['username'])){
             $sql2 ="UPDATE client SET email_address ='".$myNewEmail."' WHERE email_address = '".$_SESSION["username"]."';";
             mysqli_query($db,$sql2);
             mysqli_close($db);
-            echo "Votre adresse email a bien Ã©tÃ© changÃ©e";
+            echo "Votre adresse email a bien été changé";
 
     }
     else{
@@ -198,7 +198,7 @@ if(!isset($_SESSION['username'])){
 
       <form  class="subtab" id ="email_stuff" method="post">
       <ul><span class="emailsettings"> 
-              <input id="userinput" type="user" name="newemail" placeholder="Enter your Email" required class="emailsettings">
+              <input id="userinput" type="user" name="new_email" placeholder="Enter your Email" required class="emailsettings">
         </span class="emailsettings"></ul>
         <ul><button type="submit" class ="emailsettings">Send request</button> </ul>
       </form>
@@ -207,17 +207,37 @@ if(!isset($_SESSION['username'])){
              }
        ?>
 
+       <?php
+     
+      if (isset($_POST['new_password']) && isset ($_POST['confirm_new_password']) && $_POST['new_password'] = $_POST['confirm_new_password']){
+            include 'database.php';
+            session_start();
+            $myNewPassword = $_POST["new_password"];
+            $sql3 ="UPDATE client SET password ='".$myNewPassword."' WHERE email_address = '".$_SESSION["username"]."';";
+            mysqli_query($db,$sql3);
+            mysqli_close($db);
+            echo "Votre mot de passe a été changé";
+
+    }
+    else{
+
+     ?>
+
       <!-- ______________________________  -->
-      <form class="subtab" id ="email_stuff2">
+      <form class="subtab" id ="email_stuff2" method ="post">
       <ul><span class="emailsettings"> 
-              <input id="userinput" type="user" name="E-mail" placeholder="Enter your New password" required class="emailsettings">
+              <input id="userinput" type="user" name="new_password" placeholder="Enter your New password" required class="emailsettings">
       </span></ul>
       <ul><span class="emailsettings"> 
-              <input id="userinput" type="user" name="E-mail" placeholder="Confirm your new password" required class="emailsettings">
+              <input id="userinput" type="user" name="confirm_new_password" placeholder="Confirm your new password" required class="emailsettings">
       </span></ul>
 
         <ul><button type="submit" class ="emailsettings">Change Password</button> </ul>
       </form>
+
+       <?php
+             }
+       ?>
 
       <!-- ______________________________  -->
       <form class="subtab" id ="email_stuff3">
