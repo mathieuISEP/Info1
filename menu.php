@@ -11,9 +11,6 @@ if(!isset($_SESSION['username'])){
         <title>AutoDhome</title>
         <link href="topbar.css" type="text/css" rel="stylesheet">
         <link href="menu.css" type="text/css" rel="stylesheet">
-        <link href="temperaturebox.css" type="text/css" rel="stylesheet">
-        <link href="alarmbox.css" type="text/css" rel="stylesheet">
-        <link href="shutters.css" type="text/css" rel="stylesheet">
         <script type="text/javascript" src="menu.js"></script>
         <script type="text/javascript" src="checkbox.js"></script>
 
@@ -64,11 +61,11 @@ if(!isset($_SESSION['username'])){
       
       <ul id="dashboardlist">
       <li class="dashboardlist">
-        <?php include ("temperaturebox.php"); ?>
+        <?php include ("temperature.php"); ?>
       </li>
 
       <li class="dashboardlist">
-      <?php include ("alarmbox.php"); ?>
+      <?php include ("alarm.php"); ?>
         </li>
 
         <li class="dashboardlist">
@@ -111,11 +108,13 @@ if(!isset($_SESSION['username'])){
 
         <div id ="Shutters" class="subtab">
 
-        <?php include ("shutters.php"); ?>
+        <?php include ("shuttersbox.php"); ?>
         
         </div>
 
         <div id="Humidity" class="subtab">
+
+        <?php include ("humiditybox.php"); ?>
         </div>
 
         <div id="Cameras" class="subtab">

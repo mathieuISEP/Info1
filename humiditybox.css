@@ -1,0 +1,25 @@
+#humiditybox{
+  background-color: white;
+  border-radius:10px;
+  border-color: orange;
+  border-style: solid;
+  padding: 10px;
+  width: 350px;
+  margin: auto;
+  color: orange;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  vertical-align: top;
+}
+#humidityrooms{
+  display: none;
+}
+#roomhumidity{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#househumidity{
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
