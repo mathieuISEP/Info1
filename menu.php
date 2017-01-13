@@ -94,7 +94,7 @@ if(!isset($_SESSION['username'])){
       </section>
 
 
-      <aside id= "featurecontent" class="content"> <!-- Sub navigation content  -->
+      
 
         <div id="Temperature" class="subtab"> <!-- Subtab Temperature content  -->
                 
@@ -121,7 +121,6 @@ if(!isset($_SESSION['username'])){
         <div id="Cameras" class="subtab">
         </div>
 
-    </aside>
     </div>
 
 
@@ -169,7 +168,7 @@ if(!isset($_SESSION['username'])){
 
     <div id="Settings" class="tabcontent"><!-- ____________________________________________ -->
       
-      <div class ="settingtable">
+      <section class ="settingtable">
         <ul > <div onclick="opensubtab('setting1')" class="subtablinks"> Change email </div> </ul>
         <ul > <div onclick="opensubtab('setting2')" class="subtablinks"> Change password </div> </ul>
         <ul > <div onclick="opensubtab('setting3')" class="subtablinks"> Email Notifications </div> </ul>
@@ -182,7 +181,7 @@ if(!isset($_SESSION['username'])){
             $number ;
             ob_end_clean();
          ;?> </ul>
-      </div>
+      </section>
 
       <!-- Part for email/password change  -->
 

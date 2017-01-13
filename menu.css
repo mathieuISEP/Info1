@@ -118,6 +118,7 @@
     padding: 10px;
     border: 2px orange solid;
     color: orange;
+    float: left;
     min-width: 180px;
     max-width: 200px;
     background-color: white;
@@ -126,18 +127,7 @@
 
 .Newsletter{
     padding: 10px;
-
     color: orange;
-
-}
-
-.email_stuff{
-   width :200px;
-   height:100px;
-   border: 2px orange solid;
-   display: none;
-
-
 }
 
 #setting1{

@@ -8,8 +8,7 @@
 </head>
 <body>
 
-<form name="temperature" method="post" accept-charset="utf-8">
-  <div id="shuttersbox">
+<form id="shuttersbox" name="temperature" method="post" accept-charset="utf-8">
     <div>Shutters</div>
     <div class="hr"><hr /></div>
     <table id="houseshutters">
@@ -170,9 +169,6 @@
         <span><input id="shutterreset" type="submit" value="Reset"></span>
         <span><input id="shutterapply" type="submit" value="Apply"></span>
       </div>
-
-  </div>
-</form>
-
+  </form>
 </body>
 </html>

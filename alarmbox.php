@@ -9,8 +9,7 @@
 <body>
 
 
-  <form name="temperature" method="post" accept-charset="utf-8">
-    <div id="alarmbox">
+  <form id="alarmbox" name="temperature" method="post" accept-charset="utf-8">
         <div>Alarm</div>
        <div class="hr"><hr /></div>
         <table id="housealarm">
@@ -84,8 +83,6 @@
         <span><input id="alarmreset" type="submit" value="Reset"></span>
         <span><input id="alarmapply" type="submit" value="Apply"></span>
       </div>
-
-    </div>
   </form>
 
 </body>
