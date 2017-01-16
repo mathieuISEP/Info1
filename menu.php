@@ -211,7 +211,6 @@ if(!isset($_SESSION['username'])){
      
       if (isset($_POST['new_password']) && isset ($_POST['confirm_new_password']) && $_POST['new_password'] = $_POST['confirm_new_password']){
             include 'database.php';
-            session_start();
             $myNewPassword = $_POST["new_password"];
             $sql3 ="UPDATE client SET password ='".$myNewPassword."' WHERE email_address = '".$_SESSION["username"]."';";
             mysqli_query($db,$sql3);
