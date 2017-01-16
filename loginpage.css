@@ -1,10 +1,12 @@
 body{
 	background-image: url(villa.jpg);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
+
 }
 form{
 	background-color: white;
+	
 	width: 400px;
 	margin: auto;
 	position: relative;
