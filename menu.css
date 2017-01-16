@@ -118,6 +118,7 @@
     padding: 10px;
     border: 2px orange solid;
     color: orange;
+    float: left;
     min-width: 180px;
     max-width: 200px;
     background-color: white;
@@ -126,21 +127,10 @@
 
 .Newsletter{
     padding: 10px;
-
     color: orange;
-
 }
 
-.email_stuff{
-   width :200px;
-   height:100px;
-   border: 2px orange solid;
-   display: none;
-
-
-}
-
-#email_stuff{
+#setting1{
   background-color: white;
   width: 400px;
   margin: auto;
@@ -153,7 +143,7 @@
   font-family: "Arial", sans-serif;
 }
 
-#email_stuff2{
+#setting2{
   background-color: white;
   width: 400px;
   margin: auto;
@@ -166,7 +156,7 @@
   font-family: "Arial", sans-serif;
 }
 
-#email_stuff3{
+#setting3{
   width: 400px;
   margin: auto;
   position: relative;

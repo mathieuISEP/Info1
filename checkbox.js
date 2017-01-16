@@ -19,3 +19,11 @@ function display3() {
        else
           rooms.style.display = "block";
 }
+function display4() {
+   var rooms = document.getElementById("humidityrooms");
+       if(rooms.style.display == "block")
+          rooms.style.display = "none";
+       else
+          rooms.style.display = "block";
+}
+

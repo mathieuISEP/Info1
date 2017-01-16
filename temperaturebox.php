@@ -31,10 +31,8 @@
 
 
 
-<div class="content">
 
-  <form name="temperature" method="post" accept-charset="utf-8">
-  <div id="temperaturebox">
+  <form id="temperaturebox" name="temperature" method="post" accept-charset="utf-8">
       
       <div id="boxheader">Temperatures</div>
       
@@ -64,7 +62,7 @@
  
     </table>
 
-    <div>
+    <div id="Custom">
       <span><input type="checkbox" class="checkbox" name="checkbox" onclick="javascript:display1()"></span> Custom room temperatures
   </div> 
     
@@ -127,9 +125,6 @@
         <span><input id="tempreset" type="submit" value="Reset"></span>
         <span><input id="tempapply" type="submit" value="Apply"></span>
       </div>
-
-  </div>
   </form>
-</div>
 </body>
 </html>

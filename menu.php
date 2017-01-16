@@ -11,9 +11,6 @@ if(!isset($_SESSION['username'])){
         <title>AutoDhome</title>
         <link href="topbar.css" type="text/css" rel="stylesheet">
         <link href="menu.css" type="text/css" rel="stylesheet">
-        <link href="temperaturebox.css" type="text/css" rel="stylesheet">
-        <link href="alarmbox.css" type="text/css" rel="stylesheet">
-        <link href="shutters.css" type="text/css" rel="stylesheet">
         <script type="text/javascript" src="menu.js"></script>
         <script type="text/javascript" src="checkbox.js"></script>
 
@@ -64,11 +61,11 @@ if(!isset($_SESSION['username'])){
       
       <ul id="dashboardlist">
       <li class="dashboardlist">
-        <?php include ("temperaturebox.php"); ?>
+        <?php include ("temperature.php"); ?>
       </li>
 
       <li class="dashboardlist">
-      <?php include ("alarmbox.php"); ?>
+      <?php include ("alarm.php"); ?>
         </li>
 
         <li class="dashboardlist">
@@ -88,11 +85,13 @@ if(!isset($_SESSION['username'])){
         <div onclick="opensubtab('Temperature')" class="subtablinks">Temperature</div>
         <div onclick="opensubtab('Alarm')" class="subtablinks">Alarm</div>
         <div onclick="opensubtab('Shutters')" class="subtablinks">Shutters</div>
+        <div onclick="opensubtab('Humidity')" class="subtablinks">Humidity</div>
+        <div onclick="opensubtab('Cameras')" class="subtablinks">Cameras</div>
         </ul>
       </section>
 
 
-      <aside id= "featurecontent" class="content"> <!-- Sub navigation content  -->
+      
 
         <div id="Temperature" class="subtab"> <!-- Subtab Temperature content  -->
                 
@@ -109,11 +108,18 @@ if(!isset($_SESSION['username'])){
 
         <div id ="Shutters" class="subtab">
 
-        <?php include ("shutters.php"); ?>
+        <?php include ("shuttersbox.php"); ?>
         
         </div>
 
-    </aside>
+        <div id="Humidity" class="subtab">
+
+        <?php include ("humiditybox.php"); ?>
+        </div>
+
+        <div id="Cameras" class="subtab">
+        </div>
+
     </div>
 
 
@@ -161,22 +167,20 @@ if(!isset($_SESSION['username'])){
 
     <div id="Settings" class="tabcontent"><!-- ____________________________________________ -->
       
-      <div class ="settingtable">
-        <ul > <div onclick="opensubtab('email_stuff')" class="subtablinks" id="email_stuf"> Change email </div> </ul>
-        <ul > <div onclick="opensubtab('email_stuff2')" class="subtablinks" id="email_stuf2"> Change password </div> </ul>
-        <ul > <div onclick="opensubtab('email_stuff3')" class="subtablinks" id="email_stuf2"> Email Notifications </div> </ul>
-        <ul > <div class="subtablinks"> Customize your Dashboard </div> </ul>
+      <section class ="settingtable">
+        <ul > <div onclick="opensubtab('setting1')" class="subtablinks"> Change email </div> </ul>
+        <ul > <div onclick="opensubtab('setting2')" class="subtablinks"> Change password </div> </ul>
+        <ul > <div onclick="opensubtab('setting3')" class="subtablinks"> Email Notifications </div> </ul>
+        <ul > <div onclick="opensubtab('setting4')" class="subtablinks"> Edit Dashboard </div> </ul>
+        <ul > <div onclick="opensubtab('setting5')" class="subtablinks"> Manage House </div> </ul>
+            
             <ul > <?php 
             ob_start();
             require("loginpage.php");
             $number ;
             ob_end_clean();
          ;?> </ul>
-      </div>
-
-      
-      
-
+      </section>
 
       <!-- Part for email/password change  -->
 
@@ -196,7 +200,7 @@ if(!isset($_SESSION['username'])){
 
      ?>
 
-      <form  class="subtab" id ="email_stuff" method="post">
+      <form  class="subtab" id ="setting1" method="post">
       <ul><span class="emailsettings"> 
               <input id="userinput" type="user" name="new_email" placeholder="Enter your Email" required class="emailsettings">
         </span class="emailsettings"></ul>
@@ -223,7 +227,7 @@ if(!isset($_SESSION['username'])){
      ?>
 
       <!-- ______________________________  -->
-      <form class="subtab" id ="email_stuff2" method ="post">
+      <form class="subtab" id ="setting2" method ="post">
       <ul><span class="emailsettings"> 
               <input id="userinput" type="user" name="new_password" placeholder="Enter your New password" required class="emailsettings">
       </span></ul>
@@ -239,7 +243,7 @@ if(!isset($_SESSION['username'])){
        ?>
 
       <!-- ______________________________  -->
-      <form class="subtab" id ="email_stuff3">
+      <form class="subtab" id ="setting3">
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Alarm Notifications </label></div></ul>
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Movement Detection </label></div></ul>
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Receive Autodhome Newsletter </label></div></ul>

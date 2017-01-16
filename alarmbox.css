@@ -5,6 +5,7 @@
   border-style: solid;
   padding: 10px;
   width: 350px;
+  margin: auto;
   color: orange;
   text-align: center;
   font-family: "Arial", sans-serif;
@@ -24,6 +25,7 @@
   margin-left: 20px;
 }
 #housealarm{
+  margin-top: 10px;
   margin-left: 30px;
   margin-bottom: 10px;
 }
