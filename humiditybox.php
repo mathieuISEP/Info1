@@ -18,9 +18,9 @@
             <td id="humidityvalue">20%<!--A replacer par valeur de la database--></td>
           </tr>
         </table>
-        <span>
+        <div>
         <input type="checkbox" class="checkbox" onclick="javascript:display4()"> Show humidity per room
-      </span> 
+      </div> 
       <div id="humidityrooms">
         <table id="roomhumidity">
           

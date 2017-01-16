@@ -6,7 +6,7 @@
   padding: 10px;
   width: 400px;
   margin: auto;
-  color: orange;
+  color: black;
   text-align: left;
   font-family: "Arial", sans-serif;
   vertical-align: top;
@@ -17,7 +17,7 @@
 #housetemp{
 	margin-left: 50px;
 }
-.checkbox{
+#tempcheckbox{
 	margin-bottom: 20px;
 	margin-left: 10px;
 }
@@ -76,4 +76,12 @@
 #custom{
 	margin-left: 40px;
 	margin-top: 10px;
+}
+#templink{
+	text-align: center;
+	text-decoration: underline;
+	color: orange;
+}
+#templink:hover{
+      cursor: pointer;
 }

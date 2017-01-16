@@ -29,6 +29,7 @@
             </td>
           </tr>
         </table>
+        <div id="alarmlink" onclick="opentab('Features'); opensubtab('Alarm'); display2()"> Custom room alarms </div>
       <div id="buttons">
         <span><input id="alarmreset" type="submit" value="Reset"></span>
         <span><input id="alarmapply" type="submit" value="Apply"></span>

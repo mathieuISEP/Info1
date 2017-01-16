@@ -29,9 +29,9 @@
         </td>
       </tr>
     </table>
-    <span>
-      <input type="checkbox" id="checkbox" onclick="javascript:display3()"> Custom house shutters
-    </span> 
+    <div>
+      <input type="checkbox" id="shuttercheckbox" onclick="javascript:display3()"> Custom house shutters
+    </div> 
     <div id="shutterrooms">
       <table id="roomshutters">
 

@@ -30,6 +30,8 @@
       </tr>
     </table>
 
+    <div id="shutterlink" onclick="opentab('Features'); opensubtab('Shutters'); display3()"> Custom room shutters </div>
+
     <div id="buttons">
         <span><input id="shutterreset" type="submit" value="Reset"></span>
         <span><input id="shutterapply" type="submit" value="Apply"></span>
