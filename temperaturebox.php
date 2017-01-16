@@ -69,54 +69,34 @@
     <div id="temprooms">
 
     <table>
+      <!-- ____________________________________________ -->
+      <?php
+      $list_rooms = "SELECT Name_room 
+              FROM room 
+              WHERE id_home = 1"; 
 
-      <tr>
-        <td>Living Room</td>
-        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-        <td class="C">°C</td>
-      </tr>
 
-      <tr>
-        <td>Kitchen</td>
-        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-        <td class="C">°C</td>
-      </tr>
 
-      <tr>
-        <td>Bedroom 1</td>
-        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-        <td class="C">°C</td>
-      </tr>
+      $results = mysqli_query($db,$list_rooms);
+      if ($result=mysqli_query($db,$list_rooms))
+        {
+        // Fetch one and one row
+        while ($row=mysqli_fetch_row($result))
+          {
+          echo '<tr>';
+          echo '<td>';  printf ($row[0]); echo '</td>';  
+          echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
+          echo '<td class="C">°C</td>';
+          echo '</tr>';
+          }
+        // Free result set
+        mysqli_free_result($result);
+      }
+      mysqli_close($db);
+      ?>
+      <!-- ____________________________________________ -->
 
-      <tr>
-        <td>Bedroom 2</td>
-        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-        <td class="C">°C</td>
-      </tr>
 
-      <tr>
-        <td>Bedroom 3</td>
-        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-        <td class="C">°C</td>
-      </tr>
-
-      <tr>
-        <td>Bedroom 4</td>
-        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-        <td class="C">°C</td>
-      </tr>
-
-      <tr>
-        <td>Bathroom 1</td>
-        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-        <td class="C">°C</td>
-      </tr>
-
-      <tr>
-        <td>Bathroom 2</td>
-        <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-        <td class="°C">°C</td>
-      </tr>
 
     </table>
     </div>

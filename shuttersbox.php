@@ -34,134 +34,40 @@
     </span> 
     <div id="shutterrooms">
       <table id="roomshutters">
-        <tr>
-          <td>Living Room
-          </td>
-          <td>
-            <div class="closed">CLOSED</div>
-          </td>
-          <td>
-            <label class="switch">
-              <input type="checkbox">
-              <div class="slider round"></div>
-            </label>
-          </td>
-          <td>
-            <div class="open">OPEN</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Kitchen
-          </td>
-          <td>
-            <div class="closed">CLOSED</div>
-          </td>
-          <td>
-            <label class="switch">
-              <input type="checkbox">
-              <div class="slider round"></div>
-            </label>
-          </td>
-          <td>
-            <div class="open">OPEN</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Bedroom 1
-          </td>
-          <td>
-            <div class="closed">CLOSED</div>
-          </td>
-          <td>
-            <label class="switch">
-              <input type="checkbox">
-              <div class="slider round"></div>
-            </label>
-          </td>
-          <td>
-            <div class="open">OPEN</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Bedroom 2
-          </td>
-          <td>
-            <div class="closed">CLOSED</div>
-          </td>
-          <td>
-            <label class="switch">
-              <input type="checkbox">
-              <div class="slider round"></div>
-            </label>
-          </td>
-          <td>
-            <div class="open">OPEN</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Bedroom 3
-          </td>
-          <td>
-            <div class="closed">CLOSED</div>
-          </td>
-          <td>
-            <label class="switch">
-              <input type="checkbox">
-              <div class="slider round"></div>
-            </label>
-          </td>
-          <td>
-            <div class="open">OPEN</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Bedroom 4
-          </td>
-          <td>
-            <div class="closed">CLOSED</div>
-          </td>
-          <td>
-            <label class="switch">
-              <input type="checkbox">
-              <div class="slider round"></div>
-            </label>
-          </td>
-          <td>
-            <div class="open">OPEN</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Bathroom 1
-          </td>
-          <td>
-            <div class="closed">CLOSED</div>
-          </td>
-          <td>
-            <label class="switch">
-              <input type="checkbox">
-              <div class="slider round"></div>
-            </label>
-          </td>
-          <td>
-            <div class="open">OPEN</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Bathroom 2
-          </td>
-          <td>
-            <div class="closed">CLOSED</div>
-          </td>
-          <td>
-            <label class="switch">
-              <input type="checkbox">
-              <div class="slider round"></div>
-            </label>
-          </td>
-          <td>
-            <div class="open">OPEN</div>
-          </td>
-        </tr>
+
+        <!-- ____________________________________________ -->
+        <?php
+        include 'database.php';
+        $list_rooms = "SELECT Name_room 
+                FROM room 
+                WHERE id_home = 1"; 
+        $results = mysqli_query($db,$list_rooms);
+        
+        if ($result=mysqli_query($db,$list_rooms))
+          {
+          // Fetch one and one row 
+          while ($row=mysqli_fetch_row($result))
+            {
+            echo '<tr>';
+            echo '<td>';  printf ($row[0]); echo '</td>';
+            echo '<td>';echo '<div class="closed">CLOSED</div>'; echo '</td>';
+            echo '<td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <div class="slider round"></div>
+                    </label>
+                  </td>';
+            echo '<td><div class="open">OPEN</div></td>';
+            echo '</tr>';
+            }
+            
+          // Free result set
+          mysqli_free_result($result);
+        }
+        
+        mysqli_close($db);
+        ?>
+        <!-- ____________________________________________ -->
       </table>
     </div>
 
