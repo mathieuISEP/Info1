@@ -6,7 +6,7 @@
   padding: 10px;
   width: 400px;
   margin: auto;
-  color: orange;
+  color: black;
   text-align: center;
   font-family: "Arial", sans-serif;
   vertical-align: top;
@@ -19,7 +19,7 @@
 margin-right: 20px;
 margin-left: 20px;
 }
-#checkbox{
+#shuttercheckbox{
   margin-bottom: 20px;
 }
 #checkboxlabel{
@@ -118,4 +118,12 @@ input:checked + .slider:before {
   margin-left: 50px;
   border: outset;
   border-radius: 10px;
+}
+#shutterlink{
+  color: orange;
+  text-align: center;
+  text-decoration: underline;
+}
+#shutterlink:hover{
+  cursor: pointer;
 }

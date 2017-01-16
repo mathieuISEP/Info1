@@ -57,7 +57,7 @@
  
     </table>
 
-    <!--<a id="link" onclick="opentab('Features')opensubtab('Temperature')"> Custom room temperature </a>-->
+    <div id="templink" onclick="opentab('Features'); opensubtab('Temperature'); display1()"> Custom room temperature </div>
 
       <div id="buttons">
         <span><input id="tempreset" type="submit" value="Reset"></span>

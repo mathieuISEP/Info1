@@ -40,6 +40,7 @@ form{
  }
  #login{
  	background-color: orange;
+ 	cursor: pointer;
  }
  .password{
  	margin-top: 10px;
