@@ -124,16 +124,9 @@ if(!isset($_SESSION['username'])){
 
 
     <div id="Rooms" class="tabcontent"> <!-- ____________________________________________ -->
-
       <?php
 
-       $DB_SERVER = 'localhost';
-       $DB_USERNAME = 'root';
-       $DB_PASSWORD = 'root';
-       $DB_DATABASE = 'autodhome';
-       $DB_DATABASE = 'autodhome';
-      
-        $db =  mysqli_connect($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
+      include ("database.php");
         $list_rooms = "SELECT Name_room 
               FROM room 
               WHERE id_home = 1"; 
