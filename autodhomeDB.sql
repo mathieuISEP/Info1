@@ -69,7 +69,7 @@ Insert into sensor values (1,2,'temperature_sensor','thermometer 1',15 , '');
 
 Insert into sensor values (2,1,'Luminosity','Luminosity Livingroom',0 , '');
 Insert into sensor values (3,1,'Humidity','Humidity Livingroom',43 , '');
-Insert into sensor values (4,1,'Camera','Camera Livingroom',, '');
+Insert into sensor values (4,1,'Camera','Camera Livingroom',1, '');
 Insert into sensor values (5,1,'Shutters','Shutters 1',0, '');
 Insert into sensor values (6,1,'Shutters','Shutters 2',0, '');
 Insert into sensor values (7,1,'Shutters','Shutters 3',0, '');
@@ -98,11 +98,11 @@ Insert into sensor values (21,6,'Shutters','Shutters Room 4',0 , '');
 Insert into sensor values (22,6,'Luminosity','Light Room 4',0 , '');
 Insert into sensor values (23,6,'temperature_sensor','Temperature Room 4',20 , '');
 
-Insert into sensor values (19,7,'Luminosity','Light Bathroom 1',0 , '');
-Insert into sensor values (20,7,'temperature_sensor','Temperature Bathroom 1',20 , '');
+Insert into sensor values (24,7,'Luminosity','Light Bathroom 1',0 , '');
+Insert into sensor values (25,7,'temperature_sensor','Temperature Bathroom 1',20 , '');
 
-Insert into sensor values (21,8,'Luminosity','Light Bathroom 2',0 , '');
-Insert into sensor values (22,8,'temperature_sensor','Temperature Bathroom 2',20 , '');
+Insert into sensor values (26,8,'Luminosity','Light Bathroom 2',0 , '');
+Insert into sensor values (27,8,'temperature_sensor','Temperature Bathroom 2',20 , '');
 
 
 #Living room id = 3

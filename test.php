@@ -29,8 +29,8 @@
         // Fetch one and one row
         while ($row=mysqli_fetch_row($result))
           {
+          echo '<ul class="subtablinks" onclick="opensubtab(';echo $row[0]; echo')">'; 
 
-          echo '<ul class="subtablinks">';  
           printf ($row[0]);
           echo "</ul>";  
 
@@ -55,7 +55,7 @@
           // cerate list of sensor to display
           // to link to Room list previously created
 
-          echo '<div id ="$nb" class="subtab">';
+          echo '<div id ="'; echo $nb; echo'" class="subtab">';
           echo '</div>';
           
       }
