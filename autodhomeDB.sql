@@ -67,8 +67,48 @@ Insert into Room values ('Bathroom 2',8,1,'Bathroom');
 
 Insert into sensor values (1,2,'temperature_sensor','thermometer 1',15 , '');
 
+Insert into sensor values (2,1,'Luminosity','Luminosity Livingroom',0 , '');
+Insert into sensor values (3,1,'Humidity','Humidity Livingroom',43 , '');
+Insert into sensor values (4,1,'Camera','Camera Livingroom',, '');
+Insert into sensor values (5,1,'Shutters','Shutters 1',0, '');
+Insert into sensor values (6,1,'Shutters','Shutters 2',0, '');
+Insert into sensor values (7,1,'Shutters','Shutters 3',0, '');
 
 
+Insert into sensor values (8,2,'Humidity','Humidity kitchen 1',50 , '');
+Insert into sensor values (9,2,'Humidity','Humidity kitchen 2',46 , '');
+Insert into sensor values (10,2,'Shutters','Shutters kitchen 2',0 , '');
+Insert into sensor values (11,2,'Alarm','Fire Alarm',0 , '');
+
+
+Insert into sensor values (12,3,'Shutters','Shutters Room1',0 , '');
+Insert into sensor values (13,3,'Luminosity','Light Room 1',0 , '');
+Insert into sensor values (14,3,'temperature_sensor','Temperature Room 1',23 , '');
+
+Insert into sensor values (15,4,'Shutters','Shutters Room 2',0 , '');
+Insert into sensor values (16,4,'Luminosity','Light Room 2',0 , '');
+Insert into sensor values (17,4,'temperature_sensor','Temperature Room 2',25 , '');
+
+Insert into sensor values (18,5,'Shutters','Shutters Room 3',0 , '');
+Insert into sensor values (19,5,'Luminosity','Light Room 3',0 , '');
+Insert into sensor values (20,5,'temperature_sensor','Temperature Room 3',20 , '');
+
+
+Insert into sensor values (21,6,'Shutters','Shutters Room 4',0 , '');
+Insert into sensor values (22,6,'Luminosity','Light Room 4',0 , '');
+Insert into sensor values (23,6,'temperature_sensor','Temperature Room 4',20 , '');
+
+Insert into sensor values (19,7,'Luminosity','Light Bathroom 1',0 , '');
+Insert into sensor values (20,7,'temperature_sensor','Temperature Bathroom 1',20 , '');
+
+Insert into sensor values (21,8,'Luminosity','Light Bathroom 2',0 , '');
+Insert into sensor values (22,8,'temperature_sensor','Temperature Bathroom 2',20 , '');
+
+
+#Living room id = 3
+# Kitchen id = 4
+# Room 1 = 5, Room2 = 6, Room3 = 7 Room4= 8
+#
 
 
 

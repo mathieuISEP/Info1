@@ -127,11 +127,9 @@ if(!isset($_SESSION['username'])){
       <?php
 
       include ("database.php");
-        $list_rooms = "SELECT Name_room 
+      $list_rooms = "SELECT Name_room 
               FROM room 
               WHERE id_home = 1"; 
-
-
 
       $results = mysqli_query($db,$list_rooms);
 
@@ -260,6 +258,10 @@ if(!isset($_SESSION['username'])){
       <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Receive Autodhome Newsletter </label></div></ul>
       </form>
 
+
+      <div class="subtab" id ="setting4">
+
+      <?php include("editdashboard.php"); ?>
 
     </div>
 

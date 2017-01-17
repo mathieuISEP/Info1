@@ -1,0 +1,93 @@
+#featurecontent{
+  background-color: white;
+  border-radius:10px;
+  border-color: orange;
+  border-style: solid;
+  padding: 10px;
+  width: 300px;
+  margin: 10px;
+  color: black;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  vertical-align: top;
+}
+#dashboardcontent{
+  background-color: white;
+  border-radius:10px;
+  border-color: orange;
+  border-style: solid;
+  padding: 10px;
+  width: 300px;
+  margin: 10px;
+  color: black;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  vertical-align: top;
+}
+#featurecontentlist{
+	text-align: left;
+	list-style-type: none;
+}
+#dashboardcontentlist{
+	text-align: left;
+	list-style-type: none;
+}
+.featurecontent{
+	float: left;
+	list-style-type: none;
+}
+.dashboardcontent{
+	float: left;
+	list-style-type: none;
+}
+.featureelement{
+	list-style-type: none;
+	margin: 20px;
+	border-radius: 10px;
+}
+.featureelement:hover{
+	cursor: pointer;
+	background-color: orange;
+	color: white;
+}
+.dashboardelement{
+	list-style-type: none;
+	margin: 20px;
+	border-radius: 10px;
+}
+.dashboardelement:hover{
+	cursor: pointer;
+	background-color: orange;
+	color: white;
+}
+.rightarrow{
+	float: right;
+	margin-right: 40px;
+}
+.leftarrow{
+	margin-right: 40px;
+}
+#featureelement1{
+	visibility: visible;
+}
+#featureelement2{
+	visibility: visible;
+}
+#featureelement3{
+	visibility: visible;
+}
+#featureelement4{
+	visibility: visible;
+}
+#dashboardelement1{
+	visibility: collapse;
+}
+#dashboardelement2{
+	visibility: collapse;
+}
+#dashboardelement3{
+	visibility: collapse;
+}
+#dashboardelement4{
+	visibility: collapse;
+}
