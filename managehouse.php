@@ -16,11 +16,27 @@
 		<div class="hr"><hr /></div>
 		<div id="titleaddsensor">Add a Sensor</div>
 
+    <?php
+     
+      if (isset($_POST['sensorName'])){
+            include 'database.php';
+            $myNewSensor = $_POST["sensorName"];
+            $mySensorType = $_POST["sensorType"];
+            $myRoomType = $_POST["roomType"];
+            $sql4 ="INSERT INTO sensor VALUES (60,2,$mySensorType,$sensorName,2,3)";
+            mysqli_query($db,$sql4);
+            mysqli_close($db);
+            echo "sensor added";
+
+    }
+    else{
+
+     ?>
 		<form id="addsensor" name="addsensor" method="post" accept-charset="utf-8">
 			<table cellspacing="15">
-				<tr><td>Sensor Name</td><td><input id="sensorinput" type="text" required></td></tr>
+				<tr><td>Sensor Name</td><td><input name ="sensorName" id="sensorinput" type="text" required></td></tr>
 				<tr><td> Sensor Type </td>
-				<td><select required form="addsensor">
+				<td><select name = "sensorType" required form="addsensor">
 					<option></option>
 					<option>temperature</option>
 					<option>alarm</option>
@@ -31,7 +47,7 @@
 					<option>light</option>
 				</select></td></tr>
 				<tr><td>Room</td>
-				<td><select required form="addsensor">
+				<td><select name ="roomType" required form="addsensor">
 				<option></option>
 				<option>living room</option>
 				<option>bedroom</option>
@@ -40,6 +56,10 @@
 			</table>
 			<button class="managehousebutton">Add</button>
 		</form>
+
+		<?php
+             }
+       ?>
 		
 		<div id="titleeditsensors">Edit Sensors</div>
 
