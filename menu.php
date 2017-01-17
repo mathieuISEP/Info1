@@ -243,6 +243,10 @@ if(!isset($_SESSION['username'])){
       </form>
 
 
+      <div class="subtab" id ="setting4">
+
+      <?php include("editdashboard.php"); ?>
+
     </div>
 
 
