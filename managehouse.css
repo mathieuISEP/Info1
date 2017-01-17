@@ -1,0 +1,84 @@
+#managehouse{
+  background-color: white;
+  border-radius:10px;
+  border-color: orange;
+  border-style: solid;
+  padding: 10px;
+  width: 700px;
+  margin: auto;
+  color: black;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  vertical-align: top;
+}
+#managesensors{
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+  	background-color: white;
+  	border-radius:10px;
+  	border-color: orange;
+  	border-style: solid;
+}
+.titlemanagehouse{
+	text-align: left;
+}
+#titleaddsensor{
+	color: orange;
+	text-decoration: underline;
+	text-align: center;
+	margin: 10px;
+}
+#titleaddsensor:hover{
+	cursor: pointer;
+}
+#addsensor{
+display: none;
+}
+.addsensor{
+	margin: 10px;
+	text-align: left;
+}
+#titleeditsensors{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	text-decoration: underline;
+	color: orange;
+}
+#editsensors{
+	display: none;
+}
+#managerooms{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: right;
+	padding: 10px;
+  background-color: white;
+  border-radius:10px;
+  border-color: orange;
+  border-style: solid;
+}
+#titleaddroom{
+	color: orange;
+	text-decoration: underline;
+	text-align: center;
+	margin: 10px;
+}
+#titleaddroom:hover{
+	cursor: pointer;
+}
+#addroom{
+display: none;
+}
+#titleeditrooms{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	text-decoration: underline;
+	color: orange;
+}
+#editrooms{
+	display: none;
+}
