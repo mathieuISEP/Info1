@@ -34,7 +34,7 @@ type_room  varchar (255)
 );
 
 CREATE TABLE Sensor(
-id int primary key,
+id int NOT NULL AUTO_INCREMENT primary key,
 id_room int,
 type_sensor  varchar (255),
 sensor_name varchar (255),
