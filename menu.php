@@ -176,14 +176,19 @@ if(!isset($_SESSION['username'])){
       <!-- Part for email/password change  -->
 
         <?php
-     
-      if (isset($_POST['new_email'])){
+
+      echo $_SESSION["username"];
+
+      if (isset($_POST['new_email']) && isset ($_POST['confirm_email']) && $_POST['new_email'] = $_POST['confirm_email'] 
+        && $_POST['email_address'] = $_SESSION['username'] && $_POST['post_password'] = $_SESSION['user_password']){
+
             include 'database.php';
             $myNewEmail = $_POST["new_email"];
             $sql ="UPDATE client SET email_address ='".$myNewEmail."' WHERE email_address = '".$_SESSION["username"]."';";
             mysqli_query($db,$sql);
             mysqli_close($db);
             echo "Votre adresse email a bien été changé";
+            echo $_POST['new_email'];
 
     }
     else{
@@ -194,9 +199,18 @@ if(!isset($_SESSION['username'])){
 
       <form  class="subtab" id ="setting1" method="post">
       <ul><span class="emailsettings"> 
-              <input id="userinput" type="user" name="new_email" placeholder="Enter your Email" required class="emailsettings">
+              <input id="userinput" type="user" name="email_address" placeholder="Enter your Email" required class="emailsettings">
         </span class="emailsettings"></ul>
-        <ul><button type="submit" class ="emailsettings">Send request</button> </ul>
+        <ul><span class="emailsettings"> 
+              <input id="userinput" type="user" name="post_password" placeholder="Enter your password" required class="emailsettings">
+      </span></ul>
+      <ul><span class="emailsettings"> 
+              <input id="userinput" type="user" name="new_email" placeholder="Enter your New Email" required class="emailsettings">
+      </span></ul>
+      <ul><span class="emailsettings"> 
+              <input id="userinput" type="user" name="confirm_email" placeholder="Confirm your New Email" required class="emailsettings">
+      </span></ul>
+        <ul><button type="submit" class ="emailsettings">Change Email</button> </ul>
       </form>
       
       <?php
@@ -220,6 +234,9 @@ if(!isset($_SESSION['username'])){
      ?>
       <!-- ______________________________  -->
       <form class="subtab" id ="setting2" method ="post">
+       <ul><span class="emailsettings"> 
+              <input id="userinput" type="user" name="post_password" placeholder="Enter your current password" required class="emailsettings">
+      </span></ul>
       <ul><span class="emailsettings"> 
               <input id="userinput" type="user" name="new_password" placeholder="Enter your New password" required class="emailsettings">
       </span></ul>

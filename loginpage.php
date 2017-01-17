@@ -34,9 +34,7 @@
           $row = mysqli_fetch_assoc($result);
           if(strcmp($mypassword,$row["password"]) == 0){
           $_SESSION["username"] =  $row["email_address"]; 
-          $_SESSION["password"] =  $row["password"]; 
-
-
+          $_SESSION["user_password"] = $row["password"];
           header("location: menu.php");
 
           }
