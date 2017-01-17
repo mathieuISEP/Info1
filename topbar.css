@@ -6,6 +6,7 @@
 	background-color: white;
 	border: 5px orange solid;
 	width: auto;
+	min-width: 500px;
 	height: 80px;
 	margin: auto;
 	margin-bottom: 20px;
