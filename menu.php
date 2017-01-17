@@ -260,11 +260,12 @@ if(!isset($_SESSION['username'])){
 
 
       <div class="subtab" id ="setting4">
-
       <?php include("editdashboard.php"); ?>
-
     </div>
 
+    <div class="subtab" id="setting5">
+    <?php include("managehouse.php"); ?>
+    </div>
 
 
 

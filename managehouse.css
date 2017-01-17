@@ -4,7 +4,7 @@
   border-color: orange;
   border-style: solid;
   padding: 10px;
-  width: 700px;
+  width: 750px;
   margin: auto;
   color: black;
   text-align: center;
@@ -34,7 +34,7 @@
 	cursor: pointer;
 }
 #addsensor{
-display: none;
+/*display: none;*/
 }
 .addsensor{
 	margin: 10px;
@@ -48,7 +48,7 @@ display: none;
 	color: orange;
 }
 #editsensors{
-	display: none;
+	/*display: none;*/
 }
 #managerooms{
 	margin-top: 20px;
@@ -70,7 +70,7 @@ display: none;
 	cursor: pointer;
 }
 #addroom{
-display: none;
+/*display: none;*/
 }
 #titleeditrooms{
 	margin-top: 20px;
@@ -80,5 +80,5 @@ display: none;
 	color: orange;
 }
 #editrooms{
-	display: none;
+	/*display: none;*/
 }

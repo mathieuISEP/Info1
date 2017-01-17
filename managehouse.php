@@ -14,6 +14,7 @@
 	<div id="managesensors">
 		<div class="titlemanagehouse">Manage Sensors</div>
 		<div id="titleaddsensor" onclick="addsensor()">Add a Sensor</div>
+
 		<form id="addsensor" name="addsensor" method="post" accept-charset="utf-8">
 			<table cellspacing="15">
 				<tr><td>Sensor Name</td><td><input id="sensorinput" type="text" required></td></tr>
@@ -40,6 +41,7 @@
 		</form>
 
 		<div id="titleeditsensors" onclick="editsensors()">Edit Sensors</div>
+
 			<form id="editsensors" name="editsensors" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
 				<tr><td>Select Room</td>
@@ -64,7 +66,7 @@
 				<button>Edit Name</button>
 				<button>Delete</button>
 				<table cellspacing="15">
-				<tr><td>Sensor Name</td><td>...</td></tr>
+				<tr><td>New Sensor Name</td><td><input type="text"></td></tr>
 				</table>
 				<button>Save</button>
 			</form>
@@ -73,6 +75,7 @@
 	<div id="managerooms">
 		<div class="titlemanagehouse">Manage Rooms</div>	
 		<div id="titleaddroom" onclick="addroom()">Add a Room</div>
+
 		<form id="addroom" method="post" accept-charset="utf-8">
 		<table cellspacing="15">
 		<tr><td>Room Name</td><td><input id="roominput" type="text" required></td></tr>
@@ -81,6 +84,7 @@
 		</form>
 
 		<div id="titleeditrooms" onclick="editrooms()">Edit Rooms</div>
+
 			<form id="editrooms" name="editrooms" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
 				<tr><td>Select Room</td>
@@ -98,6 +102,7 @@
 				</table>
 				<button>Save</button>
 			</form>
+
 		</div>
 	</div>
 
