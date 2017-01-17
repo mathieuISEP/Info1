@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-      <title>Temperature</title>
+      <title>Edit Dashboard</title>
         <link href="editdashboard.css" type="text/css" rel="stylesheet">
         <script type="text/javascript" src="editdashboard.js"></script>
 
