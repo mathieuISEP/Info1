@@ -13,7 +13,8 @@
 
 	<div id="managesensors">
 		<div class="titlemanagehouse">Manage Sensors</div>
-		<div id="titleaddsensor" onclick="addsensor()">Add a Sensor</div>
+		<div class="hr"><hr /></div>
+		<div id="titleaddsensor">Add a Sensor</div>
 
 		<form id="addsensor" name="addsensor" method="post" accept-charset="utf-8">
 			<table cellspacing="15">
@@ -37,10 +38,10 @@
 				<option>etc...</option>
 				</select></td></tr>
 			</table>
-			<button>Add</button>
+			<button class="managehousebutton">Add</button>
 		</form>
-
-		<div id="titleeditsensors" onclick="editsensors()">Edit Sensors</div>
+		
+		<div id="titleeditsensors">Edit Sensors</div>
 
 			<form id="editsensors" name="editsensors" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
@@ -63,27 +64,30 @@
 					<option>light</option>
 				</select></td></tr>
 				</table>
-				<button>Edit Name</button>
-				<button>Delete</button>
+				<button class="managehousebutton">Edit Name</button>
+				<button class="managehousebutton">Delete</button>
+			</form>
+			<form id="sensorname" name="sensorname">
 				<table cellspacing="15">
-				<tr><td>New Sensor Name</td><td><input type="text"></td></tr>
+				<tr><td>New Sensor Name</td><td><input type="text" form="sensorname" required></td></tr>
 				</table>
-				<button>Save</button>
+				<button class="managehousebutton">Save</button>
 			</form>
 		</div>
 
 	<div id="managerooms">
-		<div class="titlemanagehouse">Manage Rooms</div>	
-		<div id="titleaddroom" onclick="addroom()">Add a Room</div>
+		<div class="titlemanagehouse">Manage Rooms</div>
+		<div class="hr"><hr /></div>	
+		<div id="titleaddroom">Add a Room</div>
 
 		<form id="addroom" method="post" accept-charset="utf-8">
 		<table cellspacing="15">
 		<tr><td>Room Name</td><td><input id="roominput" type="text" required></td></tr>
 		</table>
-		<button>Add</button>
+		<button class="managehousebutton">Add</button>
 		</form>
 
-		<div id="titleeditrooms" onclick="editrooms()">Edit Rooms</div>
+		<div id="titleeditrooms">Edit Rooms</div>
 
 			<form id="editrooms" name="editrooms" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
@@ -95,12 +99,15 @@
 				<option>etc...</option>
 				</select></td></tr>
 				</table>
-				<button>Edit Name</button>
-				<button>Delete</button>
+				<button class="managehousebutton">Edit Name</button>
+				<button class="managehousebutton">Delete</button>
+			</form>
+
+			<form id="roomname" name="roomname" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
-				<tr><td>Room Name</td><td>...</td></tr>
+				<tr><td>Room Name</td><td><input type="text" form="roomname" required></td></tr>
 				</table>
-				<button>Save</button>
+				<button class="managehousebutton">Save</button>
 			</form>
 
 		</div>
