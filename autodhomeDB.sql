@@ -49,11 +49,11 @@ type_actuator  varchar (255),
 actuator_name varchar (255)
 );
 
-Insert into Client values (1,'Folco','Galiano',1,'rue de la paix','Paris','France',27,'f.g@gmail.com',123,True,'root');
-Insert into Client values (2,'Mathieu','Da Silva',2,'rue Blomet','Paris','France',168,'m9.dasilva@gmail.com',345,True,'root');
-Insert into Client values (3,'Antoine','Jeannette',3,'rue de la paix','Paris','France',27,'antoine.jeannette@gmail.com',678,True,'root');
-Insert into Client values (4,'Leandro','Gasparini',4,'rue de la paix','Paris','France',27,'f.g@gmail.com',2456534543,True,'root');
-Insert into Client values (5,'Anthony','Demogues',5,'rue de la paix','Paris','France',27,'f.g@gmail.com',2456534543,True,'root');
+Insert into Client values (1,'Folco','Galiano',1,'rue de la paix','Paris','France',27,'folco.galiano@isep.fr',123,True,'root');
+Insert into Client values (2,'Mathieu','Da Silva',2,'rue Blomet','Paris','France',168,'mathieu.dasilva@isep.fr',345,True,'root');
+Insert into Client values (3,'Antoine','Jeannette',3,'rue de la paix','Paris','France',27,'antoine.jeannette@isep.fr',678,True,'root');
+Insert into Client values (4,'Leandro','Gasparini',4,'rue de la paix','Paris','France',27,'leandro.gasparini@isep.fr',2456534543,True,'root');
+Insert into Client values (5,'Anthony','Demogues',5,'rue de la paix','Paris','France',27,'anthony.demogue@isep.fr',2456534543,True,'root');
 
 Insert into Room values ('Living room',1,1,'Living room');
 Insert into Room values ('Kitchen',2,1,'Kitchen');
