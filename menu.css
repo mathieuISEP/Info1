@@ -132,18 +132,7 @@
     color: orange;
 }
 
-#setting1{
-  background-color: white;
-  width: 400px;
-  margin: auto;
-  position: relative;
-  top: 10px;
-  padding:10px;
-  border: 2px orange solid;
-  border-radius: 10px;
-  color: orange;
-  font-family: "Arial", sans-serif;
-}
+
 
 #setting2{
   background-color: white;
@@ -170,7 +159,7 @@
   font-family: "Arial", sans-serif;
 }
 
-.emailsettings{
+.passwordsettings{
   width: 300px;
   height: 40px;
 }
