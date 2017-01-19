@@ -50,12 +50,36 @@
 				</select></td></tr>
 				<tr><td>Room Name</td>
 				<td><select name ="room_type" required form="addsensor">
+
+				<?php
+	            include 'database.php';
+	            $sql3 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+	            $result = $db -> query($sql3);
+	            if ($result->num_rows > 0){
+          		$row = mysqli_fetch_assoc($result);
+          			while ($row=mysqli_fetch_row($result))
+          				{
+          				  
+	            
+	            
+	           	?>
+
 				<option value = "Default">Choose room</option>
-				<option value = "1">kitchen</option>
-				<option value = "2">living room</option>
-				<option value = "3">bedroom</option>
-				<option value = "4">bathroom</option>
-				</select></td></tr>				
+				<option value = "$row[0]">kitchen</option>
+				<option value = "$row[1]">living room</option>
+				<option value = "$row[2]">bedroom</option>
+				<option value = "$row[3]">bathroom</option>
+				</select></td></tr>		
+				<?php
+						}
+				}
+          		else{
+          			echo 'There are no sensors in this room';
+			         }	
+
+	            mysqli_query($db,$sql);
+	            mysqli_close($db);
+	           	?>		
 			</table>
 			<button type="submit" class="managehousebutton">Add</button>
 		</form>
