@@ -22,7 +22,7 @@
 
       $list_rooms = "SELECT Name_room 
               FROM room 
-              WHERE id_home = 1"; 
+              WHERE id_home =  1"; 
 
       $results = mysqli_query($db,$list_rooms);
 
@@ -32,14 +32,8 @@
         // Fetch one and one row
         while ($row=mysqli_fetch_row($result))
           {
-          	$table = $dom->createElement('div');
-			$domAttribute = $dom->createAttribute('id');
-			$domAttribute->value = $nb;
 
-			$domAttribute2 = $dom->createAttribute('class');
-			$domAttribute2->value ='subtablinks' ;
-
-         	echo '<ul onclick="opensubtab('; echo $row[0]) ; echo ')" class="subtablinks">';  
+         	echo '<ul onclick="opensubtab($row[0])" class="subtablinks">';  
           printf ($row[0]);
           echo "</ul>";  
 
@@ -66,7 +60,7 @@
 	        while ($row=mysqli_fetch_row($result))
 	          {
 
-	          echo '<div id= ' ; echo $row[0]; echo'class="subtab">'; echo $row[0]; echo '</div>';
+	          echo '<div id= $nb  class="subtab" </div>';
 	          }
 	        // Free result set
 	        mysqli_free_result($result);
