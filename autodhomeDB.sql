@@ -2,10 +2,10 @@
 use autodhome;
 
 CREATE TABLE Client (
-id_card int primary key,
+client_number int NOT NULL AUTO_INCREMENT primary key,
+id_card int,
 first_name varchar (255),
 last_name varchar (255),
-client_number int,
 street varchar (255),
 city varchar (255),
 country varchar (255),

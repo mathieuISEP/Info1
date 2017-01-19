@@ -35,6 +35,7 @@
           if(strcmp($mypassword,$row["password"]) == 0){
           $_SESSION["username"] =  $row["email_address"]; 
           $_SESSION["user_password"] = $row["password"];
+          $_SESSION["userid"] = $row["client_number"]
           header("location: menu.php");
 
           }

@@ -191,6 +191,7 @@ if(!isset($_SESSION['username'])){
      ?>     
 
       <form  class="subtab" id ="setting1" method="post">
+      
        <?php echo "<div style ='font:50px Calibri,italic,sans-serif;color:#000000'><center> Change e-mail: </center></div>";  ?>  
 
       <ul><span class="emailsettings"> 

@@ -37,10 +37,10 @@
      	?>
 		<form id="addsensor" name="addsensor" method="post" accept-charset="utf-8">
 			<table cellspacing="15">
-				<tr><td>Sensor Name</td><td><input name ="sensor_name" id="sensorinput" type="text" required></td></tr>
+				<tr><td>Sensor Name</td><td><input name ="sensor_name" placeholder ="Type sensor name" id="sensorinput" type="text" required></td></tr>
 				<tr><td> Sensor Type </td>
 				<td><select name = "sensor_type" required form="addsensor">
-					<option></option>
+					<option value = "Default">Choose sensor</option>
 					<option>temperature</option>
 					<option>alarm</option>
 					<option>shutter</option>
@@ -48,9 +48,9 @@
 					<option>door</option>
 					<option>light</option>
 				</select></td></tr>
-				<tr><td>Room type</td>
+				<tr><td>Room Name</td>
 				<td><select name ="room_type" required form="addsensor">
-				<option></option>
+				<option value = "Default">Choose room</option>
 				<option value = "1">kitchen</option>
 				<option value = "2">living room</option>
 				<option value = "3">bedroom</option>
