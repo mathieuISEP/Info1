@@ -173,6 +173,7 @@ if(!isset($_SESSION['username'])){
          ;?> </ul>
       </div>
 
+<<<<<<< HEAD
       <!-- Part for email/password change  -->
 
         <?php
@@ -245,6 +246,12 @@ if(!isset($_SESSION['username'])){
       <?php
              }
        ?>
+=======
+      <?php include("changeemail.php"); ?>
+       
+      <?php include("changepassword.php"); ?>
+    
+>>>>>>> 3eaa442ba60edf6114a48c27930f5e9779385692
 
       <!-- ______________________________  -->
       <form class="subtab" id ="setting3">
