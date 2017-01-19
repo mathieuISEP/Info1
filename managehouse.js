@@ -1,12 +1,6 @@
-function addsensor(){
-	document.getElementById("addsensor").style.display = "block";
+function editsensorname(){
+	document.getElementById("sensorname").style.display = "block";
 }
-function editsensors(){
-
-}
-function addroom(){
-
-}
-function editrooms(){
-
+function editroomname(){
+	document.getElementById("roomname").style.display = "block";
 }

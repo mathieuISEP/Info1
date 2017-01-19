@@ -16,25 +16,25 @@
 		<div class="hr"><hr /></div>
 		<div id="titleaddsensor">Add a Sensor</div>
 
-    <?php
-     
-      if (isset ($_POST['sensor_name'])  && isset($_POST['sensor_type'])){
-            include 'database.php';
-            $myNewSensor = $_POST["sensor_name"];
-            $mySensorType = $_POST["sensor_type"];
-            $myRoomType = $_POST["room_type"];
-            $sql ="INSERT INTO sensor(id_room,type_sensor,sensor_name) VALUES ('".$myRoomType."','".$mySensorType."','".$myNewSensor."')";
-            echo 'Vous venez dajouter un sensor de '.$sensor_type.'!';           
-            mysqli_query($db,$sql);
-            mysqli_close($db);
-            echo "<meta http-equiv='refresh' content='0'>";
-            
+	    <?php
+	     
+	      if (isset ($_POST['sensor_name'])  && isset($_POST['sensor_type'])){
+	            include 'database.php';
+	            $myNewSensor = $_POST["sensor_name"];
+	            $mySensorType = $_POST["sensor_type"];
+	            $myRoomType = $_POST["room_type"];
+	            $sql ="INSERT INTO sensor(id_room,type_sensor,sensor_name) VALUES ('".$myRoomType."','".$mySensorType."','".$myNewSensor."')";
+	            echo 'Vous venez dajouter un sensor de '.$sensor_type.'!';           
+	            mysqli_query($db,$sql);
+	            mysqli_close($db);
+	            echo "<meta http-equiv='refresh' content='0'>";
+	            
 
 
-    }
-    else{
+	    }
+    	else{
 
-     ?>
+     	?>
 		<form id="addsensor" name="addsensor" method="post" accept-charset="utf-8">
 			<table cellspacing="15">
 				<tr><td>Sensor Name</td><td><input name ="sensor_name" id="sensorinput" type="text" required></td></tr>
@@ -86,7 +86,7 @@
 					<option>light</option>
 				</select></td></tr>
 				</table>
-				<button class="managehousebutton">Edit Name</button>
+				<button class="managehousebutton" onclick="editsensorname()">Edit Name</button>
 				<button class="managehousebutton">Delete</button>
 			</form>
 			<form id="sensorname" name="sensorname">
@@ -95,7 +95,7 @@
 				</table>
 				<button class="managehousebutton">Save</button>
 			</form>
-		</div>
+	</div>
 
 	<div id="managerooms">
 		<div class="titlemanagehouse">Manage Rooms</div>
@@ -115,10 +115,10 @@
             
 
 
-    }
-    else{
+	    }
+	    else{
 
-     ?>
+	     ?>
 
 		<form id="addroom" method="post" accept-charset="utf-8">
 		<table cellspacing="15">
@@ -150,7 +150,7 @@
 				<option>etc...</option>
 				</select></td></tr>
 				</table>
-				<button class="managehousebutton">Edit Name</button>
+				<button class="managehousebutton" onclick="editroomname()">Edit Name</button>
 				<button class="managehousebutton">Delete</button>
 			</form>
 
@@ -161,7 +161,6 @@
 				<button class="managehousebutton">Save</button>
 			</form>
 
-		</div>
 	</div>
 
 </div>
