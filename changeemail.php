@@ -20,7 +20,7 @@
       
  
       <form  class="subtab" id ="setting1" method="post">
-      <div id="titlechangeemail">Change Email</div>
+      <div id="titlechangeemail">Change Your Email</div>
       <div class="hr"><hr /></div>
 
        <!--<?php echo "<div style ='font:50px Calibri,italic,sans-serif;color:#000000'><center> Change e-mail: </center></div>";  ?>  -->
@@ -35,7 +35,8 @@
       <li class="emaillistelements"> 
               <input class="emailsettings" type="user" name="confirm_email" placeholder="Confirm your New Email" required>
       </li>
-        <li><button class ="emailsettings" type="submit">Change Email</button> 
+        <li class="emaillistelements">
+        <button class ="emailsettings" type="submit">Change Email</button> 
         </li>
         </ul>
       </form>

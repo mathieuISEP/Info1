@@ -175,41 +175,8 @@ if(!isset($_SESSION['username'])){
 
       <?php include("changeemail.php"); ?>
        
-
-    <?php
-     
-      if (isset($_POST['new_password']) && isset ($_POST['confirm_new_password']) && $_POST['new_password'] = $_POST['confirm_new_password']){
-            include 'database.php';
-            $myNewPassword = $_POST["new_password"];
-            $sql3 ="UPDATE client SET password ='".$myNewPassword."' WHERE email_address = '".$_SESSION["username"]."';";
-            mysqli_query($db,$sql3);
-            mysqli_close($db);
-            echo "Votre mot de passe a été changé";
-
-    }
-    else{
-
-     ?>
-      <!-- ______________________________  -->
-      <form class="subtab" id ="setting2" method ="post">
-             <?php echo "<div style ='font:50px Calibri,italic,sans-serif;color:#000000'> <center> Change password: </center> </div>";  ?>  
-
-       <ul><span class="passwordsettings"> 
-              <input class="passwordsettings" type="password" name="post_password" placeholder="Enter your current password" required>
-      </span></ul>
-      <ul><span class="paswordsettings"> 
-              <input class="passwordsettings" type="password" name="new_password" placeholder="Enter your New password" required>
-      </span></ul>
-      <ul><span class="passwordsettings"> 
-              <input class="passwordsettings" type="password" name="confirm_new_password" placeholder="Confirm your new password" required>
-      </span></ul>
-
-        <ul><button class="passwordsettings" type="submit" class ="emailsettings">Change Password</button> </ul>
-      </form>
-
-      <?php
-             }
-       ?>
+      <?php include("changepassword.php"); ?>
+    
 
       <!-- ______________________________  -->
       <form class="subtab" id ="setting3">
