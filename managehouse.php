@@ -24,7 +24,7 @@
 	            $mySensorType = $_POST["sensor_type"];
 	            $myRoomType = $_POST["room_type"];
 	            $sql ="INSERT INTO sensor(id_room,type_sensor,sensor_name) VALUES ('".$myRoomType."','".$mySensorType."','".$myNewSensor."')";
-	            echo 'Vous venez dajouter un sensor de '.$sensor_type.'!';           
+	            //echo 'Vous venez dajouter un sensor de '.$sensor_type.'!';           
 	            mysqli_query($db,$sql);
 	            mysqli_close($db);
 	            echo "<meta http-equiv='refresh' content='0'>";
@@ -53,12 +53,12 @@
 				<tr><td>Room Name</td>
 				<?php
 	            include 'database.php';
-	            $sql3 = "SELECT id FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+	            $sql3 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
 	            $result3 = $db -> query($sql3);
 	            $row3 = mysqli_fetch_assoc($result3);
-	            $sql4 = "SELECT * FROM sensor WHERE id_room = '".$row3["id"]."';";
-	            $result4 = $db -> query($sql4);
-	            $row4 = mysqli_fetch_assoc($result4);
+	            //$sql4 = "SELECT * FROM sensor WHERE id_room = '".$row3["id"]."';";
+	            //$result4 = $db -> query($sql4);
+	            //$row4 = mysqli_fetch_assoc($result4);
 
 
 	         	?>
@@ -66,9 +66,9 @@
 				<td><select name ="room_type" required form="addsensor">
 				<?php 
 
-					while ($row = mysqli_fetch_array($result4))
+					while ($row3 = mysqli_fetch_array($result3))
 					{
-					    echo '<option value = "'.$row4['sensor_name'].'">'.$row4['sensor_name'].'</option>';
+					    echo '<option value = "'.$row3['Name_room'].'">'.$row3['Name_room'].'</option>';
 
 					}
 				?>  
