@@ -137,20 +137,3 @@
     height: auto;
 }
 
-.Newsletter{
-    padding: 10px;
-    color: orange;
-}
-
-#setting3{
-  width: 400px;
-  margin: auto;
-  position: relative;
-  top: 10px;
-  padding:10px;
-  border: 2px orange solid;
-  border-radius: 10px;
-  color: orange;
-  font-family: "Arial", sans-serif;
-}
-

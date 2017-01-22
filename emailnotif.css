@@ -1,0 +1,23 @@
+#emailnotif{
+  background-color: white;
+  color: black;
+  width: 400px;
+  margin: auto;
+  top: 10px;
+  padding:10px;
+  border: 2px orange solid;
+  border-radius: 10px;
+  font-family: "Arial", sans-serif;
+}
+#emailnotiftitle{
+	text-align: center;
+}
+.emailnotiflist{
+	list-style-type: none;
+	margin: 20px;
+}
+}
+.Newsletter{
+    padding: 10px;
+    color: orange;
+}

@@ -161,8 +161,8 @@ if(!isset($_SESSION['username'])){
     <div id="Settings" class="tabcontent"><!-- ____________________________________________ -->
       
       <div class ="settingtable">
-        <ul > <div onclick="opensubtab('setting1')" class="subtablinks"> Change email </div> </ul>
-        <ul > <div onclick="opensubtab('setting2')" class="subtablinks"> Change password </div> </ul>
+        <ul > <div onclick="opensubtab('setting1')" class="subtablinks"> Change Email </div> </ul>
+        <ul > <div onclick="opensubtab('setting2')" class="subtablinks"> Change Password </div> </ul>
         <ul > <div onclick="opensubtab('setting3')" class="subtablinks"> Email Notifications </div> </ul>
         <ul > <div onclick="opensubtab('setting4')" class="subtablinks"> Edit Dashboard </div> </ul>
         <ul > <div onclick="opensubtab('setting5')" class="subtablinks"> Manage House </div> </ul>
@@ -175,30 +175,25 @@ if(!isset($_SESSION['username'])){
          ;?> </ul>
       </div>
 
-
+      <div class="subtab" id="setting1">
       <?php include("changeemail.php"); ?>
-       
+       </div>
+
+       <div class="subtab" id="setting2">
       <?php include("changepassword.php"); ?>
-    
+      </div>
 
+      <div class="subtab" id="setting3">
+      <?php include("emailnotif.php"); ?>
+      </div>
 
-      <!-- ______________________________  -->
-      <form class="subtab" id ="setting3">
-      <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Alarm Notifications </label></div></ul>
-      <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Movement Detection </label></div></ul>
-      <ul><div class="Newsletter"> <label ><input type="checkbox" value="">Receive Autodhome Newsletter </label></div></ul>
-      </form>
-
-
-      <div class="subtab" id ="setting4">
+      <div class="subtab" id="setting4">
       <?php include("editdashboard.php"); ?>
-    </div>
+      </div>
 
-    <div class="subtab" id="setting5">
-    <?php include("managehouse.php"); ?>
-    </div>
-
-
-
+      <div class="subtab" id="setting5">
+      <?php include("managehouse.php"); ?>
+      </div>
+  </div>
   </body>
 </html>

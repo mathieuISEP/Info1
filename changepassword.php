@@ -20,7 +20,7 @@
 </head>
 <body>
 
-      <form class="subtab" id ="setting2" method ="post">
+      <form id="changepassword" method ="post">
       <div id="titlechangepassword">Change Your Password</div>
       <div class="hr"><hr /></div>
              <!--<?php echo "<div style ='font:50px Calibri,italic,sans-serif;color:#000000'> <center> Change password: </center> </div>";  ?> --> 
