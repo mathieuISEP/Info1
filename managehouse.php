@@ -142,22 +142,47 @@
 
 			<form id="deletesensors" name="deletesensors">
 				<table cellspacing="15">
+						<?php
+			            include 'database.php';
+			            $sql11 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+			            $result11 = $db -> query($sql11);
+			            $row11 = mysqli_fetch_assoc($result11);
+			            //$sql6 = "SELECT * FROM sensor WHERE id_room = '".$row3["id"]."';";
+			            //$result6 = $db -> query($sql6);
+			            //$row6 = mysqli_fetch_assoc($result6);
+
+
+			         	?>
 					<tr><td>Select Room</td>
 					<td><select form="deletesensors">
-					<option></option>
-					<option>living room</option>
-					<option>bedroom</option>
-					<option>etc...</option>
+					<?php 
+
+					while ($row11 = mysqli_fetch_array($result11))
+					{
+					    echo '<option value = "'.$row11['Name_room'].'">'.$row11['Name_room'].'</option>';
+
+					}
+				?>
 					</select></td></tr>
 					<tr><td>Select Sensor</td>
+								<?php
+				            include 'database.php';
+				            $sql12 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+				            $result12 = $db -> query($sql12);
+				            $row12 = mysqli_fetch_assoc($result12);
+				            $sql13 = "SELECT * FROM sensor WHERE id_room = '".$row12["id"]."';";
+				            $result13 = $db -> query($sql13);
+				            $row13 = mysqli_fetch_assoc($result13);
+				         	?>
 					<td><select required form="deletesensors">
-						<option></option>
-						<option>temperature</option>
-						<option>alarm</option>
-						<option>shutter</option>
-						<option>humidity</option>
-						<option>door</option>
-						<option>light</option>
+						<<?php 
+
+					while ($row13 = mysqli_fetch_array($result13))
+					{
+					    echo '<option value = "'.$row13['sensor_name'].'">'.$row13['sensor_name'].'</option>';
+
+					}
+				?>  
 					</select></td></tr></table>
 				<button class="managehousebutton" form="deletesensors">Delete</button>
 			</form>
@@ -239,11 +264,21 @@
 			<form id="deleterooms" name="deleterooms">
 				<table cellspacing="15">
 					<tr><td>Select Room</td>
+					<?php
+		            include 'database.php';
+		            $sql10 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+		            $result10 = $db -> query($sql10);
+		            $row10 = mysqli_fetch_assoc($result10);
+		            ?>
 					<td><select form="deleterooms" required>
-					<option></option>
-					<option>living room</option>
-					<option>bedroom</option>
-					<option>etc...</option>
+					<?php 
+
+					while ($row10 = mysqli_fetch_array($result10))
+					{
+					    echo '<option value = "'.$row10['Name_room'].'">'.$row10['Name_room'].'</option>';
+
+					}
+				?>  
 					</select></td></tr>
 					</table>
 				<button class="managehousebutton" form="deleterooms">Delete</button>
