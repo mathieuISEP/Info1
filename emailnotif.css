@@ -16,8 +16,9 @@
 	list-style-type: none;
 	margin: 20px;
 }
-}
 .Newsletter{
     padding: 10px;
-    color: orange;
+}
+.notifcheckbox{
+	margin-right: 10px;
 }
