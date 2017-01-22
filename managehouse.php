@@ -206,11 +206,21 @@
 			<form id="editrooms" name="editrooms" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
 				<tr><td>Select Room</td>
+				<?php
+	            include 'database.php';
+	            $sql9 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+	            $result9 = $db -> query($sql9);
+	            $row9 = mysqli_fetch_assoc($result9);
+	            ?>
 				<td><select form="editrooms" required>
-				<option></option>
-				<option>living room</option>
-				<option>bedroom</option>
-				<option>etc...</option>
+				<?php 
+
+					while ($row9 = mysqli_fetch_array($result9))
+					{
+					    echo '<option value = "'.$row9['Name_room'].'">'.$row9['Name_room'].'</option>';
+
+					}
+				?>  
 				</select></td></tr>
 				<tr><td>New Room Name</td><td><input type="text" name="renameroom" form="editrooms" required></td></tr>
 				</table>
