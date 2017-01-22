@@ -19,7 +19,7 @@
   <body>
       
  
-      <form  class="subtab" id ="setting1" method="post">
+      <form  id="changeemail" method="post">
       <div id="titlechangeemail">Change Your Email</div>
       <div class="hr"><hr /></div>
 

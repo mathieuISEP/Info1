@@ -81,7 +81,8 @@
 		<?php
              }
        ?>
-		
+		<div class="hr"><hr /></div>
+
 		<div id="titleeditsensors">Edit Sensors</div>
 		<?php
 	            include 'database.php';
@@ -134,6 +135,8 @@
 				</table>
 				<button class="managehousebutton" form="editsensors">Rename</button>
 			</form>
+
+			<div class="hr"><hr /></div>
 
 			<div id="titledeletesensors">Delete Sensors</div>
 
@@ -202,6 +205,8 @@
              }
        ?>
 
+       <div class="hr"><hr /></div>
+
 		<div id="titleeditrooms">Edit Rooms</div>
 			<form id="editrooms" name="editrooms" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
@@ -227,6 +232,8 @@
 				<button class="managehousebutton" form="editrooms">Rename</button>
 			</form>
 
+			<div class="hr"><hr /></div>
+			
 			<div id="titledeleterooms">Delete Rooms</div>
 
 			<form id="deleterooms" name="deleterooms">

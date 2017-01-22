@@ -9,6 +9,18 @@
   </head>
 <body>
 
+		<form id="editdashboard" name="editdashboard" method="post">
+			<div id="editdashboardtitle">Edit Your Dashboard</div>
+			<div class="hr"><hr /></div>
+			<ul id="editdashboardlist">
+			<li class="editdashboardlist"><input class="editdashboardcheckbox" type="checkbox"><span>Temperature</span></li>
+			<li class="editdashboardlist"><input class="editdashboardcheckbox" type="checkbox"><span>Alarm</span></li>
+			<li class="editdashboardlist"><input class="editdashboardcheckbox" type="checkbox"><span>Shutters</span></li>
+			<li class="editdashboardlist"><input class="editdashboardcheckbox" type="checkbox"><span>Humidity</span></li>
+			</ul>
+			<button id="savedashboard" form="editdashboard">Save</button>
+			</form>
+<!--
 		<div id="editdashboardheader">Edit Your Dashboard
 
 			<ul>
@@ -17,7 +29,7 @@
 
 				<ul id="featurecontentlist" align="center" cellpadding="10" cellspacing="10">
 					<li>
-					<div id="featureelement1" class="featureelement" onclick="switchtable()">
+					<div id="featureelement1" class="featureelement" onclick="switchtable1()">
 					<span>Temperature</span>
 					<span class="rightarrow">&rarr;</span>
 					</div>
@@ -52,7 +64,7 @@
 
 				<ul id="dashboardcontentlist">
 					<li>
-					<div id="dashboardelement1" class="dashboardelement" onclick="switchback()">
+					<div id="dashboardelement1" class="dashboardelement" onclick="switchback1()">
 						<span class="leftarrow">&larr;</span>
 						<span>Temperature</span>
 					</div>
@@ -82,5 +94,6 @@
 			</ul>
 
 	</div>
+	-->
 </body>
 </html>

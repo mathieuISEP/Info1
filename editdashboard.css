@@ -1,19 +1,33 @@
-#editdashboardbox{
-	margin: auto;
-}
-#editdashboardheader{
+#editdashboard{
   background-color: white;
   border-radius:10px;
   border-color: orange;
   border-style: solid;
   padding: 10px;
-  width: 730px;
-  height: 50px;
+  width: 300px;
   margin: auto;
   color: black;
   text-align: center;
   font-family: "Arial", sans-serif;
 }
+#editdashboardlist{
+  list-style-type: none;
+  text-align: left;
+}
+.editdashboardcheckbox{
+  margin-right: 40px;
+  cursor: pointer;
+}
+#savedashboard{
+  width: 80px;
+  height: 30px;
+  color: white;
+  background-color: #ffb833;
+  border: outset;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*
 #featurecontent{
   background-color: white;
   border-radius:10px;

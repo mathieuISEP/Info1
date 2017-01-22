@@ -33,7 +33,8 @@
         while ($row=mysqli_fetch_row($result))
           {
 
-         	echo '<ul onclick="opensubtab($row[0])" class="subtablinks">';  
+         	echo '<ul onclick="opensubtab( "'.$row[0].'")" class="subtablinks">';  
+         	//echo '<input type="button" id= "'.$unconfirm_city['name'].'" value="Accept" class="mybut btn btn-info btn-mini" style="">';
           printf ($row[0]);
           echo "</ul>";  
 
@@ -47,80 +48,44 @@
      
 
      $nb = 1;
-     while ( $nb < 9) { 
+
+
+     for($nb2 = 1; $nb2 < 9; $nb2++) { 
 
      	$list_sensors = "SELECT sensor_name 
               		FROM sensor 
               		WHERE id_room = $nb"; 
      	$results2 = mysqli_query($db,$list_sensors); 
+     	// If function
 
-		if ($result=mysqli_query($db,$list_sensors))
+
+
+     	if ($result=mysqli_query($db,$list_sensors))
         {
 	        // Fetch one and one row
 	        while ($row=mysqli_fetch_row($result))
 	          {
+	          ?>
 
-	          echo '<div id= $nb  class="subtab" </div>';
+	          <div class="subtab" id= "<?php echo $nb2;?>">   </div>
+
+	         
+     		<?php 
+     			} 
 	          }
 	        // Free result set
 	        mysqli_free_result($result);
         }
-        $nb =$nb+1;
-    }
+     
 
 
 
-
-
-      // $list_sensors = "SELECT Name_room 
-      //         FROM room 
-      //         WHERE id_home = 1"; 
-      // $results = mysqli_query($db,$list_sensors);
-      // echo '<ul class="navbar2">';
-      // if ($result=mysqli_query($db,$list_sensors))
-      //   {
-      //   // Fetch one and one row
-      //   while ($row=mysqli_fetch_row($result))
-      //     {
-      //     echo '<ul  onclick="opensubtab(';echo $row[0]; echo')">'; 
-
-      //     printf ($row[0]);
-      //     echo "</ul>";  
-
-      //     }
-      //   // Free result set
-      //   mysqli_free_result($result);
-      // }
-      // echo "</ul>";  
-
-
-
-
-      // ____________________________________________ //
-      // $nb = 1;
-      // while ( $nb < 8) {      
-      //     $list_sensors = "SELECT sensor_name 
-      //         				FROM sensor 
-      //         				WHERE id_room = $nb"; 
-      //     $results2 = mysqli_query($db,$list_sensors);
-      //     $nb = $nb + 1;
-
-      //     // cerate list of sensor to display
-      //     // to link to Room list previously created
-
-      //     echo '<div id ="'; echo $nb; echo'" class="subtab">';
-      //     echo '</div>';
-          
-      // }
-	  // ____________________________________________ //
-
-      //mysqli_close($db);
 
     ?>
     
-    </div>
+   
 
-
+	</div> 
 
   </body>
 </html>
