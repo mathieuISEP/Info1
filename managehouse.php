@@ -83,25 +83,52 @@
        ?>
 		
 		<div id="titleeditsensors">Edit Sensors</div>
+		<?php
+	            include 'database.php';
+	            $sql5 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+	            $result5 = $db -> query($sql5);
+	            $row5 = mysqli_fetch_assoc($result5);
+	            //$sql6 = "SELECT * FROM sensor WHERE id_room = '".$row3["id"]."';";
+	            //$result6 = $db -> query($sql6);
+	            //$row6 = mysqli_fetch_assoc($result6);
+
+
+	         	?>
+
 
 			<form id="editsensors" name="editsensors" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
 				<tr><td>Select Room</td>
 				<td><select form="editsensors">
-				<option></option>
-				<option>living room</option>
-				<option>bedroom</option>
-				<option>etc...</option>
+				<?php 
+
+					while ($row5 = mysqli_fetch_array($result5))
+					{
+					    echo '<option value = "'.$row5['Name_room'].'">'.$row5['Name_room'].'</option>';
+
+					}
+				?>  
 				</select></td></tr>
 				<tr><td>Select Sensor</td>
+				<?php
+	            include 'database.php';
+	            $sql7 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+	            $result7 = $db -> query($sql7);
+	            $row7 = mysqli_fetch_assoc($result7);
+	            $sql8 = "SELECT * FROM sensor WHERE id_room = '".$row7["id"]."';";
+	            $result8 = $db -> query($sql8);
+	            $row8 = mysqli_fetch_assoc($result8);
+	         	?>
+
 				<td><select required form="editsensors">
-					<option></option>
-					<option>temperature</option>
-					<option>alarm</option>
-					<option>shutter</option>
-					<option>humidity</option>
-					<option>door</option>
-					<option>light</option>
+					<?php 
+
+					while ($row8 = mysqli_fetch_array($result8))
+					{
+					    echo '<option value = "'.$row8['sensor_name'].'">'.$row8['sensor_name'].'</option>';
+
+					}
+				?>  
 				</select></td></tr>
 				<tr><td>New Sensor Name</td><td><input type="text" name="renamesensor" form="editsensors" required></td></tr>
 				</table>
@@ -162,10 +189,11 @@
 		<tr><td>Room type</td>
 				<td><select name= "select_room_type" required form="addroom">
 				<option></option>
-				<option value = "1">kitchen</option>
-				<option value = "2">living room</option>
-				<option value = "3">bedroom</option>
-				<option value = "4">bathroom</option></select></td></tr>
+				<option value = "1">Kitchen</option>
+				<option value = "2">Living room</option>
+				<option value = "3">Bedroom</option>
+				<option value = "4">Bathroom</option>
+				<option value = "5">Garage</option></select></td></tr>
 		</table>
 		<button class="managehousebutton" form="addroom">Add</button>
 		</form>
