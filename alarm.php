@@ -9,7 +9,7 @@
 <body>
 
 
-  <form id="alarmbox" name="temperature" method="post" accept-charset="utf-8">
+  <form id="alarmbox" class="dashboardbox" name="temperature" method="post" accept-charset="utf-8">
         <div>Alarm</div>
        <div class="hr"><hr /></div>
         <table id="housealarm">
@@ -29,7 +29,7 @@
             </td>
           </tr>
         </table>
-        <div id="alarmlink" onclick="opentab('Features'); opensubtab('Alarm'); display2()"> Custom room alarms </div>
+        <div id="alarmlink" onclick="opentab('Features'); opensubtab('Alarm'); checkalarmbox(); display2()"> Custom room alarms </div>
       <div id="buttons">
         <span><input id="alarmreset" type="submit" value="Reset"></span>
         <span><input id="alarmapply" type="submit" value="Apply"></span>

@@ -19,7 +19,7 @@
           </tr>
         </table>
         <div>
-        <input type="checkbox" class="checkbox" onclick="javascript:display4()"> Show humidity per room
+        <input type="checkbox" id="humiditycheckbox" onclick="javascript:display4()"> More details
       </div> 
       <div id="humidityrooms">
         <table id="roomhumidity">

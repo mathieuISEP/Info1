@@ -27,7 +27,7 @@
 
 
 
-  <form id="temperaturebox" name="temperature" method="post" accept-charset="utf-8">
+  <form id="temperaturebox" class="dashboardbox" name="temperature" method="post" accept-charset="utf-8">
       
       <div id="boxheader">Temperatures</div>
       
@@ -57,7 +57,7 @@
  
     </table>
 
-    <div id="templink" onclick="opentab('Features'); opensubtab('Temperature'); display1()"> Custom room temperature </div>
+    <div id="templink" onclick="opentab('Features'); opensubtab('Temperature'); checktempbox(); display1()"> Custom room temperature </div>
 
       <div id="buttons">
         <span><input id="tempreset" type="submit" value="Reset"></span>

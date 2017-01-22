@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form id="shuttersbox" name="temperature" method="post" accept-charset="utf-8">
+<form id="shuttersbox" class="dashboardbox" name="temperature" method="post" accept-charset="utf-8">
     <div>Shutters</div>
     <div class="hr"><hr /></div>
     <table id="houseshutters">
@@ -30,7 +30,7 @@
       </tr>
     </table>
 
-    <div id="shutterlink" onclick="opentab('Features'); opensubtab('Shutters'); display3()"> Custom room shutters </div>
+    <div id="shutterlink" onclick="opentab('Features'); opensubtab('Shutters'); checkshutterbox(); display3()"> Custom room shutters </div>
 
     <div id="buttons">
         <span><input id="shutterreset" type="submit" value="Reset"></span>

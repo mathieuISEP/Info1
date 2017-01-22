@@ -9,6 +9,9 @@ function display1() {
         else
           rooms.style.display = "none";
 }
+function checktempbox(){
+  document.getElementById("tempcheckbox").checked ="checked";
+}
 function display2() {
    var rooms = document.getElementById("alarmrooms");
        if(rooms.style.display == "block")
@@ -19,6 +22,9 @@ function display2() {
           rooms.style.display = "block";
         else
           rooms.style.display = "none";
+}
+function checkalarmbox(){
+  document.getElementById("alarmcheckbox").checked ="checked";
 }
 function display3() {
    var rooms = document.getElementById("shutterrooms");
@@ -31,6 +37,9 @@ function display3() {
         else
           rooms.style.display = "none";
 }
+function checkshutterbox(){
+  document.getElementById("shuttercheckbox").checked ="checked";
+}
 function display4() {
    var rooms = document.getElementById("humidityrooms");
        if(rooms.style.display == "block")
@@ -42,4 +51,6 @@ function display4() {
         else
           rooms.style.display = "none";
 }
-
+function checkhumiditybox(){
+  document.getElementById("humiditycheckbox").checked ="checked";
+}

@@ -60,17 +60,20 @@ if(!isset($_SESSION['username'])){
     <div id="Dashboard" class="tabcontent"><!-- ___________________________________________ -->
       
       <ul id="dashboardlist">
-      <li class="dashboardlist">
+      <li id="tempdashboard" class="dashboardlist">
         <?php include ("temperature.php"); ?>
       </li>
 
-      <li class="dashboardlist">
+      <li id="alarmdashboard" class="dashboardlist">
       <?php include ("alarm.php"); ?>
         </li>
 
-        <li class="dashboardlist">
-
+      <li id="shuttersdashboard" class="dashboardlist">
         <?php include ("shutters.php"); ?>
+    </li>
+
+    <li id="humiditydashboard" class="dashboardlist">
+    <?php include ("humidity.php"); ?>
     </li>
     </ul>
 
@@ -86,7 +89,6 @@ if(!isset($_SESSION['username'])){
         <div onclick="opensubtab('Alarm')" class="subtablinks">Alarm</div>
         <div onclick="opensubtab('Shutters')" class="subtablinks">Shutters</div>
         <div onclick="opensubtab('Humidity')" class="subtablinks">Humidity</div>
-        <div onclick="opensubtab('Cameras')" class="subtablinks">Cameras</div>
         </ul>
       </div>
 
