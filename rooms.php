@@ -9,20 +9,13 @@
 
   </head>
   <body>
-
-
-
-
-
     <div id="Rooms" > <!-- ____________________________________________ -->
      <?php
 
      include ("database.php");
-
+     
      $id = 1;
-      $list_rooms = "SELECT Name_room 
-              FROM room 
-              WHERE id_home =  1"; 
+      $list_rooms = "SELECT Name_room FROM room WHERE id_home = '".$_SESSION["userid"]."';";
 
       $results = mysqli_query($db,$list_rooms);
 
