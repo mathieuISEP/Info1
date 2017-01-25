@@ -3,7 +3,9 @@
       if (isset($_POST['new_password']) && isset ($_POST['confirm_new_password']) && $_POST['new_password'] = $_POST['confirm_new_password']){
             include 'database.php';
             $myNewPassword = $_POST["new_password"];
-            $sql3 ="UPDATE client SET password ='".$myNewPassword."' WHERE email_address = '".$_SESSION["username"]."';";
+            $myHashPassword = password_hash($myNewPassword, PASSWORD_DEFAULT, ['cost' => 12]);
+            $_SESSION["getHashPassword"] =  $myHashPassword; 
+            $sql3 ="UPDATE client SET password ='".$myHashPassword."' WHERE email_address = '".$_SESSION["username"]."';";
             mysqli_query($db,$sql3);
             mysqli_close($db);
             echo "Votre mot de passe a été changé";
