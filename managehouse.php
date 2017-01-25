@@ -140,9 +140,26 @@
 
 			<div class="hr"><hr /></div>
 
+					<?php
+    
+
+			      if (isset ($_POST['delete_sensor'])){
+			            include 'database.php';
+			            $myDeleteSensor = $_POST["delete_sensor"];
+			            $sqlDS = "DELETE FROM sensor WHERE sensor_name = '".$myDeleteSensor."';";
+			            mysqli_query($db,$sqlDS);
+			            mysqli_close($db);
+			            echo "<meta http-equiv='refresh' content='0'>";
+
+				    }
+				    else{
+
+				     ?>
+
+
 			<div id="titledeletesensors">Delete Sensors</div>
 
-			<form id="deletesensors" name="deletesensors">
+			<form id="deletesensors" name="deletesensors" method= "post">
 				<table cellspacing="15">
 						<?php
 			            include 'database.php';
@@ -153,7 +170,7 @@
 
 			         	?>
 					<tr><td>Select Room</td>
-					<td><select form="deletesensors">
+					<td><select form="deletesensors" name = "delete_sensor">
 					<?php 
 
 					while ($row11 = mysqli_fetch_array($result11))
@@ -174,7 +191,7 @@
 				            
 				         	?>
 					<td><select required form="deletesensors">
-						<<?php 
+						<?php 
 
 					while ($row13 = mysqli_fetch_array($result13))
 					{
@@ -183,9 +200,13 @@
 					}
 				?>  
 					</select></td></tr></table>
-				<button class="managehousebutton" form="deletesensors">Delete</button>
+				<button class="managehousebutton" type = "submit" form="deletesensors">Delete</button>
 			</form>
 	</div>
+
+	<?php
+             }
+       ?>
 
 	<div id="managerooms">
 		<div class="titlemanagehouse">Manage Rooms</div>
@@ -195,13 +216,13 @@
      
       if (isset ($_POST['add_room_name'])  && isset($_POST['select_room_type'])){
             include 'database.php';
-            $myAddRoomName = $_POST["add_room_name"];
-            $mySelectRoomType = $_POST["select_room_type"];
+            $myAddRoomName = $_POST['add_room_name'];
+            $mySelectRoomType = $_POST['select_room_type'];
             $sql2 ="INSERT INTO room(Name_room,type_room) VALUES ('".$myAddRoomName."','".$mySelectRoomType."')";
             echo 'Vous venez dajouter la pièce '.$myAddRoomName.'de type'.$mySelectRoomType. '!';           
             mysqli_query($db,$sql2);
             mysqli_close($db);
-            echo "<meta http-equiv='refresh' content='0'>";
+            //echo "<meta http-equiv='refresh' content='0'>";
             
 
 
@@ -261,11 +282,11 @@
 
 			<?php
      
-			      if (isset ($_POST['deleterooms'])){
+
+			      if (isset ($_POST['delete'])){
 			            include 'database.php';
 			            $myDeleteRoom = $_POST["delete"];
 			            $sqlD = "DELETE FROM room WHERE Name_room = '".$myDeleteRoom."';";
-			            echo 'Vous venez de supprimer la pièce '.$myDeleteRoom.'';           
 			            mysqli_query($db,$sqlD);
 			            mysqli_close($db);
 			            echo "<meta http-equiv='refresh' content='0'>";
@@ -275,7 +296,7 @@
 
 				     ?>
 
-				<div id="titledeleterooms">Delete Rooms</div>
+				<div id="titledeleterooms">Delete Room</div>
 
 				<form id="deleterooms" name="deleterooms" method ="post">
 					<table cellspacing="15">
@@ -286,7 +307,7 @@
 		            $result10 = $db -> query($sql10);
 		            
 		            ?>
-					<td><select form="deleterooms" required name="delete">
+					<td><select form="deleterooms" name="delete"  required form = "deleterooms">
 					<?php 
 
 					while ($row10 = mysqli_fetch_array($result10))
