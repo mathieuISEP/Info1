@@ -57,7 +57,6 @@
   	font-family: "Comic sans MS";
   	text-align: center;
   	width: 70px;
-  	margin-left: 20px;
 }
 .stepper{
 	margin-top: 15px;
@@ -65,7 +64,6 @@
   	font-family: "Comic sans MS";
   	text-align: center;
   	width: 70px;
-  	margin-left: 100px;
 }
 .hr{
 	margin: auto;

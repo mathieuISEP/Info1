@@ -38,25 +38,23 @@
       
       <div class="hr"><hr /></div>
     
-    <table>
+    <table cellpadding="5">
+    <tr><td></td><td>Current</td><td>Target</td><td>Set</td><td></td>
+    </tr>
       <tr>
-        <td><div id="housetemp">House Temperature</div></td>
-        <td><input value = "<?php $post_temp ?>" name = "post_temperature" placeholder="SET T°" id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
-        <!--<td class="C">°C</td> !-->
-      </tr>
-      <tr>
-      
-           <td class="target" id="target"><?php echo 'target T°: '. $post_temp. ' °C';?> </td>
-            <td class="current" id="current"> 
+        <td><div id="housetemp">House</div></td>
+        <td class="current" id="current"> 
 
               <?php $current = "SELECT current_data FROM sensor WHERE id = '1'";
               $current_result =  $db -> query($current);
               while ($row = $current_result->fetch_assoc()) {
-              echo 'Current T°: '.$row['current_data']. ' °C'."<br>";
+              echo ''.$row['current_data']. ' °C'."<br>";
               }
             ?> 
             </td>
-          </tr>
+            <td class="target" id="target"><?php echo ''. $post_temp. ' °C';?> </td>
+        <td><input value = "<?php $post_temp ?>" name = "post_temperature" placeholder="SET T°" id="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>
+      </tr>
 
 
  
@@ -68,7 +66,8 @@
     
     <div id="temprooms">
 
-    <table>
+    <table cellpadding="5">
+    <tr><td></td><td>Current</td><td>Target</td><td>Set</td><td></td></tr>
       <!-- ____________________________________________ -->
       <?php
       $list_rooms = "SELECT Name_room 
@@ -85,6 +84,8 @@
           {
           echo '<tr>';
           echo '<td>';  printf ($row[0]); echo '</td>';  
+          echo '<td>'; '</td>';
+          echo '<td>'; '</td>';
           echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
           echo '<td class="C">°C</td>';
           echo '</tr>';
