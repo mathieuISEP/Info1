@@ -22,8 +22,16 @@
 	            include 'database.php';
 	            $myNewSensor = $_POST["sensor_name"];
 	            $mySensorType = $_POST["sensor_type"];
-	            $myRoomType = $_POST["room_type"];
-	            $sql ="INSERT INTO sensor(id_room,type_sensor,sensor_name) VALUES ('".$myRoomType."','".$mySensorType."','".$myNewSensor."')";
+	            $myRoomType = $_POST["room_name"];
+
+	            $sql14 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+	            $result14 = $db -> query($sql14);
+	            $row14 = mysqli_fetch_assoc($result14);
+
+	            $sql15 = "SELECT * FROM sensor WHERE id_room = '".$row14["id"]."';";
+	            $result15 = $db -> query($sql15);
+	            $row15 = mysqli_fetch_assoc($result15);
+	            $sql ="INSERT INTO sensor(id_room,type_sensor,sensor_name) VALUES ('".$row15["id_room"]."','".$mySensorType."','".$myNewSensor."')";
 	            //echo 'Vous venez dajouter un sensor de '.$sensor_type.'!';           
 	            mysqli_query($db,$sql);
 	            mysqli_close($db);
@@ -40,7 +48,7 @@
 				<tr><td>Sensor Name</td><td><input name ="sensor_name" placeholder ="Type sensor name" id="sensorinput" type="text" form="addsensor" required></td></tr>
 				<tr><td> Sensor Type </td>
 				<td><select name = "sensor_type" required form="addsensor">
-					<option value = "Default">Choose sensor</option>
+					<option value = "Default" placeholder ="Choose a sensor" ></option>
 					<option>temperature</option>
 					<option>alarm</option>
 					<option>shutter</option>
@@ -55,15 +63,12 @@
 	            include 'database.php';
 	            $sql3 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
 	            $result3 = $db -> query($sql3);
-	            $row3 = mysqli_fetch_assoc($result3);
-	            //$sql4 = "SELECT * FROM sensor WHERE id_room = '".$row3["id"]."';";
-	            //$result4 = $db -> query($sql4);
-	            //$row4 = mysqli_fetch_assoc($result4);
+	            
 
 
 	         	?>
 
-				<td><select name ="room_type" required form="addsensor">
+				<td><select name ="room_name" required form="addsensor">
 				<?php 
 
 					while ($row3 = mysqli_fetch_array($result3))
@@ -88,10 +93,7 @@
 	            include 'database.php';
 	            $sql5 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
 	            $result5 = $db -> query($sql5);
-	            $row5 = mysqli_fetch_assoc($result5);
-	            //$sql6 = "SELECT * FROM sensor WHERE id_room = '".$row3["id"]."';";
-	            //$result6 = $db -> query($sql6);
-	            //$row6 = mysqli_fetch_assoc($result6);
+	            
 
 
 	         	?>
@@ -100,7 +102,7 @@
 			<form id="editsensors" name="editsensors" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
 				<tr><td>Select Room</td>
-				<td><select form="editsensors">
+				<td><select form="editsensors" name = "select_room">
 				<?php 
 
 					while ($row5 = mysqli_fetch_array($result5))
@@ -118,10 +120,10 @@
 	            $row7 = mysqli_fetch_assoc($result7);
 	            $sql8 = "SELECT * FROM sensor WHERE id_room = '".$row7["id"]."';";
 	            $result8 = $db -> query($sql8);
-	            $row8 = mysqli_fetch_assoc($result8);
+	            //$row8 = mysqli_fetch_assoc($result8);
 	         	?>
 
-				<td><select required form="editsensors">
+				<td><select required form="editsensors" name = "select_sensor">
 					<?php 
 
 					while ($row8 = mysqli_fetch_array($result8))
@@ -146,10 +148,7 @@
 			            include 'database.php';
 			            $sql11 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
 			            $result11 = $db -> query($sql11);
-			            $row11 = mysqli_fetch_assoc($result11);
-			            //$sql6 = "SELECT * FROM sensor WHERE id_room = '".$row3["id"]."';";
-			            //$result6 = $db -> query($sql6);
-			            //$row6 = mysqli_fetch_assoc($result6);
+			            
 
 
 			         	?>
@@ -172,7 +171,7 @@
 				            $row12 = mysqli_fetch_assoc($result12);
 				            $sql13 = "SELECT * FROM sensor WHERE id_room = '".$row12["id"]."';";
 				            $result13 = $db -> query($sql13);
-				            $row13 = mysqli_fetch_assoc($result13);
+				            
 				         	?>
 					<td><select required form="deletesensors">
 						<<?php 
@@ -240,7 +239,7 @@
 	            include 'database.php';
 	            $sql9 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
 	            $result9 = $db -> query($sql9);
-	            $row9 = mysqli_fetch_assoc($result9);
+	            
 	            ?>
 				<td><select form="editrooms" required>
 				<?php 
@@ -258,19 +257,36 @@
 			</form>
 
 			<div class="hr"><hr /></div>
-			
-			<div id="titledeleterooms">Delete Rooms</div>
 
-			<form id="deleterooms" name="deleterooms">
-				<table cellspacing="15">
+
+			<?php
+     
+			      if (isset ($_POST['deleterooms'])){
+			            include 'database.php';
+			            $myDeleteRoom = $_POST["delete"];
+			            $sqlD = "DELETE FROM room WHERE Name_room = '".$myDeleteRoom."';";
+			            echo 'Vous venez de supprimer la pièce '.$myDeleteRoom.'';           
+			            mysqli_query($db,$sqlD);
+			            mysqli_close($db);
+			            echo "<meta http-equiv='refresh' content='0'>";
+
+				    }
+				    else{
+
+				     ?>
+
+				<div id="titledeleterooms">Delete Rooms</div>
+
+				<form id="deleterooms" name="deleterooms" method ="post">
+					<table cellspacing="15">
 					<tr><td>Select Room</td>
 					<?php
 		            include 'database.php';
 		            $sql10 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
 		            $result10 = $db -> query($sql10);
-		            $row10 = mysqli_fetch_assoc($result10);
+		            
 		            ?>
-					<td><select form="deleterooms" required>
+					<td><select form="deleterooms" required name="delete">
 					<?php 
 
 					while ($row10 = mysqli_fetch_array($result10))
@@ -281,9 +297,12 @@
 				?>  
 					</select></td></tr>
 					</table>
-				<button class="managehousebutton" form="deleterooms">Delete</button>
+				<button class="managehousebutton" type = "submit" form="deleterooms">Delete</button>
 			</form>
 	</div>
+	<?php
+             }
+       ?>
 
 </div>
 </body>

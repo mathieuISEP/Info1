@@ -28,16 +28,22 @@
       
       
       $sql = "SELECT * FROM client WHERE email_address = '$myusername'";
+
       $result = $db -> query($sql);
 
       if ($result->num_rows > 0){
           $row = mysqli_fetch_assoc($result);
-          if(strcmp($mypassword,$row["password"]) == 0){
-          $_SESSION["username"] =  $row["email_address"]; 
-          $_SESSION["user_password"] = $row["password"];
-          $_SESSION["userid"] = $row["client_number"];
-          header("location: menu.php");
-
+          //if(strcmp($mypassword,$row["password"]) == 0){
+            if (password_verify($mypassword,$row["password"])) {
+            // Success! Log the user in here.
+                $_SESSION["username"] =  $row["email_address"]; 
+                $_SESSION["user_password"] = $row["password"];
+                $_SESSION["userid"] = $row["client_number"];
+                header("location: menu.php");
+                //}
+                //else{
+                 // echo "<div style ='font:30px/40px Arial,bold,sans-serif;color:#FFFFFF'> Incorrect password </div>";
+               // }
           }
           else{
         echo "<div style ='font:30px/40px Arial,bold,sans-serif;color:#FFFFFF'> Incorrect password </div>";
