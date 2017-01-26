@@ -144,7 +144,7 @@
              $db =  new mysqli($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);  
              $list_rooms = "SELECT Name_room 
                             FROM room 
-                            WHERE id_home = 1"; 
+                            WHERE id_home = '".$_SESSION["userid"]."';"; 
 
           if ($result=mysqli_query($db,$list_rooms))
             {

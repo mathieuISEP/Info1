@@ -133,7 +133,7 @@
         include 'database.php';
         $list_rooms = "SELECT Name_room 
                 FROM room 
-                WHERE id_home = 1"; 
+                WHERE id_home = '".$_SESSION["userid"]."';"; // was 1
         $results = mysqli_query($db,$list_rooms);
         
         if ($result=mysqli_query($db,$list_rooms))

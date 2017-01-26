@@ -69,7 +69,44 @@
      echo '</div>';
      
 
+     
 
+     // echo '<div class ="element">';
+     //      echo '<tr>';
+     //      echo '<td>';  print "Temperature _ Test  "; echo '</td>';  
+     //      echo '<td>'; '</td>';
+     //      echo '<td>'; '</td>';
+     //      echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
+     //      echo '<td class="C">°C</td>';
+     //      echo '</tr>';
+     // echo '</div>';
+     // //
+
+
+     //  echo '<tr class ="element">';
+     //           echo '<td>'; print 'Alarms'; echo' </td>'; 
+     //           echo '<td> <div class="off">OFF</div> </td>';
+     //           echo '<td> <label class="switch">
+     //                      <input type="checkbox">
+     //                      <div class="slider round"></div>
+     //                      </label> 
+     //               </td>';
+     //         echo '<td><div class="on">ON</div></td>';
+     // echo "</tr>";
+
+
+     // echo '<div class ="element">';
+
+     
+     echo '<div class="room_element">';
+
+
+
+
+
+
+
+     echo '</div>';
 
     ?>
 	</div> 
