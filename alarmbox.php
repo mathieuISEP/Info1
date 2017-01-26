@@ -99,8 +99,7 @@
       </div>
 
       <div id="buttons">
-        <span><input id="alarmreset" type="submit" value="Reset"></span>
-        <span><input id="alarmapply" type="submit" value="Apply"></span>
+        <input id="alarmapply" type="submit" value="Apply">
       </div>
   </form>
 <?php

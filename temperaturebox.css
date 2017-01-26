@@ -30,21 +30,12 @@
 #temprooms{
 	display: none;
 }
-#tempreset{
-	width: 80px;
-	height: 30px;
-	color: white;
-	background-color: #ffb833;
-	margin-left: 80px;
-	border: outset;
-	border-radius: 10px;
-}
 #tempapply{
 	width: 80px;
 	height: 30px;
 	color: white;
 	background-color: #ffb833;
-	margin-left: 70px;
+	margin-left: 130px;
 	border: outset;
 	border-radius: 10px;
 }

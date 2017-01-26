@@ -91,8 +91,7 @@
     </div>
 
     <div id="buttons">
-        <span><input id="shutterreset" type="submit" value="Reset"></span>
-        <span><input id="shutterapply" type="submit" value="Apply"></span>
+        <input id="shutterapply" type="submit" value="Apply">
       </div>
   </form>
   <?php

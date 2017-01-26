@@ -102,21 +102,13 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
-#shutterreset{
-  width: 80px;
-  height: 30px;
-  color: white;
-  background-color: #ffb833;
-  border: outset;
-  border-radius: 10px;
-}
 #shutterapply{
   width: 80px;
   height: 30px;
   color: white;
   background-color: #ffb833;
-  margin-left: 50px;
+  margin-left: 20px;
+  margin-top: 10px;
   border: outset;
   border-radius: 10px;
 }
