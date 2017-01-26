@@ -90,20 +90,12 @@
 
 		<div id="titleeditsensors">Edit Sensors</div>
 		<?php
-	            include 'database.php';
-	            $sql5 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
-	            $result5 = $db -> query($sql5);
-	            $sqlU = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
-	            $resultU = $db -> query($sqlU);
-	            $rowU = mysqli_fetch_assoc($resultU);
-	            $sqlU2 = "SELECT * FROM sensor WHERE id_room = '".$rowU["id"]."';";
-	            $resultU2 = $db -> query($sqlU2);
-	            $rowU2 = mysqli_fetch_assoc($resultU2);
-	            if (isset ($_POST['rename_sensor'])){
+	           
+	           if (isset ($_POST['rename_sensor'])){
 			            
 			            $myEditSensorName = $_POST["rename_sensor"];
-			            //echo $myEditSensorName;
-			            $sqlEdit = "UPDATE sensor SET sensor_name = '$myEditSensorName' WHERE sensor_name = '".$rowU2["sensor_name"]."';";
+			            $mySensorToEdit = $_POST["select_sensor"];
+			            $sqlEdit = "UPDATE sensor SET sensor_name = '$myEditSensorName' WHERE sensor_name = '".$mySensorToEdit."';";
 			            mysqli_query($db,$sqlEdit);
 			            mysqli_close($db);
 			            echo "<meta http-equiv='refresh' content='0'>";
@@ -123,6 +115,10 @@
 				<tr><td>Select Room</td>
 				<td><select form="editsensors" name = "select_room">
 				<?php 
+					include 'database.php';
+		            $sql5 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+		            $result5 = $db -> query($sql5);
+
 
 					while ($row5 = mysqli_fetch_array($result5))
 					{
@@ -272,13 +268,29 @@
 		<button class="managehousebutton" form="addroom">Add</button>
 		</form>
 
-		<?php
-             }
-       ?>
+		
+		<div id="titleeditrooms">Edit Rooms</div>
+
+					<?php
+			             }
+			       ?>
 
        <div class="hr"><hr /></div>
 
-		<div id="titleeditrooms">Edit Rooms</div>
+			<?php 
+			if (isset ($_POST["edit_room_name"]) && isset ($_POST["room_to_edit"])){
+				include 'database.php';
+				$myEditRoomName = $_POST["edit_room_name"];
+				$myRoomToEdit = $_POST["room_to_edit"];
+				$editRoomQuery = "UPDATE room SET Name_room = '$myEditRoomName' WHERE Name_room = '".$myRoomToEdit."';";
+			    mysqli_query($db,$editRoomQuery);
+			    mysqli_close($db); 
+			    echo "<meta http-equiv='refresh' content='0'>";
+				}
+					else {
+
+
+			?>
 			<form id="editrooms" name="editrooms" method="post" accept-charset="uft-8">
 				<table cellspacing="15">
 				<tr><td>Select Room</td>
@@ -288,7 +300,7 @@
 	            $result9 = $db -> query($sql9);
 	            
 	            ?>
-				<td><select form="editrooms" required>
+				<td><select name="room_to_edit" form="editrooms" required>
 				<?php 
 
 					while ($row9 = mysqli_fetch_array($result9))
@@ -298,10 +310,15 @@
 					}
 				?>  
 				</select></td></tr>
-				<tr><td>New Room Name</td><td><input type="text" name="renameroom" form="editrooms" required></td></tr>
+				<tr><td>New Room Name</td><td><input type="text" name="edit_room_name" form="editrooms" required></td></tr>
 				</table>
-				<button class="managehousebutton" form="editrooms">Rename</button>
+				<button class="managehousebutton" type="submit" form="editrooms">Rename</button>
 			</form>
+
+				<?php
+             }
+       ?>
+
 
 			<div class="hr"><hr /></div>
 
