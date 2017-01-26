@@ -93,14 +93,20 @@
 	            include 'database.php';
 	            $sql5 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
 	            $result5 = $db -> query($sql5);
+	            $sqlU = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
+	            $resultU = $db -> query($sqlU);
+	            $rowU = mysqli_fetch_assoc($resultU);
+	            $sqlU2 = "SELECT * FROM sensor WHERE id_room = '".$rowU["id"]."';";
+	            $resultU2 = $db -> query($sqlU2);
+	            $rowU2 = mysqli_fetch_assoc($resultU2);
 	            if (isset ($_POST['rename_sensor'])){
 			            
 			            $myEditSensorName = $_POST["rename_sensor"];
-			            echo $myEditSensorName;
-			            $sqlEdit = "UPDATE sensor SET sensor_name = '$myEditSensorName' WHERE id = '".$row8["id"]."';";
+			            //echo $myEditSensorName;
+			            $sqlEdit = "UPDATE sensor SET sensor_name = '$myEditSensorName' WHERE sensor_name = '".$rowU2["sensor_name"]."';";
 			            mysqli_query($db,$sqlEdit);
 			            mysqli_close($db);
-			            //echo "<meta http-equiv='refresh' content='0'>";
+			            echo "<meta http-equiv='refresh' content='0'>";
 
 				    }
 				    else{
@@ -238,7 +244,7 @@
             include 'database.php';
             $myAddRoomName = $_POST['add_room_name'];
             $mySelectRoomType = $_POST['select_room_type'];
-            $sql2 ="INSERT INTO room(Name_room,type_room) VALUES ('".$myAddRoomName."','".$mySelectRoomType."')";
+            $sql2 ="INSERT INTO room(Name_room,id_home,type_room) VALUES ('".$myAddRoomName."',1,'".$mySelectRoomType."')";
             echo 'Vous venez dajouter la pièce '.$myAddRoomName.'de type'.$mySelectRoomType. '!';           
             mysqli_query($db,$sql2);
             mysqli_close($db);
