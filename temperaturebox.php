@@ -24,7 +24,7 @@
       }
       
     
-    $sql = "UPDATE sensor SET target_data = $post_temp WHERE id='1'";
+    $sql = "UPDATE sensor SET target_data = $post_temp WHERE id=1";
     $result = $db -> query($sql);
    
  ?>
@@ -103,7 +103,8 @@
     </div>
 
       <div id="buttons">
-        <input id="tempapply" type="submit" value="Apply">
+        <span><input id="tempreset" type="submit" value="Reset"></span>
+        <span><input id="tempapply" type="submit" value="Apply"></span>
       </div>
   </form>
 </body>
