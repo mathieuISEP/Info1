@@ -8,7 +8,26 @@
 </head>
 <body>
 
+      <?php
 
+             include 'database.php';
+
+            $sql1 = "SELECT on_off FROM sensor WHERE id='11'";
+            $result1 = $db -> query($sql1);
+            $row1 = mysqli_fetch_assoc($result1);
+            echo $row1['on_off'];
+
+            if(isset($_POST['housealarm'])){
+              $status = 1;
+            }
+            else{
+              $status = 0;
+            }
+            $sql2 = "UPDATE sensor SET on_off = $status WHERE id='11'";
+            $result2 = $db -> query($sql2);
+            $row2 = mysqli_fetch_assoc($result2);
+
+            ?>
   <form id="alarmbox" name="temperature" method="post" accept-charset="utf-8">
         <div>Alarm</div>
        <div class="hr"><hr /></div>
@@ -20,7 +39,7 @@
             </td>
             <td>
              <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" name="housealarm" <?php if ($row1['on_off'] == 1) echo 'checked'; ?> />
                  <div class="slider round"></div>
             </label>     
            </td>
