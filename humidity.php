@@ -15,7 +15,18 @@
         <table id="househumidity">
           <tr>
             <td>House Humidity</td>
-            <td id="humidityvalue">20%<!--A replacer par valeur de la database--></td>
+            <td id="humidityvalue">
+
+            <?php 
+              include ("database.php");
+            $current = "SELECT current_data FROM sensor WHERE id = '3'";
+              $current_result =  $db -> query($current);
+              while ($row = $current_result->fetch_assoc()) {
+              echo ''.$row['current_data']. ' %'."<br>";
+              }
+            ?>
+              
+            </td>
           </tr>
         </table>
         <div  id="humiditylink" onclick="opentab('Features'); opensubtab('Humidity'); checkhumiditybox(); display4()"> More details </div> 
