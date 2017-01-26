@@ -71,16 +71,16 @@
 
      
 
-     // echo '<div class ="element">';
-     //      echo '<tr>';
-     //      echo '<td>';  print "Temperature _ Test  "; echo '</td>';  
-     //      echo '<td>'; '</td>';
-     //      echo '<td>'; '</td>';
-     //      echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
-     //      echo '<td class="C">°C</td>';
-     //      echo '</tr>';
-     // echo '</div>';
-     // //
+     echo '<div class ="element">';
+          echo '<tr>';
+          echo '<td>';  print "Temperature _ Test  "; echo '</td>';  
+          echo '<td>'; '</td>';
+          echo '<td>'; '</td>';
+          echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
+          echo '<td class="C">°C</td>';
+          echo '</tr>';
+     echo '</div>';
+     //
 
 
      //  echo '<tr class ="element">';
@@ -98,7 +98,7 @@
      // echo '<div class ="element">';
 
      
-     echo '<div class="room_element">';
+     echo '<div class="room_element" id="info">';
 
 
 
