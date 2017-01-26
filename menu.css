@@ -137,3 +137,26 @@
     height: auto;
 }
 
+.room_element {
+    padding: 10px;
+    border: 2px orange solid;
+    color: orange;
+    float: left;
+    min-width: 10px;
+    /*max-width: 100px;*/
+    height: auto;
+    background-color: white;
+    overflow: hidden;
+    text-align: left;
+    margin: 10px;
+}
+
+  .subtablinks_rooms{
+    line-height: 50px;
+    font-family: "Arial", sans-serif;
+    width: 200px;
+  }
+  .subtablinks_rooms:hover {/* Enables hovering highligth over subtab links */
+      cursor: pointer;
+      background: orange;
+      color: #fff;
