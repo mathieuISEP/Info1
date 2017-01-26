@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 26 Janvier 2017 à 10:19
+-- Généré le :  Jeu 26 Janvier 2017 à 21:29
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -59,11 +59,11 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`client_number`, `id_card`, `first_name`, `last_name`, `street`, `city`, `country`, `street_number`, `email_address`, `bank_number`, `isadmin`, `password`) VALUES
-(1, 0, 'Galiano', '1', 'rue de la paix', 'Paris', 'France', 27, 'folco.galiano@isep.fr', '123', 1, 'root'),
-(2, 0, 'Da Silva', '2', 'rue Blomet', 'Paris', 'France', 168, 'mathieu.dasilva@isep.fr', '345', 1, 'root'),
+(1, 0, 'Galiano', '1', 'rue de la paix', 'Paris', 'France', 27, 'folco.galiano@isep.fr', '123', 1, '$2y$12$LCnHMEm3ytbZGehMbw5ga.RP.QYizaT.0cSF8oUUCQxbq6ZMhVBV2'),
+(2, 0, 'Da Silva', '2', 'rue Blomet', 'Paris', 'France', 168, 'mathieu.dasilva@isep.fr', '345', 1, '$2y$12$AY1LLoEZc.h9g5tomcnhuO8EyUCuL42dudDN6jLebk6BiF.aE6WxC'),
 (3, 0, 'Jeannette', '3', 'rue de la paix', 'Paris', 'France', 27, 'antoine.jeannette@isep.fr', '678', 1, '$2y$12$6ZpnCFotdG6cXIfU4MibNO.BEg37UgNxEH0Pn2ipPLKllgNvNDWVq'),
-(4, 0, 'Gasparini', '4', 'rue de la paix', 'Paris', 'France', 27, 'leandro.gasparini@isep.fr', '2456534543', 1, 'root'),
-(5, 0, 'Demogues', '5', 'rue de la paix', 'Paris', 'France', 27, 'anthony.demogue@isep.fr', '2456534543', 1, 'root');
+(4, 0, 'Gasparini', '4', 'rue de la paix', 'Paris', 'France', 27, 'leandro.gasparini@isep.fr', '2456534543', 1, '$2y$12$Ex7nGWVUiT682Qd3bHFkFusCwobpq78UQJeZMaxrVZo4KiXOOeGLe'),
+(5, 0, 'Demogues', '5', 'rue de la paix', 'Paris', 'France', 27, 'anthony.demogue@isep.fr', '2456534543', 1, '$2y$12$Cas3dVszoJJA24UbdrpdY.UDgl09Kv1HRlIePhlaoCevf2EEyOQPC');
 
 -- --------------------------------------------------------
 
@@ -138,7 +138,7 @@ INSERT INTO `sensor` (`id`, `id_room`, `type_sensor`, `sensor_name`, `current_da
 (8, 2, 'Humidity', 'Humidity kitchen 1', 50, 0, 0),
 (9, 2, 'Humidity', 'Humidity kitchen 2', 46, 0, 0),
 (10, 2, 'Shutters', 'Shutters kitchen 2', 0, 0, 0),
-(11, 2, 'Alarm', 'House alarm', 0, 0, 1),
+(11, 2, 'Alarm', 'House alarm', 0, 0, 0),
 (12, 3, 'Shutters', 'Shutters Room1', 0, 0, 0),
 (13, 3, 'Luminosity', 'Light Room 1', 0, 0, 0),
 (14, 3, 'temperature_sensor', 'Temperature Room 1', 23, 0, 0),
@@ -195,10 +195,25 @@ ALTER TABLE `sensor`
 --
 
 --
+-- AUTO_INCREMENT pour la table `actuator`
+--
+ALTER TABLE `actuator`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT pour la table `client`
 --
 ALTER TABLE `client`
   MODIFY `client_number` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT pour la table `home`
+--
+ALTER TABLE `home`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `room`
+--
+ALTER TABLE `room`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `sensor`
 --
@@ -207,8 +222,3 @@ ALTER TABLE `sensor`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-ALTER TABLE `room` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE `home` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE `actuator` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
