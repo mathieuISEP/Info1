@@ -14,3 +14,4 @@ $('.selectsensors').change(function() {
         }
     });
 });
+
