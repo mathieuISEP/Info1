@@ -17,12 +17,14 @@
             <td>House Humidity</td>
             <td id="humidityvalue">
 
-            <!--<?php $current = "SELECT current_data FROM sensor WHERE id = '3'";
+            <?php 
+              include ("database.php");
+            $current = "SELECT current_data FROM sensor WHERE id = '3'";
               $current_result =  $db -> query($current);
               while ($row = $current_result->fetch_assoc()) {
               echo ''.$row['current_data']. ' %'."<br>";
               }
-            ?> -->
+            ?>
 
             </td>
           </tr>
@@ -35,11 +37,7 @@
           
 
         <?php       // _______PHP for automatic Room display in Humidity Subtab_______________
-            $DB_SERVER = 'localhost';
-             $DB_USERNAME = 'root';
-             $DB_PASSWORD = 'root';
-             $DB_DATABASE = 'autodhome';
-             $db =  new mysqli($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);  
+              
              $list_rooms = "SELECT Name_room 
                             FROM room 
                             WHERE id_home = 1"; 
