@@ -140,21 +140,6 @@
 
 			<div class="hr"><hr /></div>
 
-					<?php
-    
-
-			      if (isset ($_POST['delete_sensor'])){
-			            include 'database.php';
-			            $myDeleteSensor = $_POST["delete_sensor"];
-			            $sqlDS = "DELETE FROM sensor WHERE sensor_name = '".$myDeleteSensor."';";
-			            mysqli_query($db,$sqlDS);
-			            mysqli_close($db);
-			            echo "<meta http-equiv='refresh' content='0'>";
-
-				    }
-				    else{
-
-				     ?>
 
 
 			<div id="titledeletesensors">Delete Sensors</div>
@@ -180,6 +165,23 @@
 					}
 				?>
 					</select></td></tr>
+
+
+					<?php
+    
+
+			      if (isset ($_POST['delete_sensor'])){
+			            include 'database.php';
+			            $myDeleteSensor = $_POST["delete_sensor"];
+			            $sqlDS = "DELETE FROM sensor WHERE sensor_name = '".$myDeleteSensor."';";
+			            mysqli_query($db,$sqlDS);
+			            mysqli_close($db);
+			            echo "<meta http-equiv='refresh' content='0'>";
+
+				    }
+				    else{
+
+				     ?>
 					<tr><td>Select Sensor</td>
 								<?php
 				            include 'database.php';
@@ -190,7 +192,7 @@
 				            $result13 = $db -> query($sql13);
 				            
 				         	?>
-					<td><select required form="deletesensors">
+					<td><select name = "delete_sensor" required form="deletesensors">
 						<?php 
 
 					while ($row13 = mysqli_fetch_array($result13))

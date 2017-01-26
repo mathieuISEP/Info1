@@ -145,8 +145,10 @@ if(!isset($_SESSION['username'])){
             ob_start();
             require("loginpage.php");
             $number ;
-            ob_end_clean();
-         ;?> </ul>
+            ob_end_clean();        
+         ?>
+
+          </ul>
       </div>
 
       <div class="subtab" id="setting1">
