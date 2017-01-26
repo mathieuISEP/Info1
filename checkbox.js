@@ -12,6 +12,23 @@ function display1() {
 function checktempbox(){
   document.getElementById("tempcheckbox").checked ="checked";
 }
+function on_off(){
+      if($('#alarmstatus').attr('checked', true)){
+        $("#textstatus").val(1);
+      }
+      else{
+        $("#textstatus").val(0);
+      }
+}
+function open_closed(){
+      if($('#shutterstatus').attr('checked', true)){
+        $("#textstatus").val("1");
+      }
+      else{
+        $("#textstatus").val("0");
+      }
+
+}
 function display2() {
    var rooms = document.getElementById("alarmrooms");
        if(rooms.style.display == "block")

@@ -8,6 +8,25 @@
 </head>
 <body>
 
+<?php
+
+             include 'database.php';
+
+            $sql1 = "SELECT on_off FROM sensor WHERE id='5'";
+            $result1 = $db -> query($sql1);
+            $row1 = mysqli_fetch_assoc($result1);
+            $status = $row1['on_off'];
+
+            if(isset($_POST['shuttercheckbox'])){
+              $status = $_POST['shutterstatus'];
+            $sql2 = "UPDATE sensor SET on_off = $status WHERE id='5'";
+            $result2 = $db -> query($sql2);
+            $row2 = mysqli_fetch_assoc($result2);
+          }
+          else{
+            ?>
+
+
 <form id="shuttersbox" name="temperature" method="post" accept-charset="utf-8">
     <div>Shutters</div>
     <div class="hr"><hr /></div>
@@ -20,7 +39,7 @@
         </td>
         <td>
           <label class="switch">
-            <input type="checkbox">
+            <input type="checkbox" id="shutterstatus" name="shutterstatus" onclick="open_closed()"<?php if ($status == 1) echo 'checked'; ?>>
             <div class="slider round"></div>
           </label>
         </td>
@@ -76,5 +95,8 @@
         <span><input id="shutterapply" type="submit" value="Apply"></span>
       </div>
   </form>
+  <?php
+}
+?>
 </body>
 </html>

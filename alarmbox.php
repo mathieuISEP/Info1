@@ -5,6 +5,8 @@
   <title>Alarm</title>
   <link href="alarmbox.css" type="text/css" rel="stylesheet">
   <script type="text/javascript" src="checkbox.js"></script>
+  <script src="jquery-3.1.1.js"></script>
+
 </head>
 <body>
 
@@ -15,19 +17,17 @@
             $sql1 = "SELECT on_off FROM sensor WHERE id='11'";
             $result1 = $db -> query($sql1);
             $row1 = mysqli_fetch_assoc($result1);
-            echo $row1['on_off'];
+            $status = $row1['on_off'];
 
-            if(isset($_POST['housealarm'])){
-              $status = 1;
-            }
-            else{
-              $status = 0;
-            }
+            if(isset($_POST['alarmcheckbox'])){
+              $status = $_POST['alarmstatus'];
             $sql2 = "UPDATE sensor SET on_off = $status WHERE id='11'";
             $result2 = $db -> query($sql2);
             $row2 = mysqli_fetch_assoc($result2);
-
+          }
+          else{
             ?>
+
   <form id="alarmbox" name="temperature" method="post" accept-charset="utf-8">
         <div>Alarm</div>
        <div class="hr"><hr /></div>
@@ -39,9 +39,9 @@
             </td>
             <td>
              <label class="switch">
-                <input type="checkbox" name="housealarm" <?php if ($row1['on_off'] == 1) echo 'checked'; ?> />
+                <input type="checkbox" id="alarmstatus" name="alarmstatus" onclick="on_off()"<?php if ($status == 1) echo 'checked'; ?>>
                  <div class="slider round"></div>
-            </label>     
+            </label>
            </td>
            <td>
              <div id="on">ON</div>
@@ -103,6 +103,8 @@
         <span><input id="alarmapply" type="submit" value="Apply"></span>
       </div>
   </form>
-
+<?php
+}
+?>
 </body>
 </html>
