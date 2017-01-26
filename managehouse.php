@@ -93,6 +93,19 @@
 	            include 'database.php';
 	            $sql5 = "SELECT * FROM room WHERE id_home = '".$_SESSION["userid"]."';";
 	            $result5 = $db -> query($sql5);
+	            if (isset ($_POST['rename_sensor'])){
+			            
+			            $myEditSensorName = $_POST["rename_sensor"];
+			            echo $myEditSensorName;
+			            $sqlEdit = "UPDATE sensor SET sensor_name = '$myEditSensorName' WHERE id = '".$row8["id"]."';";
+			            mysqli_query($db,$sqlEdit);
+			            mysqli_close($db);
+			            //echo "<meta http-equiv='refresh' content='0'>";
+
+				    }
+				    else{
+
+
 	            
 
 
@@ -112,6 +125,7 @@
 					}
 				?>  
 				</select></td></tr>
+
 				<tr><td>Select Sensor</td>
 				<?php
 	            include 'database.php';
@@ -120,7 +134,7 @@
 	            $row7 = mysqli_fetch_assoc($result7);
 	            $sql8 = "SELECT * FROM sensor WHERE id_room = '".$row7["id"]."';";
 	            $result8 = $db -> query($sql8);
-	            //$row8 = mysqli_fetch_assoc($result8);
+	            $row8 = mysqli_fetch_assoc($result8);
 	         	?>
 
 				<td><select required form="editsensors" name = "select_sensor">
@@ -133,10 +147,14 @@
 					}
 				?>  
 				</select></td></tr>
-				<tr><td>New Sensor Name</td><td><input type="text" name="renamesensor" form="editsensors" required></td></tr>
+				<tr><td>New Sensor Name</td><td><input type="text" name="rename_sensor" form="editsensors" required></td></tr>
 				</table>
 				<button class="managehousebutton" form="editsensors">Rename</button>
 			</form>
+
+			<?php
+             }
+       ?>
 
 			<div class="hr"><hr /></div>
 

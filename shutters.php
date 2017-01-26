@@ -21,7 +21,7 @@
             $status = 1;
             $sql2 = "UPDATE sensor SET on_off = $status WHERE id='5'";
             $result2 = $db -> query($sql2);
-            $row2 = mysqli_fetch_assoc($result2);
+            //$row2 = mysqli_fetch_assoc($result2);
             ?>
 
           <form id="shuttersbox" class="dashboardbox" name="temperature" method="post" accept-charset="utf-8">
@@ -58,7 +58,7 @@
             $status = 0;
              $sql2 = "UPDATE sensor SET on_off = $status WHERE id='5'";
             $result2 = $db -> query($sql2);
-            $row2 = mysqli_fetch_assoc($result2);
+            //$row2 = mysqli_fetch_assoc($result2);
             ?>
 
 
