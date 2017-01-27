@@ -26,7 +26,7 @@
             ?>
 
 
-         <form id="alarmbox" name="temperature" method="post" accept-charset="utf-8">
+         <form id="alarmbox" name="alarmbox" method="post" accept-charset="utf-8">
                     <div>Alarm</div>
                    <div class="hr"><hr /></div>
                     <table id="housealarm">
@@ -109,7 +109,7 @@
             $result2 = $db -> query($sql2);
             ?>
 
-  <form id="alarmbox" name="temperature" method="post" accept-charset="utf-8">
+  <form id="alarmbox" name="alarmbox" method="post" accept-charset="utf-8">
         <div>Alarm</div>
        <div class="hr"><hr /></div>
         <table id="housealarm">
