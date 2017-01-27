@@ -54,7 +54,7 @@
         // If function
         if ($result=mysqli_query($db,$list_sensors))
         {
-            
+            // Fetch one and one row
             while ($row=mysqli_fetch_row($result))
 	          {
 	         	echo '<ul class ="subtablinks_rooms">';  
@@ -68,66 +68,66 @@
      }
      echo '</div>';
      
-
-<<<<<<< HEAD
       include "database.php";
       $type_sensor = "SELECT type_sensor 
                     FROM sensor 
-                    WHERE id_room = $nb2";
+                    WHERE id_room = $nb2"; 
       $result_type = mysqli_query($db,$type_sensor);
-      $row_type = mysqli_fetch_row($result_type);
-      if (row_type["type_sensor"] == 'temperature_sensor'){
+      $row_type = mysqli_fetch_assoc($result_type);
+      if ($row_type["type_sensor"] == 'temperature_sensor'){
         include 'temperaturebox.php';
       }
-      else if (row_type["type_sensor"] == 'Shutters'){
+      else if ($row_type["type_sensor"] == 'Shutters'){
         include 'shutters.php';
       }
-      else if (row_type["type_sensor"] == 'Humidity'){
+      else if ($row_type["type_sensor"] == 'Humidity'){
         include 'humiditybox.php';
       }
-      else if (row_type["type_sensor"] == 'Alarm'){
+      else if ($row_type["type_sensor"] == 'Alarm'){
         include 'alarmbox.php';
       }
-      else if (row_type["type_sensor"] == 'Luminosity'){
+      else if ($row_type["type_sensor"] == 'Luminosity'){
         include 'alarmbox.php';
       }
+     
 
-=======
-      
->>>>>>> fcd519829a47ce0eea149d99be303a6b1a23d49c
-
-
-     // Crere une liste de sub_sub_tabs avec les mêmes attribus que subtabs
-     // lier a une fonction javascript , comme pour subtabs
-
-     ?>
-     <div class ="element">
-      <tr>';
-      <td>Temperature _ Test</td> 
-      <td></td>
-       <td></td>
-          <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
-          <td class="C">°C</td>
-          </tr>
-     </div>
-     <tr class ="element">';
-                <td>Alarms</td>
-                <td> <div class="off">OFF</div> </td>
-                <td> <label class="switch">
-                           <input type="checkbox">
-                           <div class="slider round"></div>
-                           </label> 
-                    </td>
-              <td><div class="on">ON</div></td>
-     </tr>
+     echo '<div class ="element">';
+          echo '<tr>';
+          echo '<td>';  print "Temperature _ Test  "; echo '</td>';  
+          echo '<td>'; '</td>';
+          echo '<td>'; '</td>';
+          echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
+          echo '<td class="C">°C</td>';
+          echo '</tr>';
+     echo '</div>';
+     //
 
 
-     <div class ="element">
+     //  echo '<tr class ="element">';
+     //           echo '<td>'; print 'Alarms'; echo' </td>'; 
+     //           echo '<td> <div class="off">OFF</div> </td>';
+     //           echo '<td> <label class="switch">
+     //                      <input type="checkbox">
+     //                      <div class="slider round"></div>
+     //                      </label> 
+     //               </td>';
+     //         echo '<td><div class="on">ON</div></td>';
+     // echo "</tr>";
+
+
+     // echo '<div class ="element">';
 
      
-     <div class="room_element" id="info">
-     </div>
-<?php
+     echo '<div class="room_element" id="info">';
+
+
+
+
+
+
+
+     echo '</div>';
+
     ?>
 	</div> 
   </body>

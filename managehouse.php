@@ -69,6 +69,7 @@
 	         	?>
 
 				<td><select name ="room_name" required form="addsensor">
+
 				<?php 
 
 					while ($row3 = mysqli_fetch_array($result3))
