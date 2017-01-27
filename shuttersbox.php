@@ -24,7 +24,7 @@
 
             ?>
 
-            <form id="shuttersbox" name="temperature" method="post" accept-charset="utf-8">
+            <form id="shuttersbox" name="shuttersbox" method="post" accept-charset="utf-8">
     <div>Shutters</div>
     <div class="hr"><hr /></div>
     <table id="houseshutters">
@@ -101,7 +101,7 @@
             ?>
 
 
-<form id="shuttersbox" name="temperature" method="post" accept-charset="utf-8">
+<form id="shuttersbox" name="shuttersbox" method="post" accept-charset="utf-8">
     <div>Shutters</div>
     <div class="hr"><hr /></div>
     <table id="houseshutters">
