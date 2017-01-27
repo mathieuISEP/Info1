@@ -69,7 +69,28 @@
      echo '</div>';
      
 
-     
+      include "database.php";
+      $type_sensor = "SELECT type_sensor 
+                    FROM sensor 
+                    WHERE id_room = $nb2";
+      $result_type = mysqli_query($db,$type_sensor);
+      $row_type = mysqli_fetch_row($result_type);
+      if (row_type["type_sensor"] == 'temperature_sensor'){
+        include 'temperaturebox.php';
+      }
+      else if (row_type["type_sensor"] == 'Shutters'){
+        include 'shutters.php';
+      }
+      else if (row_type["type_sensor"] == 'Humidity'){
+        include 'humiditybox.php';
+      }
+      else if (row_type["type_sensor"] == 'Alarm'){
+        include 'alarmbox.php';
+      }
+      else if (row_type["type_sensor"] == 'Luminosity'){
+        include 'alarmbox.php';
+      }
+
 
      echo '<div class ="element">';
           echo '<tr>';

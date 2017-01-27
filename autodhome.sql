@@ -128,32 +128,22 @@ CREATE TABLE `sensor` (
 --
 
 INSERT INTO `sensor` (`id`, `id_room`, `type_sensor`, `sensor_name`, `current_data`, `target_data`, `on_off`) VALUES
-(1, 2, 'temperature_sensor', 'thermometer 1', 15, 20, 0),
-(2, 1, 'Luminosity', 'Luminosity Livingroom', 0, 0, 0),
+(1, 2, 'temperature_sensor', 'Temperature Kitchen', 15, 20, 0),
 (3, 1, 'Humidity', 'House Humidity', 24, 0, 0),
-(4, 1, 'Camera', 'Camera Livingroom', 1, 0, 0),
 (5, 1, 'Shutters', 'Shutters 1', 0, 0, 0),
 (6, 1, 'Shutters', 'Shutters 2', 0, 0, 0),
 (7, 1, 'Shutters', 'Shutters 3', 0, 0, 0),
-(8, 2, 'Humidity', 'Humidity kitchen 1', 50, 0, 0),
-(9, 2, 'Humidity', 'Humidity kitchen 2', 46, 0, 0),
-(10, 2, 'Shutters', 'Shutters kitchen 2', 0, 0, 0),
+(8, 2, 'Humidity', 'Humidity Kitchen 1', 50, 0, 0),
 (11, 2, 'Alarm', 'House alarm', 0, 0, 0),
-(12, 3, 'Shutters', 'Shutters Room1', 0, 0, 0),
-(13, 3, 'Luminosity', 'Light Room 1', 0, 0, 0),
+(12, 3, 'Shutters', 'Shutters Room', 0, 0, 0),
 (14, 3, 'temperature_sensor', 'Temperature Room 1', 23, 0, 0),
 (15, 4, 'Shutters', 'Shutters Room 2', 0, 0, 0),
-(16, 4, 'Luminosity', 'Light Room 2', 0, 0, 0),
 (17, 4, 'temperature_sensor', 'Temperature Room 2', 25, 0, 0),
 (18, 5, 'Shutters', 'Shutters Room 3', 0, 0, 0),
-(19, 5, 'Luminosity', 'Light Room 3', 0, 0, 0),
 (20, 5, 'temperature_sensor', 'Temperature Room 3', 20, 0, 0),
 (21, 6, 'Shutters', 'Shutters Room 4', 0, 0, 0),
-(22, 6, 'Luminosity', 'Light Room 4', 0, 0, 0),
 (23, 6, 'temperature_sensor', 'Temperature Room 4', 20, 0, 0),
-(24, 7, 'Luminosity', 'Light Bathroom 1', 0, 0, 0),
 (25, 7, 'temperature_sensor', 'Temperature Bathroom 1', 20, 0, 0),
-(26, 8, 'Luminosity', 'Light Bathroom 2', 0, 0, 0),
 (27, 8, 'temperature_sensor', 'Temperature Bathroom 2', 20, 0, 0);
 
 --
