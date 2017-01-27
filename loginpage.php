@@ -46,23 +46,90 @@
                // }
           }
           else{
-        echo "<div style ='font:30px/40px Arial,bold,sans-serif;color:#FFFFFF'> Incorrect password </div>";
+            ?>
+            <form name="login" action="" method="post" accept-charset="utf-8">
+    <h1>
+        Enter my Home
+    </h1>
+   <table id="loginpagetable">
+    <tr>
+      <div class="user">
+        <td>
+        <label for="username">Username</label>
+        </td>
+        <td>
+        <span>
+            <input id="userinput" type="user" name="username" placeholder="username" required>
+        </span>
+        </td>
+      </div>
+    </tr>
+    <tr>
+      <div class="password">
+        <td>
+        <label for="password">Password</label>
+        </td>
+        <td>
+        <span>
+            <input id="passwordinput" type="password" name="password" placeholder="password" required>
+        </span>
+        </td>
+    </div>
+    </tr>
+    </table>
+    <div id="passworderror"><?php echo "Incorrect password";?></div>
+    <div class="login">
+             <input id="login" type="submit" value="Login">
+    </div>
+</form>
 
-            
+    <?php   
           }
         } 
           else{
-            
-        echo "<div style ='font:30px/40px Arial,bold,sans-serif;color:#FFFFFF'> Username doesn't exist </div>";
+            ?>
 
+
+            <form name="login" action="" method="post" accept-charset="utf-8">
+    <h1>
+        Enter my Home
+    </h1>
+   <table id="loginpagetable">
+    <tr>
+      <div class="user">
+        <td>
+        <label for="username">Username</label>
+        </td>
+        <td>
+        <span>
+            <input id="userinput" type="user" name="username" placeholder="username" required>
+        </span>
+        </td>
+      </div>
+    </tr>
+    <tr>
+      <div class="password">
+        <td>
+        <label for="password">Password</label>
+        </td>
+        <td>
+        <span>
+            <input id="passwordinput" type="password" name="password" placeholder="password" required>
+        </span>
+        </td>
+    </div>
+    </tr>
+    </table>
+    <div id="usererror"><?php echo "Username doesn't exist"; ?></div>
+    <div class="login">
+             <input id="login" type="submit" value="Login">
+    </div>
+</form>
+        
+  <?php
        }    
        }
        else{
-
-
-
-
-
 ?>
     
 <form name="login" action="" method="post" accept-charset="utf-8">

@@ -54,7 +54,7 @@
         // If function
         if ($result=mysqli_query($db,$list_sensors))
         {
-            // Fetch one and one row
+            
             while ($row=mysqli_fetch_row($result))
 	          {
 	         	echo '<ul class ="subtablinks_rooms">';  
@@ -69,6 +69,7 @@
      echo '</div>';
      
 
+<<<<<<< HEAD
       include "database.php";
       $type_sensor = "SELECT type_sensor 
                     FROM sensor 
@@ -91,44 +92,42 @@
         include 'alarmbox.php';
       }
 
-
-     echo '<div class ="element">';
-          echo '<tr>';
-          echo '<td>';  print "Temperature _ Test  "; echo '</td>';  
-          echo '<td>'; '</td>';
-          echo '<td>'; '</td>';
-          echo '<td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
-          echo '<td class="C">°C</td>';
-          echo '</tr>';
-     echo '</div>';
-     //
+=======
+      
+>>>>>>> fcd519829a47ce0eea149d99be303a6b1a23d49c
 
 
-     //  echo '<tr class ="element">';
-     //           echo '<td>'; print 'Alarms'; echo' </td>'; 
-     //           echo '<td> <div class="off">OFF</div> </td>';
-     //           echo '<td> <label class="switch">
-     //                      <input type="checkbox">
-     //                      <div class="slider round"></div>
-     //                      </label> 
-     //               </td>';
-     //         echo '<td><div class="on">ON</div></td>';
-     // echo "</tr>";
+     // Crere une liste de sub_sub_tabs avec les mêmes attribus que subtabs
+     // lier a une fonction javascript , comme pour subtabs
+
+     ?>
+     <div class ="element">
+      <tr>';
+      <td>Temperature _ Test</td> 
+      <td></td>
+       <td></td>
+          <td><input class="stepper" type="number" min="0" max= "30" step="0.5" pattern="[0-9]*"></td>';
+          <td class="C">°C</td>
+          </tr>
+     </div>
+     <tr class ="element">';
+                <td>Alarms</td>
+                <td> <div class="off">OFF</div> </td>
+                <td> <label class="switch">
+                           <input type="checkbox">
+                           <div class="slider round"></div>
+                           </label> 
+                    </td>
+              <td><div class="on">ON</div></td>
+     </tr>
 
 
-     // echo '<div class ="element">';
+     <div class ="element">
 
      
-     echo '<div class="room_element" id="info">';
-
-
-
-
-
-
-
-     echo '</div>';
-
+     <div class="room_element" id="info">
+     </div>
+<?php
     ?>
 	</div> 
   </body>

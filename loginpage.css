@@ -1,7 +1,9 @@
 body{
-	background-image: url(villa.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: url(villa.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 }
 form{
@@ -54,3 +56,15 @@ form{
  #loginpagetable{
  	margin: auto;
  }
+#passworderror{
+	margin-left: 120px;
+	color: red;
+	font-weight: bold;
+	margin-top: 10px;
+}
+#usererror{
+	margin-left: 90px;
+	color: red;
+	font-weight: bold;
+	margin-top: 10px;
+}
