@@ -103,7 +103,6 @@
     </div>
 
       <div id="buttons">
-        <span><input id="tempreset" type="submit" value="Reset"></span>
         <span><input id="tempapply" type="submit" value="Apply"></span>
       </div>
   </form>

@@ -56,3 +56,15 @@ form{
  #loginpagetable{
  	margin: auto;
  }
+#passworderror{
+	margin-left: 120px;
+	color: red;
+	font-weight: bold;
+	margin-top: 10px;
+}
+#usererror{
+	margin-left: 90px;
+	color: red;
+	font-weight: bold;
+	margin-top: 10px;
+}
