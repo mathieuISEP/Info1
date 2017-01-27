@@ -30,3 +30,13 @@ function setTemp  (current0,target){
 
 
 }
+
+function opensubsubtab(Name){
+              var i;
+              var x = document.getElementsByClassName("subsubtab");
+              for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                  x[i].style.background = "none";
+              }
+              document.getElementById(Name).style.display = "block";
+}

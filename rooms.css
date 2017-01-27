@@ -28,7 +28,8 @@
 }
 
 
-.element {
+.subsubtab {
+
   background-color: white;
   /*border-radius:10px;*/
   border-color: orange;
@@ -41,7 +42,8 @@
   text-align: left;
   font-family: "Arial", sans-serif;
   border: 2px orange solid;
-  display: inline-block;
+  display:none;
+  
   /*margin: auto;*/
 }
 
